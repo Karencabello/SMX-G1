@@ -35,6 +35,7 @@ int main(void) {
     char *filename = OUTFILENAME;
     long int llavor = RANSEED;      //Inicialitzar generador numeros aleatoris
  
+    system("mkdir -p log");
     ofile = fopen(filename, "w");
     if(ofile == NULL){
         ERROR((ofile, "Not possible to open file %s \n", filename));

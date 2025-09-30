@@ -1,0 +1,115 @@
+**************** BEGIN EXECUTION *****************
+     Time : Tue Sep 30 17:51:40 2025
+*************************************************
+----------------------------------------------------------
+---------- Configuracio Programa -------------------------
+----------------------------------------------------------
+Random seed, seed chosen   : 56721
+
+Temps obertura supermercat : 0.0
+Temps tancar supermercat   : 100.0
+
+Temps mig entre arribades  : 15
+Temps mig de servei        : 60
+
+Nombre total de caixers    : 3
+-----------------------------------------------------------
+
+--- Traces de Seguiment del programa (0 = NO, 1 = SI) : 0 
+
+
+-----------------------------------------------------------
+----- Resum dels Resultats de la Simulació ----------------
+-----------------------------------------------------------
+Nombre de clients atesos: (total 6 promig    2.0)
+
+  0 |      2      2      2 
+
+Numbre promig de clients a cua/caixa             :      0.0     0.0     0.0
+Temps promig de cua a cada caixa                 :      0.0     0.0     0.0
+Temps promig de servei a cada caixa              :     73.5    23.0    14.5
+Temps promig al super dels clients de cada caixa :      0.0     0.0     0.0
+
+Nombre minim de clients a cua/caixa              :        0       0       0
+Temps minim de cua a cada caixa                  :    50000   50000   50000
+Temps minim de servei a cada caixa               :        4      13       8
+Temps minim al super dels clients de cada caixa  :    50000   50000   50000
+
+Nombre maxim de clients a la cua/caixa           :        0       0       0
+Temps maxim de cua a cada caixa                  :       -1      -1      -1
+Temps maxim de servei a cada caixa               :      143      33      21
+Temps maxim al super dels clients segons caixa   :       -1      -1      -1
+
+-----------------------------------------------------------
+------- Totes les Estadístiques calculades ----------------
+-----------------------------------------------------------
+CUA 0 nombre clients en espera a cua  Mean: 0.00, Samples: 160, Min: 0, Max 0
+
+  0 |    160      0 
+
+CUA 1 nombre clients en espera a cua  Mean: 0.00, Samples: 160, Min: 0, Max 0
+
+  0 |    160      0 
+
+CUA 2 nombre clients en espera a cua  Mean: 0.00, Samples: 160, Min: 0, Max 0
+
+  0 |    160      0 
+
+CUA 0 temps d'espera a cua  Mean: 0.00, Samples: 0, Min: 50000, Max -1
+
+  0 |      0 
+
+CUA 1 temps d'espera a cua  Mean: 0.00, Samples: 0, Min: 50000, Max -1
+
+  0 |      0 
+
+CUA 2 temps d'espera a cua  Mean: 0.00, Samples: 0, Min: 50000, Max -1
+
+  0 |      0 
+
+CUA 0 temps d'espera de servei a caixa  Mean: 73.50, Samples: 2, Min: 4, Max 143
+
+  0 |      0      0      0      0      1      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      0      0      0      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      1      0 
+
+CUA 1 temps d'espera de servei a caixa  Mean: 23.00, Samples: 2, Min: 13, Max 33
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      1      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      1      0 
+
+CUA 2 temps d'espera de servei a caixa  Mean: 14.50, Samples: 2, Min: 8, Max 21
+
+  0 |      0      0      0      0      0      0      0      0      1      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      1      0 
+
+CUA 0 temps total al super segons caixa  Mean: 0.00, Samples: 0, Min: 50000, Max -1
+
+  0 |      0 
+
+CUA 1 temps total al super segons caixa  Mean: 0.00, Samples: 0, Min: 50000, Max -1
+
+  0 |      0 
+
+CUA 2 temps total al super segons caixa  Mean: 0.00, Samples: 0, Min: 50000, Max -1
+
+  0 |      0 
+
+****************  END EXECUTION *****************
+     Time : Tue Sep 30 17:51:43 2025
+*************************************************

@@ -1,0 +1,4 @@
+- [x] Investigate segmentation fault in supermarket simulation
+- [x] Identify root cause: log directory missing causes fopen to fail, ofile=NULL, then ERROR macro uses fprintf(ofile,...) causing segfault
+- [ ] Fix by adding directory creation in main before fopen
+- [ ] Test the fix
