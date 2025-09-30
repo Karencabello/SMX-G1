@@ -1,0 +1,37 @@
+{
+  // Settings for all SMX simulations (C code)
+
+  // Use Makefiles for MinGW to ensure compatibility with Windows
+  "cmake.generator": "MinGW Makefiles",
+
+  // Automatically run CMake configuration when project is opened
+  "cmake.configureOnOpen": true,
+
+  // Place all CMake-generated build files in a separate folder
+  "cmake.buildDirectory": "${workspaceFolder}/build",
+
+  // Root of the source project (where top-level CMakeLists.txt is)
+  "cmake.sourceDirectory": "${workspaceFolder}",
+
+  // Where `make install` will copy built outputs (optional)
+  "cmake.installPrefix": "${workspaceFolder}/install",
+
+  // Pass build type as Debug to enable GDB debugging and symbols
+  "cmake.configureArgs": [
+    "-DCMAKE_BUILD_TYPE=Debug"
+  ],
+
+  // Set compiler paths to avoid CMake Kit selection dialog
+  "cmake.configureSettings": {
+    "CMAKE_C_COMPILER": "C:/MyPrograms/msys64/ucrt64/bin/gcc.exe",
+    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"  // For IntelliSense and static analysis tools
+  },
+
+  // Prefer these CMake generators (auto-selects without prompt)
+  "cmake.preferredGenerators": [
+    "MinGW Makefiles"
+  ],
+ 
+}
+
+

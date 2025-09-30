@@ -1,0 +1,13 @@
+{
+  // Recommended VS Code extensions for all SMX simulations (C code)
+  // These tools help with development, building, debugging, and CMake integration.
+  "recommendations": [
+    "ms-vscode.cpptools",                // C/C++ IntelliSense, debugging, and code browsing
+    "ms-vscode.cmake-tools",             // CMake integration (build, configure, debug)
+    "ms-vscode.cpptools-extension-pack", // Bundle of useful C++ tools
+    "mhutchie.git-graph",                // Visualize Git history (branches, commits)
+    "github.copilot",                    // GitHub Copilot AI coding assistant
+    "github.vscode-github-actions",      // GitHub Actions workflow syntax support
+    "formulahendry.code-runner"          // Run code snippets and files quickly (supports many languages)
+  ]               
+} 

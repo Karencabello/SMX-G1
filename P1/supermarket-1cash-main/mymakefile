@@ -1,0 +1,26 @@
+# Makefile supermercat (1 cashier case)
+# Execution in a c terminal (MSYS2 UCRT64 or cygwin)
+# Open MSYS2 UCRT64 terminal and change to the folder where you have the code. 
+# Run the makefile with the instruction: make -f mymakefile
+# The makefile generates a supermercat.exe
+# Run the programith the instruction: ./supermercat.exe
+
+
+supermercat: ./src/agenda.o ./src/cua.o ./src/sev.o ./src/stochastic.o
+	gcc -o supermercat ./src/agenda.o ./src/cua.o ./src/sev.o ./src/stochastic.o
+
+agenda.o: ./src/agenda.c ./src/agenda.h ./src/sev.h
+	gcc -c ./src/agenda.c
+
+cua.o: ./src/cua.c ./src/cua.h ./src/sev.h ./src/agenda.h
+	gcc -c ./src/cua.c
+
+sev.o: ./src/sev.c ./src/sev.h ./src/cua.h ./src/agenda.h
+	gcc -c ./src/sev.c
+
+# To makesure everything is recompiled eliminate the objective and executable
+# files
+# in the cygwin terminal do: make -f makefile clean
+clean: 
+	rm ./src/*.o 
+	rm ./supermercat
