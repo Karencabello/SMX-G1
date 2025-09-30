@@ -197,7 +197,7 @@ int cua_mes_curta(scua *cues, int ntc){
 #endif
     } 
 #if (DEBUGquinaCua == 1)
-        fprintf(ofile, "Quina cua? Cua %d long %d !!!!!!!!!\n", e.on, e.tar);
+        fprintf(ofile, "Quina cua? Cua %d long %f !!!!!!!!!\n", e.on, e.tar);
 #endif
     return(e.on);
 } // cua_mes_curta

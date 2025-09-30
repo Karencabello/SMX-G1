@@ -20,7 +20,7 @@
 #define RANSEED     56721   // Llavor del generador de números aleatorio // Zero for random start
 
 #define OBRIRTIME      0.0    // temps d'obertura del supermercat
-#define TANCARTIME    100.0  // Temps de tancar el supermercat
+#define TANCARTIME    1000.0  // Temps de tancar el supermercat
 
 #define ARRIVAL       15    // Temps mig entre arribades
 #define SERVICE       60     // Temps mig de servei
@@ -33,11 +33,11 @@
 #define MAXDELHIST     50000  // Dimension of the delay histogram array statistics
 
 // Configuració pel seguiment de l'execució (Debugging), banderas : 0=NO, 1=SI
-#define DEBUGserv      0      // Bandera per fer seguiment del servei
-#define DEBUGagenda    0      // Bandera per fer seguiment de l'agenda
-#define DEBUGcua       0      // Bandera per fer seguiment de la cua
-#define DEBUGquinaCua  0      // Bandera per fer seguiment per decidir la cua on posar clients
-#define DEBUGalea      0      // Visualitza els streams aleatoris, desactivar totes les altres per utilitzar aquesta
+#define DEBUGserv      1      // Bandera per fer seguiment del servei
+#define DEBUGagenda    1      // Bandera per fer seguiment de l'agenda
+#define DEBUGcua       1      // Bandera per fer seguiment de la cua
+#define DEBUGquinaCua  1      // Bandera per fer seguiment per decidir la cua on posar clients
+#define DEBUGalea      1      // Visualitza els streams aleatoris, desactivar totes les altres per utilitzar aquesta
 #define anyDEBUG       (DEBUGserv + DEBUGagenda + DEBUGcua + DEBUGquinaCua + DEBUGalea) 
 
 //--------------------- Constants de programació ---------------------
