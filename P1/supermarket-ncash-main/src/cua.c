@@ -179,7 +179,7 @@ void elim_cues(scua *cues, int ntc){
 // la cua amb menys clients esperant
 int cua_mes_curta(scua *cues, int inici, int final){
     int c;
-    //el_cua e;
+    el_cua e;
     int millor = inici;
     int minlong = long_cua(cues[inici]);
     

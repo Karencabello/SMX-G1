@@ -94,31 +94,57 @@ int main(void) {
                     tant = ta;
                     ta = e.quan;
                     actualitzar_stats_cua(cues, ntc, tant, ta, &sts, MAXQUHIST);
-                    // si la caixa buida passa directament a ser servit
-                    e.on = primer_caixer_buit(cues, ntc);
-                    if (e.on != NA){
-                        cues[e.on].caixa = 1;
-                        t = 1 + expo(SERVICE);                             
+                    // Decideix si el client es ràpid o lent (30% rapids)
+                    int esRapid = (rand() % 100 < 30) ? 1 : 0;
+                    if(esRapid){
+                        //client cua ràpida
+                        e.on = primer_caixer_buit(cues, 0, N_RAPIDS-1);
+                        if (e.on != NA){
+                            cues[e.on].caixa = 1;
+                            t = 1 + expo(SERVICE);
+                            inc_stats(sts.dshist, e.on, (int)round(t), ntc, MAXDELHIST);
+                            e = crea_esdev(SORTIDA, ta+t, e.on);
+                            posa_agenda(ta, e);
+                        }else{
+                            // posar a la cua més curta de les ràpides
+                            c.on = cua_mes_curta(cues, 0, N_RAPIDS-1);
+                            c.tar = ta;
+                            c.tse = 0;
+                            j = posa_cua(&cues[c.on], ta, c);
+                            if(j == 0){
+                                puts("ERROR: cua ràpida massa petita");
+                                exit(0);
+
+                            }
+                        }
+                    }
+                }else{ 
+                        // client a la cua lenta 
+                        e.on = primer_caixer_buit(cues, N_RAPIDS, ntc-1);
+                        if (e.on != NA){
+                            cues[e.on].caixa = 1;
+                            t = 1 + expo(SERVICE);                             
 #if (DEBUGalea == 1)
                         fprintf(ofile, " utilitzat pel servei a %lf cua %d\n", 
                                 t, e.on);
 #endif
-                        inc_stats(sts.dshist, e.on, (int)round(t), ntc, MAXDELHIST);
+                            inc_stats(sts.dshist, e.on, (int)round(t), ntc, MAXDELHIST);
 #if DEBUGserv == 1    
                         fprintf(ofile,"%.4lf TEMPS servei %.4lf: ARRIBADA %.4lf SORTIDA %.4lf\n", ta, t, e.quan,ta+t);
                         fflush(ofile);
 #endif
-                        e = crea_esdev(SORTIDA, ta+t, e.on);
-                        posa_agenda(ta, e);
-                    }else{ // posar element a la cua d'espera
-                        c.on = cua_mes_curta(cues, ntc);                         
-                        c.tar = ta;
-                        c.tse = 0; //??
-                        //c.on = cua_mes_curta(cues, ntc); 
-                        j = posa_cua(&cues[c.on], ta, c);
-                        if(j == 0){
-                            puts("ERROR: cua massa petita");
-                            exit(0);
+                            e = crea_esdev(SORTIDA, ta+t, e.on);
+                            posa_agenda(ta, e);
+                        }else{ // posar element a la cua d'espera
+                            c.on = cua_mes_curta(cues, N_RAPIDS, ntc-1);                         
+                            c.tar = ta;
+                            c.tse = 0; //??
+                            //c.on = cua_mes_curta(cues, ntc); 
+                            j = posa_cua(&cues[c.on], ta, c);
+                            if(j == 0){
+                                puts("ERROR: cua massa petita");
+                                exit(0);
+                            }
                         }
                     }//else
                     // Decidir la seguent arribada
