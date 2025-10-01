@@ -48,6 +48,7 @@
 #define ARRIBADA  'A'
 #define SORTIDA   'S'
 #define TANCAR    'T'
+#define N_RAPIDS 2   // nombre de caixers ràpids (primeres cues)
 
 extern FILE *ofile;              // Fitxer per debuggar
 // Use ERROR when the print out informs of a problem in the program and it must abort but printing statistics before finishing
