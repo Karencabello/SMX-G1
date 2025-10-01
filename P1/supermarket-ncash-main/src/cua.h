@@ -16,7 +16,7 @@ void crea_cues(scua **pcua, int max, int ntc);
 int posa_cua(scua *cua, float ta, el_cua c);
 int treu_cua(scua *cua, float ta, el_cua *c);
 int long_cua(scua cua);
-int cua_mes_curta(scua *cues, int inici, int final);
-int primer_caixer_buit(scua *cues, int inici, int final);
+int cua_mes_curta(scua *cues, int ntc);
+int primer_caixer_buit(scua *cues, int ntc);
 #endif	/* CUA_H */
 

@@ -177,21 +177,24 @@ void elim_cues(scua *cues, int ntc){
 
 // Decideix a quina cua/caixer posar el nou client
 // la cua amb menys clients esperant
-int cua_mes_curta(scua *cues, int inici, int final){
+int cua_mes_curta(scua *cues, int ntc){
     int c;
     el_cua e;
+<<<<<<< HEAD
     int millor = inici;
     int minlong = long_cua(cues[inici]);
+=======
+>>>>>>> parent of 8a5c112 (mitja part)
     
     // En principi la de menys clients és la primera)
-    //e.on  = 0;
-    //e.tar = long_cua(cues[e.on]);
+    e.on  = 0;
+    e.tar = long_cua(cues[e.on]);
     
     // recorre resta de cues per identificar la més curta
-    for(c = inici + 1; c <= final; c++){
-        if (long_cua(cues[c]) < minlong){
-            millor = c;
-            minlong = long_cua(cues[c]);
+    for(c = 0; c < ntc; c++){
+        if (long_cua(cues[c]) < e.tar){
+            e.on = c;
+            e.tar = long_cua(cues[c]);
         }
 #if (DEBUG-quina-cua == 1)
         fprintf(ofile, "Quina cua? Cua %d long %d (minim: cua %d long %d)\n", 
@@ -199,19 +202,19 @@ int cua_mes_curta(scua *cues, int inici, int final){
 #endif
     } 
 #if (DEBUGquinaCua == 1)
-       // fprintf(ofile, "Quina cua? Cua %d long %f !!!!!!!!!\n", e.on, e.tar);
+        fprintf(ofile, "Quina cua? Cua %d long %f !!!!!!!!!\n", e.on, e.tar);
 #endif
-    return millor;
+    return(e.on);
 } // cua_mes_curta
 
-int primer_caixer_buit(scua *cues, int inici, int final){
-    int c = inici;
-    int ret = NA;
+int primer_caixer_buit(scua *cues, int ntc){
+    int c = 0;
+    int ret;
 
-    while(c <= final && cues[c].caixa != 0)
+    while(c < ntc && cues[c].caixa != 0)
         c++;
-    if(c <= final)
-        ret = c;
+    if(c == ntc)
+        ret = NA;
     else
         ret = c;
 #if (DEBUGquinaCua == 1)
