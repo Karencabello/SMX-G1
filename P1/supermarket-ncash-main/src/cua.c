@@ -180,11 +180,6 @@ void elim_cues(scua *cues, int ntc){
 int cua_mes_curta(scua *cues, int ntc){
     int c;
     el_cua e;
-<<<<<<< HEAD
-    int millor = inici;
-    int minlong = long_cua(cues[inici]);
-=======
->>>>>>> parent of 8a5c112 (mitja part)
     
     // En principi la de menys clients és la primera)
     e.on  = 0;
