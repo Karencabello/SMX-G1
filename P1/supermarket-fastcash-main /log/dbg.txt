@@ -1,0 +1,157 @@
+**************** BEGIN EXECUTION *****************
+     Time : Tue Sep 30 17:34:28 2025
+*************************************************
+----------------------------------------------------------
+---------- Configuracio Programa -------------------------
+----------------------------------------------------------
+Random seed, seed chosen   : 56721
+
+Temps obertura supermercat : 0.0
+Temps tancar supermercat   : 100.0
+
+Temps mig entre arribades  : 15
+Temps mig de servei        : 60
+
+Nombre total de caixers    : 2
+-----------------------------------------------------------
+
+--- Traces de Seguiment del programa (0 = NO, 1 = SI) : 0 
+
+
+-----------------------------------------------------------
+----- Resum dels Resultats de la Simulació ----------------
+-----------------------------------------------------------
+Nombre de clients atesos: (total 8 promig    4.0)
+
+  0 |      4      4 
+
+Numbre promig de clients a cua/caixa             :      0.8     0.2
+Temps promig de cua a cada caixa                 :    148.5    24.7
+Temps promig de servei a cada caixa              :     88.5    30.5
+Temps promig al super dels clients de cada caixa :    252.0    54.7
+
+Nombre minim de clients a cua/caixa              :        0       0
+Temps minim de cua a cada caixa                  :       94      18
+Temps minim de servei a cada caixa               :        4       3
+Temps minim al super dels clients de cada caixa  :      220      31
+
+Nombre maxim de clients a la cua/caixa           :        2       2
+Temps maxim de cua a cada caixa                  :      203      28
+Temps maxim de servei a cada caixa               :      143      56
+Temps maxim al super dels clients segons caixa   :      284      85
+
+-----------------------------------------------------------
+------- Totes les Estadístiques calculades ----------------
+-----------------------------------------------------------
+CUA 0 nombre clients en espera a cua  Mean: 0.81, Samples: 367, Min: 0, Max 2
+
+  0 |    147    143     77      0 
+
+CUA 1 nombre clients en espera a cua  Mean: 0.20, Samples: 367, Min: 0, Max 2
+
+  0 |    317     25     25      0 
+
+CUA 0 temps d'espera a cua  Mean: 148.50, Samples: 2, Min: 94, Max 203
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      0      0      0      0      0      0      0      0      0 
+ 90 |      0      0      0      0      1      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      0      0      0      0      0      0      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      0      0      0 
+200 |      0      0      0      1      0 
+
+CUA 1 temps d'espera a cua  Mean: 24.67, Samples: 3, Min: 18, Max 28
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      1      0 
+ 20 |      0      0      0      0      0      0      0      0      2      0 
+
+CUA 0 temps d'espera de servei a caixa  Mean: 88.50, Samples: 4, Min: 4, Max 143
+
+  0 |      0      0      0      0      1      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      1      0      0      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      1      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      1      0 
+
+CUA 1 temps d'espera de servei a caixa  Mean: 30.50, Samples: 4, Min: 3, Max 56
+
+  0 |      0      0      0      1      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      1      0      0      1      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      1      0 
+
+CUA 0 temps total al super segons caixa  Mean: 252.00, Samples: 2, Min: 220, Max 284
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      0      0      0      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      0      0      0      0      0      0      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      0      0      0 
+200 |      0      0      0      0      0      0      0      0      0      0 
+210 |      0      0      0      0      0      0      0      0      0      0 
+220 |      1      0      0      0      0      0      0      0      0      0 
+230 |      0      0      0      0      0      0      0      0      0      0 
+240 |      0      0      0      0      0      0      0      0      0      0 
+250 |      0      0      0      0      0      0      0      0      0      0 
+260 |      0      0      0      0      0      0      0      0      0      0 
+270 |      0      0      0      0      0      0      0      0      0      0 
+280 |      0      0      0      0      1      0 
+
+CUA 1 temps total al super segons caixa  Mean: 54.67, Samples: 3, Min: 31, Max 85
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      1      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      1      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      0      0      0      0      1      0 
+
+****************  END EXECUTION *****************
+     Time : Tue Sep 30 17:34:28 2025
+*************************************************

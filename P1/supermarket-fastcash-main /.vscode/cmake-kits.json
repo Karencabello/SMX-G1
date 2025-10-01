@@ -1,0 +1,13 @@
+[
+  {
+    "comment": "CMake configuration for all SMX simulations (C code)",
+    "name": "SMX Simulations MSYS2 UCRT64 (preconfigured)",
+    "compilers": {
+      "C": "${env:MSYS2_PATH}/gcc.exe"
+    },
+    "preferredGenerator": {
+      "name": "MinGW Makefiles"
+    }
+  }
+]
+ 

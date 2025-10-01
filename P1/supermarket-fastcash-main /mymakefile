@@ -1,0 +1,38 @@
+# Makefile supermercat ncash
+# Execution in terminal (VS code terminal or cygwin terminal): 
+# Enter cygwin/terminal and change to the directory where you have the code. 
+# Put the mymakefile in the same directory
+# Run the makefile with the instruction: make -f mymakefile
+# The makefile generates a supermercat.exe
+# Run the supermercat with the instruction: ./supermercat.exe
+
+# Folders
+SRC_DIR = src
+BUILD_DIR = mybuild
+
+# Files
+SRCS = $(wildcard $(SRC_DIR)/*.c)
+OBJS = $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
+EXE = $(BUILD_DIR)/supermercat
+
+# Default target
+all: $(EXE)
+
+# Link executable
+$(EXE): $(OBJS)
+	@mkdir -p $(BUILD_DIR)
+	gcc -o $@ $(OBJS)
+
+# Compile each .c into .o inside mybuild/
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(BUILD_DIR)
+	gcc -c $< -o $@
+
+# To makesure everything is recompiled eliminate the objective and executable
+# files
+# in the cygwin terminal do: make -f makefile clean
+clean: 
+	rm -rf $(BUILD_DIR)
+
+# Rebuild rule: clean + all
+rebuild: clean all 

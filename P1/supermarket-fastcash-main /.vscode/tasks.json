@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+        // -------------------------------------------------------
+        // Debug Supermarket n-Cashier Case project
+        // -------------------------------------------------------
+            "label": "Build Supermercat n-Cashier case (SMX)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--config",
+                "Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        // -------------------------------------------------------
+        // Run Supermarket 1-Cashier Case project
+        // -------------------------------------------------------        
+        {
+            "label": "Run Supermarket n-Cashier Case project ",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/supermarket-ncash.exe",
+            "args": ["111arg1run", "111arg2run"],
+            "problemMatcher": []
+        }
+    ]
+}
+ 
