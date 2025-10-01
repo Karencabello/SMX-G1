@@ -1,0 +1,85 @@
+**************** BEGIN EXECUTION *****************
+     Time : Wed Oct  1 15:32:21 2025
+*************************************************
+----------------------------------------------------------
+---------- Configuracio Programa -------------------------
+----------------------------------------------------------
+Random seed, seed chosen   : 56721
+
+Temps obertura supermercat : 0.0
+Temps tancar supermercat   : 1000.0
+
+Temps mig entre arribades  : 15
+Temps mig de servei        : 60
+
+Nombre total de caixers    : 5
+-----------------------------------------------------------
+
+--- Traces de Seguiment del programa (0 = NO, 1 = SI) : 5 
+
+Cua 0 (I -1,F -1, L  0): 
+Cua 1 (I -1,F -1, L  0): 
+Cua 2 (I -1,F -1, L  0): 
+Cua 3 (I -1,F -1, L  0): 
+Cua 4 (I -1,F -1, L  0): 
+
+0.0000 Posa AGENDA  0: Agenda ( 0): (O,   0.0000, -1)
+0.0000 Posa AGENDA  1: Agenda ( 1): (T, 1000.0000, -1)(O,   0.0000, -1)
+0.0000 Treu AGENDA  1 (O,   0.0000, -1)Agenda ( 0): (T, 1000.0000, -1)
+Número aleatori: 0.443919 --  utilitzat per la seguent arribada a 12.181681 cua -1
+0.0000 Posa AGENDA  1: Agenda ( 1): (T, 1000.0000, -1)(A,  12.1817, -1)
+0.0000 Treu AGENDA  1 (A,  12.1817, -1)Agenda ( 0): (T, 1000.0000, -1)
+Primer Caixer Buit 0 
+Número aleatori: 0.689480 -- 12.1817 Posa AGENDA  1: Agenda ( 1): (T, 1000.0000, -1)(S,  35.4907,  0)
+Número aleatori: 0.094133 --  utilitzat per la seguent arribada a 47.627403 cua -1 
+12.1817 Posa AGENDA  2: Agenda ( 2): (T, 1000.0000, -1)(A,  47.6274, -1)(S,  35.4907,  0)
+12.1817 Treu AGENDA  2 (S,  35.4907,  0)Agenda ( 1): (T, 1000.0000, -1)(A,  47.6274, -1)
+35.4907 Treu AGENDA  1 (A,  47.6274, -1)Agenda ( 0): (T, 1000.0000, -1)
+Primer Caixer Buit 2 
+Número aleatori: 0.584008 --  utilitzat pel servei a 33.270466 cua 2
+47.6274 TEMPS servei 33.2705: ARRIBADA 47.6274 SORTIDA 80.8979
+47.6274 Posa AGENDA  1: Agenda ( 1): (T, 1000.0000, -1)(S,  80.8979,  2)
+Número aleatori: 0.417676 --  utilitzat per la seguent arribada a 60.723129 cua -1 
+47.6274 Posa AGENDA  2: Agenda ( 2): (T, 1000.0000, -1)(S,  80.8979,  2)(A,  60.7231, -1)
+47.6274 Treu AGENDA  2 (A,  60.7231, -1)Agenda ( 1): (T, 1000.0000, -1)(S,  80.8979,  2)
+Primer Caixer Buit 0 
+Número aleatori: 0.371435 -- 60.7231 Posa AGENDA  2: Agenda ( 2): (T, 1000.0000, -1)(S, 121.1459,  0)(S,  80.8979,  2)
+Número aleatori: 0.715751 --  utilitzat per la seguent arribada a 65.739479 cua -1 
+60.7231 Posa AGENDA  3: Agenda ( 3): (T, 1000.0000, -1)(S, 121.1459,  0)(S,  80.8979,  2)(A,  65.7395, -1)
+60.7231 Treu AGENDA  3 (A,  65.7395, -1)Agenda ( 2): (T, 1000.0000, -1)(S, 121.1459,  0)(S,  80.8979,  2)
+Primer Caixer Buit 3 
+Número aleatori: 0.816040 --  utilitzat pel servei a 13.197510 cua 3
+65.7395 TEMPS servei 13.1975: ARRIBADA 65.7395 SORTIDA 78.9370
+65.7395 Posa AGENDA  3: Agenda ( 3): (T, 1000.0000, -1)(S, 121.1459,  0)(S,  80.8979,  2)(S,  78.9370,  3)
+Número aleatori: 0.185397 --  utilitzat per la seguent arribada a 91.018326 cua -1 
+65.7395 Posa AGENDA  4: Agenda ( 4): (T, 1000.0000, -1)(S, 121.1459,  0)(A,  91.0183, -1)(S,  80.8979,  2)(S,  78.9370,  3)
+65.7395 Treu AGENDA  4 (S,  78.9370,  3)Agenda ( 3): (T, 1000.0000, -1)(S, 121.1459,  0)(A,  91.0183, -1)(S,  80.8979,  2)
+78.9370 Treu AGENDA  3 (S,  80.8979,  2)Agenda ( 2): (T, 1000.0000, -1)(S, 121.1459,  0)(A,  91.0183, -1)
+80.8979 Treu AGENDA  2 (A,  91.0183, -1)Agenda ( 1): (T, 1000.0000, -1)(S, 121.1459,  0)
+Primer Caixer Buit 2 
+Número aleatori: 0.397401 --  utilitzat pel servei a 56.368511 cua 2
+91.0183 TEMPS servei 56.3685: ARRIBADA 91.0183 SORTIDA 147.3868
+91.0183 Posa AGENDA  2: Agenda ( 2): (T, 1000.0000, -1)(S, 147.3868,  2)(S, 121.1459,  0)
+Número aleatori: 0.124666 --  utilitzat per la seguent arribada a 122.250061 cua -1 
+91.0183 Posa AGENDA  3: Agenda ( 3): (T, 1000.0000, -1)(S, 147.3868,  2)(A, 122.2501, -1)(S, 121.1459,  0)
+91.0183 Treu AGENDA  3 (S, 121.1459,  0)Agenda ( 2): (T, 1000.0000, -1)(S, 147.3868,  2)(A, 122.2501, -1)
+121.1459 Treu AGENDA  2 (A, 122.2501, -1)Agenda ( 1): (T, 1000.0000, -1)(S, 147.3868,  2)
+Primer Caixer Buit 3 
+Número aleatori: 0.648820 --  utilitzat pel servei a 26.955990 cua 3
+122.2501 TEMPS servei 26.9560: ARRIBADA 122.2501 SORTIDA 149.2061
+122.2501 Posa AGENDA  2: Agenda ( 2): (T, 1000.0000, -1)(S, 149.2061,  3)(S, 147.3868,  2)
+Número aleatori: 0.719126 --  utilitzat per la seguent arribada a 127.195831 cua -1 
+122.2501 Posa AGENDA  3: Agenda ( 3): (T, 1000.0000, -1)(S, 149.2061,  3)(S, 147.3868,  2)(A, 127.1958, -1)
+122.2501 Treu AGENDA  3 (A, 127.1958, -1)Agenda ( 2): (T, 1000.0000, -1)(S, 149.2061,  3)(S, 147.3868,  2)
+Primer Caixer Buit 4 
+Número aleatori: 0.221957 --  utilitzat pel servei a 91.316238 cua 4
+127.1958 TEMPS servei 91.3162: ARRIBADA 127.1958 SORTIDA 218.5121
+127.1958 Posa AGENDA  3: Agenda ( 3): (T, 1000.0000, -1)(S, 218.5121,  4)(S, 149.2061,  3)(S, 147.3868,  2)
+Número aleatori: 0.435018 --  utilitzat per la seguent arribada a 139.681351 cua -1 
+127.1958 Posa AGENDA  4: Agenda ( 4): (T, 1000.0000, -1)(S, 218.5121,  4)(S, 149.2061,  3)(S, 147.3868,  2)(A, 139.6814, -1)
+127.1958 Treu AGENDA  4 (A, 139.6814, -1)Agenda ( 3): (T, 1000.0000, -1)(S, 218.5121,  4)(S, 149.2061,  3)(S, 147.3868,  2)
+Primer Caixer Buit 5 
+Número aleatori: 0.288417 --  utilitzat pel servei a 75.600784 cua 5
+
+ERROOORRRRRRRRRR
+ERROR: Row 5 greater than max vect dimension 5. Increase vector size.
