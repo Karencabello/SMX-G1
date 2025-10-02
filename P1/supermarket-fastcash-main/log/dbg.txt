@@ -1,5 +1,5 @@
 **************** BEGIN EXECUTION *****************
-     Time : Tue Sep 30 17:34:28 2025
+     Time : Thu Oct  2 18:00:13 2025
 *************************************************
 ----------------------------------------------------------
 ---------- Configuracio Programa -------------------------
@@ -12,76 +12,507 @@ Temps tancar supermercat   : 100.0
 Temps mig entre arribades  : 15
 Temps mig de servei        : 60
 
-Nombre total de caixers    : 2
+Nombre total de caixers    : 5
 -----------------------------------------------------------
 
 --- Traces de Seguiment del programa (0 = NO, 1 = SI) : 0 
 
+Cua 0 (I -1,F -1, L  0): 
+Cua 1 (I -1,F -1, L  0): 
+Cua 2 (I -1,F -1, L  0): 
+Cua 3 (I -1,F -1, L  0): 
+Cua 4 (I -1,F -1, L  0): 
+
+ utilitzat per la seguent arribada a 12.181681 cua -1
+Primer Caixer Buit 0 
+ utilitzat per la seguent arribada a 47.627403 cua -1 
+Primer Caixer Buit 2 
+ utilitzat pel servei a 33.270466 cua 2
+47.6274 TEMPS servei 33.2705: ARRIBADA 47.6274 SORTIDA 80.8979
+ utilitzat per la seguent arribada a 60.723129 cua -1 
+Primer Caixer Buit 0 
+ utilitzat per la seguent arribada a 65.739479 cua -1 
+Primer Caixer Buit 3 
+ utilitzat pel servei a 13.197510 cua 3
+65.7395 TEMPS servei 13.1975: ARRIBADA 65.7395 SORTIDA 78.9370
+ utilitzat per la seguent arribada a 91.018326 cua -1 
+Primer Caixer Buit 2 
+ utilitzat pel servei a 56.368511 cua 2
+91.0183 TEMPS servei 56.3685: ARRIBADA 91.0183 SORTIDA 147.3868
+ utilitzat per la seguent arribada a 122.250061 cua -1 
+Primer Caixer Buit 3 
+ utilitzat pel servei a 26.955990 cua 3
+122.2501 TEMPS servei 26.9560: ARRIBADA 122.2501 SORTIDA 149.2061
+ utilitzat per la seguent arribada a 127.195831 cua -1 
+Primer Caixer Buit 4 
+ utilitzat pel servei a 91.316238 cua 4
+127.1958 TEMPS servei 91.3162: ARRIBADA 127.1958 SORTIDA 218.5121
+ utilitzat per la seguent arribada a 139.681351 cua -1 
+Primer Caixer Buit -1 
+139.6814 POSA CUA 2... pos  0 elem 139.6814 Cua 2 (I  0,F  0, L  1): 139.6814 
+ utilitzat per la seguent arribada a 158.331543 cua -1 
+147.3868 TREU CUA 2... pos  0 139.6814 (long 1) Cua 2 (I -1,F -1, L  0): 
+147.3868 Cua 2 TEMPS total d'espera a la cua 7.7055 (  8)
+ utilitzat pel temps de servei 51.332489 cua 2
+147.3868 TEMPS SERVEI 51.3325: ARRIBADA 139.6814 SORTIDA 198.7193
+Primer Caixer Buit 0 
+ utilitzat per la seguent arribada a 159.300247 cua -1 
+Primer Caixer Buit 3 
+ utilitzat pel servei a 88.736771 cua 3
+159.3002 TEMPS servei 88.7368: ARRIBADA 159.3002 SORTIDA 248.0370
+ utilitzat per la seguent arribada a 176.973541 cua -1 
+Primer Caixer Buit -1 
+176.9735 POSA CUA 2... pos  0 elem 176.9735 Cua 2 (I  0,F  0, L  1): 176.9735 
+ utilitzat per la seguent arribada a 184.729874 cua -1 
+Primer Caixer Buit -1 
+184.7299 POSA CUA 3... pos  0 elem 184.7299 Cua 3 (I  0,F  0, L  1): 184.7299 
+ utilitzat per la seguent arribada a 202.760712 cua -1 
+198.7193 TREU CUA 2... pos  0 176.9735 (long 1) Cua 2 (I -1,F -1, L  0): 
+198.7193 Cua 2 TEMPS total d'espera a la cua 21.7458 ( 22)
+ utilitzat pel temps de servei 16.406649 cua 2
+198.7193 TEMPS SERVEI 16.4066: ARRIBADA 176.9735 SORTIDA 215.1260
+Primer Caixer Buit -1 
+202.7607 POSA CUA 2... pos  0 elem 202.7607 Cua 2 (I  0,F  0, L  1): 202.7607 
+ utilitzat per la seguent arribada a 218.119949 cua -1 
+215.1260 TREU CUA 2... pos  0 202.7607 (long 1) Cua 2 (I -1,F -1, L  0): 
+215.1260 Cua 2 TEMPS total d'espera a la cua 12.3653 ( 12)
+ utilitzat pel temps de servei 28.575176 cua 2
+215.1260 TEMPS SERVEI 28.5752: ARRIBADA 202.7607 SORTIDA 243.7012
+Primer Caixer Buit 1 
+ utilitzat per la seguent arribada a 239.856262 cua -1 
+Primer Caixer Buit 0 
+ utilitzat per la seguent arribada a 243.485840 cua -1 
+Primer Caixer Buit -1 
+243.4858 POSA CUA 0... pos  0 elem 243.4858 Cua 0 (I  0,F  0, L  1): 243.4858 
+ utilitzat per la seguent arribada a 244.210373 cua -1 
+Primer Caixer Buit -1 
+244.2104 POSA CUA 1... pos  0 elem 244.2104 Cua 1 (I  0,F  0, L  1): 244.2104 
+ utilitzat per la seguent arribada a 258.644409 cua -1 
+248.0370 TREU CUA 3... pos  0 184.7299 (long 1) Cua 3 (I -1,F -1, L  0): 
+248.0370 Cua 3 TEMPS total d'espera a la cua 63.3071 ( 63)
+ utilitzat pel temps de servei 23.147417 cua 3
+248.0370 TEMPS SERVEI 23.1474: ARRIBADA 184.7299 SORTIDA 271.1844
+Primer Caixer Buit 2 
+ utilitzat pel servei a 52.560207 cua 2
+258.6444 TEMPS servei 52.5602: ARRIBADA 258.6444 SORTIDA 311.2046
+ utilitzat per la seguent arribada a 261.923218 cua -1 
+Primer Caixer Buit -1 
+261.9232 POSA CUA 0... pos  1 elem 261.9232 Cua 0 (I  0,F  1, L  2): 243.4858 261.9232 
+ utilitzat per la seguent arribada a 264.031281 cua -1 
+Primer Caixer Buit -1 
+264.0313 POSA CUA 1... pos  1 elem 264.0313 Cua 1 (I  0,F  1, L  2): 244.2104 264.0313 
+ utilitzat per la seguent arribada a 268.296967 cua -1 
+Primer Caixer Buit -1 
+268.2970 POSA CUA 0... pos  2 elem 268.2970 Cua 0 (I  0,F  2, L  3): 243.4858 261.9232 268.2970 
+ utilitzat per la seguent arribada a 292.993683 cua -1 
+292.8507 TREU CUA 1... pos  0 244.2104 (long 2) Cua 1 (I  1,F  1, L  1): 264.0313 
+292.8507 Cua 1 TEMPS total d'espera a la cua 48.6403 ( 49)
+ utilitzat pel temps de servei 79.732956 cua 1
+292.8507 TEMPS SERVEI 79.7330: ARRIBADA 244.2104 SORTIDA 372.5837
+Primer Caixer Buit 3 
+ utilitzat pel servei a 189.636154 cua 3
+292.9937 TEMPS servei 189.6362: ARRIBADA 292.9937 SORTIDA 482.6298
+ utilitzat per la seguent arribada a 300.744598 cua -1 
+Primer Caixer Buit 4 
+ utilitzat pel servei a 68.024460 cua 4
+300.7446 TEMPS servei 68.0245: ARRIBADA 300.7446 SORTIDA 368.7690
+ utilitzat per la seguent arribada a 303.155060 cua -1 
+Primer Caixer Buit -1 
+303.1551 POSA CUA 2... pos  0 elem 303.1551 Cua 2 (I  0,F  0, L  1): 303.1551 
+ utilitzat per la seguent arribada a 314.785706 cua -1 
+311.2046 TREU CUA 2... pos  0 303.1551 (long 1) Cua 2 (I -1,F -1, L  0): 
+311.2046 Cua 2 TEMPS total d'espera a la cua 8.0496 (  8)
+ utilitzat pel temps de servei 120.696327 cua 2
+311.2046 TEMPS SERVEI 120.6963: ARRIBADA 303.1551 SORTIDA 431.9009
+Primer Caixer Buit -1 
+314.7857 POSA CUA 2... pos  0 elem 314.7857 Cua 2 (I  0,F  0, L  1): 314.7857 
+ utilitzat per la seguent arribada a 322.271057 cua -1 
+Primer Caixer Buit -1 
+322.2711 POSA CUA 3... pos  0 elem 322.2711 Cua 3 (I  0,F  0, L  1): 322.2711 
+ utilitzat per la seguent arribada a 337.730011 cua -1 
+Primer Caixer Buit -1 
+337.7300 POSA CUA 4... pos  0 elem 337.7300 Cua 4 (I  0,F  0, L  1): 337.7300 
+ utilitzat per la seguent arribada a 341.041260 cua -1 
+Primer Caixer Buit -1 
+341.0413 POSA CUA 2... pos  1 elem 341.0413 Cua 2 (I  0,F  1, L  2): 314.7857 341.0413 
+ utilitzat per la seguent arribada a 357.948242 cua -1 
+Primer Caixer Buit -1 
+357.9482 POSA CUA 3... pos  1 elem 357.9482 Cua 3 (I  0,F  1, L  2): 322.2711 357.9482 
+ utilitzat per la seguent arribada a 360.377808 cua -1 
+Primer Caixer Buit -1 
+360.3778 POSA CUA 1... pos  2 elem 360.3778 Cua 1 (I  1,F  2, L  2): 264.0313 360.3778 
+ utilitzat per la seguent arribada a 367.425751 cua -1 
+Primer Caixer Buit -1 
+367.4258 POSA CUA 1... pos  3 elem 367.4258 Cua 1 (I  1,F  3, L  3): 264.0313 360.3778 367.4258 
+ utilitzat per la seguent arribada a 419.110535 cua -1 
+368.7690 TREU CUA 4... pos  0 337.7300 (long 1) Cua 4 (I -1,F -1, L  0): 
+368.7690 Cua 4 TEMPS total d'espera a la cua 31.0390 ( 31)
+ utilitzat pel temps de servei 9.139638 cua 4
+368.7690 TEMPS SERVEI 9.1396: ARRIBADA 337.7300 SORTIDA 377.9087
+372.5837 TREU CUA 1... pos  1 264.0313 (long 3) Cua 1 (I  2,F  3, L  2): 360.3778 367.4258 
+372.5837 Cua 1 TEMPS total d'espera a la cua 108.5524 (109)
+ utilitzat pel temps de servei 11.065347 cua 1
+372.5837 TEMPS SERVEI 11.0653: ARRIBADA 264.0313 SORTIDA 383.6490
+381.2634 TREU CUA 0... pos  0 243.4858 (long 3) Cua 0 (I  1,F  2, L  2): 261.9232 268.2970 
+381.2634 Cua 0 TEMPS total d'espera a la cua 137.7776 (138)
+ utilitzat pel temps de servei 67.119957 cua 0
+381.2634 TEMPS SERVEI 67.1200: ARRIBADA 243.4858 SORTIDA 448.3834
+383.6490 TREU CUA 1... pos  2 360.3778 (long 2) Cua 1 (I  3,F  3, L  1): 367.4258 
+383.6490 Cua 1 TEMPS total d'espera a la cua 23.2712 ( 23)
+ utilitzat pel temps de servei 57.392582 cua 1
+383.6490 TEMPS SERVEI 57.3926: ARRIBADA 360.3778 SORTIDA 441.0416
+Primer Caixer Buit -1 
+419.1105 POSA CUA 1... pos  4 elem 419.1105 Cua 1 (I  3,F  4, L  2): 367.4258 419.1105 
+ utilitzat per la seguent arribada a 439.883698 cua -1 
+431.9009 TREU CUA 2... pos  0 314.7857 (long 2) Cua 2 (I  1,F  1, L  1): 341.0413 
+431.9009 Cua 2 TEMPS total d'espera a la cua 117.1152 (117)
+ utilitzat pel temps de servei 22.013407 cua 2
+431.9009 TEMPS SERVEI 22.0134: ARRIBADA 314.7857 SORTIDA 453.9143
+Primer Caixer Buit 4 
+ utilitzat pel servei a 8.630358 cua 4
+439.8837 TEMPS servei 8.6304: ARRIBADA 439.8837 SORTIDA 448.5141
+ utilitzat per la seguent arribada a 440.877655 cua -1 
+Primer Caixer Buit -1 
+440.8777 POSA CUA 0... pos  3 elem 440.8777 Cua 0 (I  1,F  3, L  3): 261.9232 268.2970 440.8777 
+ utilitzat per la seguent arribada a 449.749664 cua -1 
+441.0416 TREU CUA 1... pos  3 367.4258 (long 2) Cua 1 (I  4,F  4, L  1): 419.1105 
+441.0416 Cua 1 TEMPS total d'espera a la cua 73.6158 ( 74)
+ utilitzat pel temps de servei 5.998266 cua 1
+441.0416 TEMPS SERVEI 5.9983: ARRIBADA 367.4258 SORTIDA 447.0399
+447.0399 TREU CUA 1... pos  4 419.1105 (long 1) Cua 1 (I -1,F -1, L  0): 
+447.0399 Cua 1 TEMPS total d'espera a la cua 27.9293 ( 28)
+ utilitzat pel temps de servei 28.400478 cua 1
+447.0399 TEMPS SERVEI 28.4005: ARRIBADA 419.1105 SORTIDA 475.4403
+448.3834 TREU CUA 0... pos  1 261.9232 (long 3) Cua 0 (I  2,F  3, L  2): 268.2970 440.8777 
+448.3834 Cua 0 TEMPS total d'espera a la cua 186.4602 (186)
+ utilitzat pel temps de servei 68.439430 cua 0
+448.3834 TEMPS SERVEI 68.4394: ARRIBADA 261.9232 SORTIDA 516.8228
+Primer Caixer Buit 4 
+ utilitzat pel servei a 31.850870 cua 4
+449.7497 TEMPS servei 31.8509: ARRIBADA 449.7497 SORTIDA 481.6005
+ utilitzat per la seguent arribada a 462.805145 cua -1 
+453.9143 TREU CUA 2... pos  1 341.0413 (long 1) Cua 2 (I -1,F -1, L  0): 
+453.9143 Cua 2 TEMPS total d'espera a la cua 112.8731 (113)
+ utilitzat pel temps de servei 18.980530 cua 2
+453.9143 TEMPS SERVEI 18.9805: ARRIBADA 341.0413 SORTIDA 472.8949
+Primer Caixer Buit -1 
+462.8051 POSA CUA 2... pos  0 elem 462.8051 Cua 2 (I  0,F  0, L  1): 462.8051 
+ utilitzat per la seguent arribada a 463.963318 cua -1 
+Primer Caixer Buit -1 
+463.9633 POSA CUA 4... pos  0 elem 463.9633 Cua 4 (I  0,F  0, L  1): 463.9633 
+ utilitzat per la seguent arribada a 466.712677 cua -1 
+Primer Caixer Buit -1 
+466.7127 POSA CUA 1... pos  0 elem 466.7127 Cua 1 (I  0,F  0, L  1): 466.7127 
+ utilitzat per la seguent arribada a 469.292267 cua -1 
+Primer Caixer Buit -1 
+469.2923 POSA CUA 1... pos  1 elem 469.2923 Cua 1 (I  0,F  1, L  2): 466.7127 469.2923 
+ utilitzat per la seguent arribada a 487.817383 cua -1 
+472.8949 TREU CUA 2... pos  0 462.8051 (long 1) Cua 2 (I -1,F -1, L  0): 
+472.8949 Cua 2 TEMPS total d'espera a la cua 10.0897 ( 10)
+ utilitzat pel temps de servei 243.167816 cua 2
+472.8949 TEMPS SERVEI 243.1678: ARRIBADA 462.8051 SORTIDA 716.0627
+475.4403 TREU CUA 1... pos  0 466.7127 (long 2) Cua 1 (I  1,F  1, L  1): 469.2923 
+475.4403 Cua 1 TEMPS total d'espera a la cua 8.7277 (  9)
+ utilitzat pel temps de servei 6.826858 cua 1
+475.4403 TEMPS SERVEI 6.8269: ARRIBADA 466.7127 SORTIDA 482.2672
+481.6005 TREU CUA 4... pos  0 463.9633 (long 1) Cua 4 (I -1,F -1, L  0): 
+481.6005 Cua 4 TEMPS total d'espera a la cua 17.6372 ( 18)
+ utilitzat pel temps de servei 36.820454 cua 4
+481.6005 TEMPS SERVEI 36.8205: ARRIBADA 463.9633 SORTIDA 518.4210
+482.2672 TREU CUA 1... pos  1 469.2923 (long 1) Cua 1 (I -1,F -1, L  0): 
+482.2672 Cua 1 TEMPS total d'espera a la cua 12.9749 ( 13)
+ utilitzat pel temps de servei 40.157124 cua 1
+482.2672 TEMPS SERVEI 40.1571: ARRIBADA 469.2923 SORTIDA 522.4243
+482.6298 TREU CUA 3... pos  0 322.2711 (long 2) Cua 3 (I  1,F  1, L  1): 357.9482 
+482.6298 Cua 3 TEMPS total d'espera a la cua 160.3588 (160)
+ utilitzat pel temps de servei 155.106979 cua 3
+482.6298 TEMPS SERVEI 155.1070: ARRIBADA 322.2711 SORTIDA 637.7368
+Primer Caixer Buit -1 
+487.8174 POSA CUA 2... pos  0 elem 487.8174 Cua 2 (I  0,F  0, L  1): 487.8174 
+ utilitzat per la seguent arribada a 514.078369 cua -1 
+Primer Caixer Buit -1 
+514.0784 POSA CUA 4... pos  0 elem 514.0784 Cua 4 (I  0,F  0, L  1): 514.0784 
+ utilitzat per la seguent arribada a 555.293091 cua -1 
+516.8228 TREU CUA 0... pos  2 268.2970 (long 2) Cua 0 (I  3,F  3, L  1): 440.8777 
+516.8228 Cua 0 TEMPS total d'espera a la cua 248.5258 (249)
+ utilitzat pel temps de servei 3.154991 cua 0
+516.8228 TEMPS SERVEI 3.1550: ARRIBADA 268.2970 SORTIDA 519.9778
+518.4210 TREU CUA 4... pos  0 514.0784 (long 1) Cua 4 (I -1,F -1, L  0): 
+518.4210 Cua 4 TEMPS total d'espera a la cua 4.3426 (  4)
+ utilitzat pel temps de servei 166.986511 cua 4
+518.4210 TEMPS SERVEI 166.9865: ARRIBADA 514.0784 SORTIDA 685.4075
+519.9778 TREU CUA 0... pos  3 440.8777 (long 1) Cua 0 (I -1,F -1, L  0): 
+519.9778 Cua 0 TEMPS total d'espera a la cua 79.1001 ( 79)
+ utilitzat pel temps de servei 6.373839 cua 0
+519.9778 TEMPS SERVEI 6.3738: ARRIBADA 440.8777 SORTIDA 526.3516
+Primer Caixer Buit -1 
+555.2931 POSA CUA 4... pos  0 elem 555.2931 Cua 4 (I  0,F  0, L  1): 555.2931 
+ utilitzat per la seguent arribada a 586.106995 cua -1 
+Primer Caixer Buit -1 
+586.1070 POSA CUA 2... pos  1 elem 586.1070 Cua 2 (I  0,F  1, L  2): 487.8174 586.1070 
+ utilitzat per la seguent arribada a 591.955444 cua -1 
+Primer Caixer Buit -1 
+591.9554 POSA CUA 3... pos  2 elem 591.9554 Cua 3 (I  1,F  2, L  2): 357.9482 591.9554 
+ utilitzat per la seguent arribada a 592.246887 cua -1 
+Primer Caixer Buit 0 
+ utilitzat per la seguent arribada a 592.286743 cua -1 
+Primer Caixer Buit -1 
+592.2867 POSA CUA 4... pos  1 elem 592.2867 Cua 4 (I  0,F  1, L  2): 555.2931 592.2867 
+ utilitzat per la seguent arribada a 620.260010 cua -1 
+Primer Caixer Buit -1 
+620.2600 POSA CUA 2... pos  2 elem 620.2600 Cua 2 (I  0,F  2, L  3): 487.8174 586.1070 620.2600 
+ utilitzat per la seguent arribada a 623.685913 cua -1 
+Primer Caixer Buit 1 
+ utilitzat per la seguent arribada a 646.433289 cua -1 
+637.7368 TREU CUA 3... pos  1 357.9482 (long 2) Cua 3 (I  2,F  2, L  1): 591.9554 
+637.7368 Cua 3 TEMPS total d'espera a la cua 279.7886 (280)
+ utilitzat pel temps de servei 13.461835 cua 3
+637.7368 TEMPS SERVEI 13.4618: ARRIBADA 357.9482 SORTIDA 651.1987
+Primer Caixer Buit -1 
+646.4333 POSA CUA 3... pos  3 elem 646.4333 Cua 3 (I  2,F  3, L  2): 591.9554 646.4333 
+ utilitzat per la seguent arribada a 655.388062 cua -1 
+651.1987 TREU CUA 3... pos  2 591.9554 (long 2) Cua 3 (I  3,F  3, L  1): 646.4333 
+651.1987 Cua 3 TEMPS total d'espera a la cua 59.2432 ( 59)
+ utilitzat pel temps de servei 18.739222 cua 3
+651.1987 TEMPS SERVEI 18.7392: ARRIBADA 591.9554 SORTIDA 669.9379
+Primer Caixer Buit -1 
+655.3881 POSA CUA 3... pos  4 elem 655.3881 Cua 3 (I  3,F  4, L  2): 646.4333 655.3881 
+ utilitzat per la seguent arribada a 673.211670 cua -1 
+669.9379 TREU CUA 3... pos  3 646.4333 (long 2) Cua 3 (I  4,F  4, L  1): 655.3881 
+669.9379 Cua 3 TEMPS total d'espera a la cua 23.5046 ( 24)
+ utilitzat pel temps de servei 182.680817 cua 3
+669.9379 TEMPS SERVEI 182.6808: ARRIBADA 646.4333 SORTIDA 852.6187
+Primer Caixer Buit -1 
+673.2117 POSA CUA 3... pos  5 elem 673.2117 Cua 3 (I  4,F  5, L  2): 655.3881 673.2117 
+ utilitzat per la seguent arribada a 700.770264 cua -1 
+685.4075 TREU CUA 4... pos  0 555.2931 (long 2) Cua 4 (I  1,F  1, L  1): 592.2867 
+685.4075 Cua 4 TEMPS total d'espera a la cua 130.1144 (130)
+ utilitzat pel temps de servei 29.869448 cua 4
+685.4075 TEMPS SERVEI 29.8694: ARRIBADA 555.2931 SORTIDA 715.2769
+Primer Caixer Buit -1 
+700.7703 POSA CUA 4... pos  2 elem 700.7703 Cua 4 (I  1,F  2, L  2): 592.2867 700.7703 
+ utilitzat per la seguent arribada a 751.600830 cua -1 
+715.2769 TREU CUA 4... pos  1 592.2867 (long 2) Cua 4 (I  2,F  2, L  1): 700.7703 
+715.2769 Cua 4 TEMPS total d'espera a la cua 122.9902 (123)
+ utilitzat pel temps de servei 78.324806 cua 4
+715.2769 TEMPS SERVEI 78.3248: ARRIBADA 592.2867 SORTIDA 793.6017
+716.0627 TREU CUA 2... pos  0 487.8174 (long 3) Cua 2 (I  1,F  2, L  2): 586.1070 620.2600 
+716.0627 Cua 2 TEMPS total d'espera a la cua 228.2453 (228)
+ utilitzat pel temps de servei 77.920555 cua 2
+716.0627 TEMPS SERVEI 77.9206: ARRIBADA 487.8174 SORTIDA 793.9832
+Primer Caixer Buit -1 
+751.6008 POSA CUA 4... pos  3 elem 751.6008 Cua 4 (I  2,F  3, L  2): 700.7703 751.6008 
+ utilitzat per la seguent arribada a 764.326660 cua -1 
+Primer Caixer Buit -1 
+764.3267 POSA CUA 2... pos  3 elem 764.3267 Cua 2 (I  1,F  3, L  3): 586.1070 620.2600 764.3267 
+ utilitzat per la seguent arribada a 768.134155 cua -1 
+Primer Caixer Buit -1 
+768.1342 POSA CUA 3... pos  6 elem 768.1342 Cua 3 (I  4,F  6, L  3): 655.3881 673.2117 768.1342 
+ utilitzat per la seguent arribada a 772.182312 cua -1 
+Primer Caixer Buit -1 
+772.1823 POSA CUA 4... pos  4 elem 772.1823 Cua 4 (I  2,F  4, L  3): 700.7703 751.6008 772.1823 
+ utilitzat per la seguent arribada a 806.219666 cua -1 
+793.6017 TREU CUA 4... pos  2 700.7703 (long 3) Cua 4 (I  3,F  4, L  2): 751.6008 772.1823 
+793.6017 Cua 4 TEMPS total d'espera a la cua 92.8315 ( 93)
+ utilitzat pel temps de servei 12.008497 cua 4
+793.6017 TEMPS SERVEI 12.0085: ARRIBADA 700.7703 SORTIDA 805.6102
+793.9832 TREU CUA 2... pos  1 586.1070 (long 3) Cua 2 (I  2,F  3, L  2): 620.2600 764.3267 
+793.9832 Cua 2 TEMPS total d'espera a la cua 207.8762 (208)
+ utilitzat pel temps de servei 23.411669 cua 2
+793.9832 TEMPS SERVEI 23.4117: ARRIBADA 586.1070 SORTIDA 817.3949
+805.6102 TREU CUA 4... pos  3 751.6008 (long 2) Cua 4 (I  4,F  4, L  1): 772.1823 
+805.6102 Cua 4 TEMPS total d'espera a la cua 54.0094 ( 54)
+ utilitzat pel temps de servei 75.475525 cua 4
+805.6102 TEMPS SERVEI 75.4755: ARRIBADA 751.6008 SORTIDA 881.0858
+Primer Caixer Buit -1 
+806.2197 POSA CUA 4... pos  5 elem 806.2197 Cua 4 (I  4,F  5, L  2): 772.1823 806.2197 
+ utilitzat per la seguent arribada a 817.587708 cua -1 
+817.3949 TREU CUA 2... pos  2 620.2600 (long 2) Cua 2 (I  3,F  3, L  1): 764.3267 
+817.3949 Cua 2 TEMPS total d'espera a la cua 197.1349 (197)
+ utilitzat pel temps de servei 12.721794 cua 2
+817.3949 TEMPS SERVEI 12.7218: ARRIBADA 620.2600 SORTIDA 830.1167
+Primer Caixer Buit -1 
+817.5877 POSA CUA 2... pos  4 elem 817.5877 Cua 2 (I  3,F  4, L  2): 764.3267 817.5877 
+ utilitzat per la seguent arribada a 825.889465 cua -1 
+Primer Caixer Buit 0 
+ utilitzat per la seguent arribada a 854.886536 cua -1 
+830.1167 TREU CUA 2... pos  3 764.3267 (long 2) Cua 2 (I  4,F  4, L  1): 817.5877 
+830.1167 Cua 2 TEMPS total d'espera a la cua 65.7900 ( 66)
+ utilitzat pel temps de servei 9.961598 cua 2
+830.1167 TEMPS SERVEI 9.9616: ARRIBADA 764.3267 SORTIDA 840.0783
+840.0783 TREU CUA 2... pos  4 817.5877 (long 1) Cua 2 (I -1,F -1, L  0): 
+840.0783 Cua 2 TEMPS total d'espera a la cua 22.4906 ( 22)
+ utilitzat pel temps de servei 103.733330 cua 2
+840.0783 TEMPS SERVEI 103.7333: ARRIBADA 817.5877 SORTIDA 943.8116
+852.6187 TREU CUA 3... pos  4 655.3881 (long 3) Cua 3 (I  5,F  6, L  2): 673.2117 768.1342 
+852.6187 Cua 3 TEMPS total d'espera a la cua 197.2306 (197)
+ utilitzat pel temps de servei 165.868301 cua 3
+852.6187 TEMPS SERVEI 165.8683: ARRIBADA 655.3881 SORTIDA 1018.4869
+Primer Caixer Buit 1 
+ utilitzat per la seguent arribada a 860.967346 cua -1 
+Primer Caixer Buit -1 
+860.9673 POSA CUA 2... pos  0 elem 860.9673 Cua 2 (I  0,F  0, L  1): 860.9673 
+ utilitzat per la seguent arribada a 882.954895 cua -1 
+881.0858 TREU CUA 4... pos  4 772.1823 (long 2) Cua 4 (I  5,F  5, L  1): 806.2197 
+881.0858 Cua 4 TEMPS total d'espera a la cua 108.9034 (109)
+ utilitzat pel temps de servei 44.482933 cua 4
+881.0858 TEMPS SERVEI 44.4829: ARRIBADA 772.1823 SORTIDA 925.5687
+Primer Caixer Buit -1 
+882.9549 POSA CUA 0... pos  0 elem 882.9549 Cua 0 (I  0,F  0, L  1): 882.9549 
+ utilitzat per la seguent arribada a 884.239868 cua -1 
+Primer Caixer Buit -1 
+884.2399 POSA CUA 2... pos  1 elem 884.2399 Cua 2 (I  0,F  1, L  2): 860.9673 884.2399 
+ utilitzat per la seguent arribada a 894.527649 cua -1 
+887.2477 TREU CUA 0... pos  0 882.9549 (long 1) Cua 0 (I -1,F -1, L  0): 
+887.2477 Cua 0 TEMPS total d'espera a la cua 4.2928 (  4)
+ utilitzat pel temps de servei 249.514847 cua 0
+887.2477 TEMPS SERVEI 249.5148: ARRIBADA 882.9549 SORTIDA 1136.7626
+Primer Caixer Buit -1 
+894.5276 POSA CUA 4... pos  6 elem 894.5276 Cua 4 (I  5,F  6, L  2): 806.2197 894.5276 
+ utilitzat per la seguent arribada a 922.140503 cua -1 
+Primer Caixer Buit -1 
+922.1405 POSA CUA 2... pos  2 elem 922.1405 Cua 2 (I  0,F  2, L  3): 860.9673 884.2399 922.1405 
+ utilitzat per la seguent arribada a 936.900146 cua -1 
+925.5687 TREU CUA 4... pos  5 806.2197 (long 2) Cua 4 (I  6,F  6, L  1): 894.5276 
+925.5687 Cua 4 TEMPS total d'espera a la cua 119.3490 (119)
+ utilitzat pel temps de servei 12.125344 cua 4
+925.5687 TEMPS SERVEI 12.1253: ARRIBADA 806.2197 SORTIDA 937.6940
+Primer Caixer Buit 1 
+ utilitzat per la seguent arribada a 937.936584 cua -1 
+937.6940 TREU CUA 4... pos  6 894.5276 (long 1) Cua 4 (I -1,F -1, L  0): 
+937.6940 Cua 4 TEMPS total d'espera a la cua 43.1664 ( 43)
+ utilitzat pel temps de servei 6.997639 cua 4
+937.6940 TEMPS SERVEI 6.9976: ARRIBADA 894.5276 SORTIDA 944.6917
+Primer Caixer Buit -1 
+937.9366 POSA CUA 4... pos  0 elem 937.9366 Cua 4 (I  0,F  0, L  1): 937.9366 
+ utilitzat per la seguent arribada a 937.974548 cua -1 
+Primer Caixer Buit -1 
+937.9745 POSA CUA 4... pos  1 elem 937.9745 Cua 4 (I  0,F  1, L  2): 937.9366 937.9745 
+ utilitzat per la seguent arribada a 946.359009 cua -1 
+943.8116 TREU CUA 2... pos  0 860.9673 (long 3) Cua 2 (I  1,F  2, L  2): 884.2399 922.1405 
+943.8116 Cua 2 TEMPS total d'espera a la cua 82.8443 ( 83)
+ utilitzat pel temps de servei 82.963257 cua 2
+943.8116 TEMPS SERVEI 82.9633: ARRIBADA 860.9673 SORTIDA 1026.7749
+944.6917 TREU CUA 4... pos  0 937.9366 (long 2) Cua 4 (I  1,F  1, L  1): 937.9745 
+944.6917 Cua 4 TEMPS total d'espera a la cua 6.7551 (  7)
+ utilitzat pel temps de servei 25.887312 cua 4
+944.6917 TEMPS SERVEI 25.8873: ARRIBADA 937.9366 SORTIDA 970.5790
+Primer Caixer Buit -1 
+946.3590 POSA CUA 0... pos  0 elem 946.3590 Cua 0 (I  0,F  0, L  1): 946.3590 
+ utilitzat per la seguent arribada a 948.563477 cua -1 
+Primer Caixer Buit -1 
+948.5635 POSA CUA 1... pos  0 elem 948.5635 Cua 1 (I  0,F  0, L  1): 948.5635 
+ utilitzat per la seguent arribada a 963.570984 cua -1 
+Primer Caixer Buit -1 
+963.5710 POSA CUA 4... pos  2 elem 963.5710 Cua 4 (I  1,F  2, L  2): 937.9745 963.5710 
+ utilitzat per la seguent arribada a 981.414307 cua -1 
+970.5790 TREU CUA 4... pos  1 937.9745 (long 2) Cua 4 (I  2,F  2, L  1): 963.5710 
+970.5790 Cua 4 TEMPS total d'espera a la cua 32.6044 ( 33)
+ utilitzat pel temps de servei 68.348282 cua 4
+970.5790 TEMPS SERVEI 68.3483: ARRIBADA 937.9745 SORTIDA 1038.9272
+Primer Caixer Buit -1 
+981.4143 POSA CUA 4... pos  3 elem 981.4143 Cua 4 (I  2,F  3, L  2): 963.5710 981.4143 
+ utilitzat per la seguent arribada a 983.403015 cua -1 
+Primer Caixer Buit -1 
+983.4030 POSA CUA 2... pos  3 elem 983.4030 Cua 2 (I  1,F  3, L  3): 884.2399 922.1405 983.4030 
+ utilitzat per la seguent arribada a 984.259033 cua -1 
+Primer Caixer Buit -1 
+984.2590 POSA CUA 3... pos  7 elem 984.2590 Cua 3 (I  5,F  7, L  3): 673.2117 768.1342 984.2590 
+ utilitzat per la seguent arribada a 996.821350 cua -1 
+Primer Caixer Buit -1 
+996.8214 POSA CUA 4... pos  4 elem 996.8214 Cua 4 (I  2,F  4, L  3): 963.5710 981.4143 996.8214 
+ utilitzat per la seguent arribada a 1006.966431 cua -1 
+1005.6702 TREU CUA 1... pos  0 948.5635 (long 1) Cua 1 (I -1,F -1, L  0): 
+1005.6702 Cua 1 TEMPS total d'espera a la cua 57.1067 ( 57)
+ utilitzat pel temps de servei 4.149010 cua 1
+1005.6702 TEMPS SERVEI 4.1490: ARRIBADA 948.5635 SORTIDA 1009.8192
+1018.4869 TREU CUA 3... pos  5 673.2117 (long 3) Cua 3 (I  6,F  7, L  2): 768.1342 984.2590 
+1018.4869 Cua 3 TEMPS total d'espera a la cua 345.2753 (345)
+ utilitzat pel temps de servei 26.143452 cua 3
+1018.4869 TEMPS SERVEI 26.1435: ARRIBADA 673.2117 SORTIDA 1044.6304
+1026.7749 TREU CUA 2... pos  1 884.2399 (long 3) Cua 2 (I  2,F  3, L  2): 922.1405 983.4030 
+1026.7749 Cua 2 TEMPS total d'espera a la cua 142.5350 (143)
+ utilitzat pel temps de servei 56.182465 cua 2
+1026.7749 TEMPS SERVEI 56.1825: ARRIBADA 884.2399 SORTIDA 1082.9574
+1038.9272 TREU CUA 4... pos  2 963.5710 (long 3) Cua 4 (I  3,F  4, L  2): 981.4143 996.8214 
+1038.9272 Cua 4 TEMPS total d'espera a la cua 75.3563 ( 75)
+ utilitzat pel temps de servei 9.533046 cua 4
+1038.9272 TEMPS SERVEI 9.5330: ARRIBADA 963.5710 SORTIDA 1048.4603
+1044.6304 TREU CUA 3... pos  6 768.1342 (long 2) Cua 3 (I  7,F  7, L  1): 984.2590 
+1044.6304 Cua 3 TEMPS total d'espera a la cua 276.4962 (276)
+ utilitzat pel temps de servei 4.697369 cua 3
+1044.6304 TEMPS SERVEI 4.6974: ARRIBADA 768.1342 SORTIDA 1049.3278
+1048.4603 TREU CUA 4... pos  3 981.4143 (long 2) Cua 4 (I  4,F  4, L  1): 996.8214 
+1048.4603 Cua 4 TEMPS total d'espera a la cua 67.0460 ( 67)
+ utilitzat pel temps de servei 34.621880 cua 4
+1048.4603 TEMPS SERVEI 34.6219: ARRIBADA 981.4143 SORTIDA 1083.0822
+1049.3278 TREU CUA 3... pos  7 984.2590 (long 1) Cua 3 (I -1,F -1, L  0): 
+1049.3278 Cua 3 TEMPS total d'espera a la cua 65.0687 ( 65)
+ utilitzat pel temps de servei 13.597184 cua 3
+1049.3278 TEMPS SERVEI 13.5972: ARRIBADA 984.2590 SORTIDA 1062.9249
+1082.9574 TREU CUA 2... pos  2 922.1405 (long 2) Cua 2 (I  3,F  3, L  1): 983.4030 
+1082.9574 Cua 2 TEMPS total d'espera a la cua 160.8169 (161)
+ utilitzat pel temps de servei 123.966339 cua 2
+1082.9574 TEMPS SERVEI 123.9663: ARRIBADA 922.1405 SORTIDA 1206.9237
+1083.0822 TREU CUA 4... pos  4 996.8214 (long 1) Cua 4 (I -1,F -1, L  0): 
+1083.0822 Cua 4 TEMPS total d'espera a la cua 86.2608 ( 86)
+ utilitzat pel temps de servei 9.933225 cua 4
+1083.0822 TEMPS SERVEI 9.9332: ARRIBADA 996.8214 SORTIDA 1093.0154
+1136.7626 TREU CUA 0... pos  0 946.3590 (long 1) Cua 0 (I -1,F -1, L  0): 
+1136.7626 Cua 0 TEMPS total d'espera a la cua 190.4036 (190)
+ utilitzat pel temps de servei 216.724289 cua 0
+1136.7626 TEMPS SERVEI 216.7243: ARRIBADA 946.3590 SORTIDA 1353.4868
+1206.9237 TREU CUA 2... pos  3 983.4030 (long 1) Cua 2 (I -1,F -1, L  0): 
+1206.9237 Cua 2 TEMPS total d'espera a la cua 223.5207 (224)
+ utilitzat pel temps de servei 64.862900 cua 2
+1206.9237 TEMPS SERVEI 64.8629: ARRIBADA 983.4030 SORTIDA 1271.7866
 
 -----------------------------------------------------------
 ----- Resum dels Resultats de la Simulació ----------------
 -----------------------------------------------------------
-Nombre de clients atesos: (total 8 promig    4.0)
+Nombre de clients atesos: (total 75 promig   15.0)
 
-  0 |      4      4 
+  0 |     12     12     19     13     19 
 
-Numbre promig de clients a cua/caixa             :      0.8     0.2
-Temps promig de cua a cada caixa                 :    148.5    24.7
-Temps promig de servei a cada caixa              :     88.5    30.5
-Temps promig al super dels clients de cada caixa :    252.0    54.7
+Numbre promig de clients a cua/caixa             :      0.6     0.3     1.2     1.1     0.7
+Temps promig de cua a cada caixa                 :    141.0    45.2   101.4   163.2    66.1
+Temps promig de servei a cada caixa              :     89.4    37.3    63.1    71.0    43.2
+Temps promig al super dels clients de cada caixa :    243.0    74.4   167.4   230.2   107.4
 
-Nombre minim de clients a cua/caixa              :        0       0
-Temps minim de cua a cada caixa                  :       94      18
-Temps minim de servei a cada caixa               :        4       3
-Temps minim al super dels clients de cada caixa  :      220      31
+Nombre minim de clients a cua/caixa              :        0       0       0       0       0
+Temps minim de cua a cada caixa                  :        4       9       8      24       4
+Temps minim de servei a cada caixa               :        3       4      10       5       7
+Temps minim al super dels clients de cada caixa  :       85      16      38      78      33
 
-Nombre maxim de clients a la cua/caixa           :        2       2
-Temps maxim de cua a cada caixa                  :      203      28
-Temps maxim de servei a cada caixa               :      143      56
-Temps maxim al super dels clients segons caixa   :      284      85
+Nombre maxim de clients a la cua/caixa           :        3       3       3       3       3
+Temps maxim de cua a cada caixa                  :      249     109     228     345     130
+Temps maxim de servei a cada caixa               :      250      80     243     190     167
+Temps maxim al super dels clients segons caixa   :      407     128     306     371     201
 
 -----------------------------------------------------------
 ------- Totes les Estadístiques calculades ----------------
 -----------------------------------------------------------
-CUA 0 nombre clients en espera a cua  Mean: 0.81, Samples: 367, Min: 0, Max 2
+CUA 0 nombre clients en espera a cua  Mean: 0.63, Samples: 1353, Min: 0, Max 3
 
-  0 |    147    143     77      0 
+  0 |    882    216    134    121      0 
 
-CUA 1 nombre clients en espera a cua  Mean: 0.20, Samples: 367, Min: 0, Max 2
+CUA 1 nombre clients en espera a cua  Mean: 0.27, Samples: 1353, Min: 0, Max 3
 
-  0 |    317     25     25      0 
+  0 |   1077    197     74      5      0 
 
-CUA 0 temps d'espera a cua  Mean: 148.50, Samples: 2, Min: 94, Max 203
+CUA 2 nombre clients en espera a cua  Mean: 1.20, Samples: 1353, Min: 0, Max 3
 
-  0 |      0      0      0      0      0      0      0      0      0      0 
- 10 |      0      0      0      0      0      0      0      0      0      0 
- 20 |      0      0      0      0      0      0      0      0      0      0 
- 30 |      0      0      0      0      0      0      0      0      0      0 
- 40 |      0      0      0      0      0      0      0      0      0      0 
- 50 |      0      0      0      0      0      0      0      0      0      0 
- 60 |      0      0      0      0      0      0      0      0      0      0 
- 70 |      0      0      0      0      0      0      0      0      0      0 
- 80 |      0      0      0      0      0      0      0      0      0      0 
- 90 |      0      0      0      0      1      0      0      0      0      0 
-100 |      0      0      0      0      0      0      0      0      0      0 
-110 |      0      0      0      0      0      0      0      0      0      0 
-120 |      0      0      0      0      0      0      0      0      0      0 
-130 |      0      0      0      0      0      0      0      0      0      0 
-140 |      0      0      0      0      0      0      0      0      0      0 
-150 |      0      0      0      0      0      0      0      0      0      0 
-160 |      0      0      0      0      0      0      0      0      0      0 
-170 |      0      0      0      0      0      0      0      0      0      0 
-180 |      0      0      0      0      0      0      0      0      0      0 
-190 |      0      0      0      0      0      0      0      0      0      0 
-200 |      0      0      0      1      0 
+  0 |    454    367    343    189      0 
 
-CUA 1 temps d'espera a cua  Mean: 24.67, Samples: 3, Min: 18, Max 28
+CUA 3 nombre clients en espera a cua  Mean: 1.09, Samples: 1353, Min: 0, Max 3
 
-  0 |      0      0      0      0      0      0      0      0      0      0 
- 10 |      0      0      0      0      0      0      0      0      1      0 
- 20 |      0      0      0      0      0      0      0      0      2      0 
+  0 |    562    230    443    118      0 
 
-CUA 0 temps d'espera de servei a caixa  Mean: 88.50, Samples: 4, Min: 4, Max 143
+CUA 4 nombre clients en espera a cua  Mean: 0.73, Samples: 1353, Min: 0, Max 3
+
+  0 |    772    232    286     63      0 
+
+CUA 0 temps d'espera a cua  Mean: 141.00, Samples: 6, Min: 4, Max 249
 
   0 |      0      0      0      0      1      0      0      0      0      0 
  10 |      0      0      0      0      0      0      0      0      0      0 
@@ -90,39 +521,178 @@ CUA 0 temps d'espera de servei a caixa  Mean: 88.50, Samples: 4, Min: 4, Max 143
  40 |      0      0      0      0      0      0      0      0      0      0 
  50 |      0      0      0      0      0      0      0      0      0      0 
  60 |      0      0      0      0      0      0      0      0      0      0 
- 70 |      0      0      0      0      0      0      0      0      0      0 
- 80 |      0      1      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      1 
+ 80 |      0      0      0      0      0      0      0      0      0      0 
  90 |      0      0      0      0      0      0      0      0      0      0 
 100 |      0      0      0      0      0      0      0      0      0      0 
 110 |      0      0      0      0      0      0      0      0      0      0 
-120 |      0      0      0      0      0      0      1      0      0      0 
-130 |      0      0      0      0      0      0      0      0      0      0 
-140 |      0      0      0      1      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      1      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      0      0      0      0      0      0      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      1      0      0      0 
+190 |      1      0      0      0      0      0      0      0      0      0 
+200 |      0      0      0      0      0      0      0      0      0      0 
+210 |      0      0      0      0      0      0      0      0      0      0 
+220 |      0      0      0      0      0      0      0      0      0      0 
+230 |      0      0      0      0      0      0      0      0      0      0 
+240 |      0      0      0      0      0      0      0      0      0      1 
+250 |      0 
 
-CUA 1 temps d'espera de servei a caixa  Mean: 30.50, Samples: 4, Min: 3, Max 56
+CUA 1 temps d'espera a cua  Mean: 45.25, Samples: 8, Min: 9, Max 109
 
-  0 |      0      0      0      1      0      0      0      0      0      0 
- 10 |      0      0      0      0      0      0      0      0      0      0 
- 20 |      0      0      0      0      0      0      0      0      0      0 
- 30 |      1      0      0      1      0      0      0      0      0      0 
- 40 |      0      0      0      0      0      0      0      0      0      0 
- 50 |      0      0      0      0      0      0      1      0 
+  0 |      0      0      0      0      0      0      0      0      0      1 
+ 10 |      0      0      0      1      0      0      0      0      0      0 
+ 20 |      0      0      0      1      0      0      0      0      1      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      1 
+ 50 |      0      0      0      0      0      0      0      1      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      1      0      0      0      0      0 
+ 80 |      0      0      0      0      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      1 
+110 |      0 
 
-CUA 0 temps total al super segons caixa  Mean: 252.00, Samples: 2, Min: 220, Max 284
+CUA 2 temps d'espera a cua  Mean: 101.38, Samples: 16, Min: 8, Max 228
 
-  0 |      0      0      0      0      0      0      0      0      0      0 
- 10 |      0      0      0      0      0      0      0      0      0      0 
- 20 |      0      0      0      0      0      0      0      0      0      0 
+  0 |      0      0      0      0      0      0      0      0      2      0 
+ 10 |      1      0      1      0      0      0      0      0      0      0 
+ 20 |      0      0      2      0      0      0      0      0      0      0 
  30 |      0      0      0      0      0      0      0      0      0      0 
  40 |      0      0      0      0      0      0      0      0      0      0 
  50 |      0      0      0      0      0      0      0      0      0      0 
- 60 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      1      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      0      0      1      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      1      0      0      0      1      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      1      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      1      0      0      0      0      0      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      1      0      0 
+200 |      0      0      0      0      0      0      0      0      1      0 
+210 |      0      0      0      0      0      0      0      0      0      0 
+220 |      0      0      0      0      1      0      0      0      1      0 
+
+CUA 3 temps d'espera a cua  Mean: 163.22, Samples: 9, Min: 24, Max 345
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      1      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      1 
+ 60 |      0      0      0      1      0      1      0      0      0      0 
  70 |      0      0      0      0      0      0      0      0      0      0 
  80 |      0      0      0      0      0      0      0      0      0      0 
  90 |      0      0      0      0      0      0      0      0      0      0 
 100 |      0      0      0      0      0      0      0      0      0      0 
 110 |      0      0      0      0      0      0      0      0      0      0 
 120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      1      0      0      0      0      0      0      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      1      0      0 
+200 |      0      0      0      0      0      0      0      0      0      0 
+210 |      0      0      0      0      0      0      0      0      0      0 
+220 |      0      0      0      0      0      0      0      0      0      0 
+230 |      0      0      0      0      0      0      0      0      0      0 
+240 |      0      0      0      0      0      0      0      0      0      0 
+250 |      0      0      0      0      0      0      0      0      0      0 
+260 |      0      0      0      0      0      0      0      0      0      0 
+270 |      0      0      0      0      0      0      1      0      0      0 
+280 |      1      0      0      0      0      0      0      0      0      0 
+290 |      0      0      0      0      0      0      0      0      0      0 
+300 |      0      0      0      0      0      0      0      0      0      0 
+310 |      0      0      0      0      0      0      0      0      0      0 
+320 |      0      0      0      0      0      0      0      0      0      0 
+330 |      0      0      0      0      0      0      0      0      0      0 
+340 |      0      0      0      0      0      1      0 
+
+CUA 4 temps d'espera a cua  Mean: 66.13, Samples: 15, Min: 4, Max 130
+
+  0 |      0      0      0      0      1      0      0      1      0      0 
+ 10 |      0      0      0      0      0      0      0      0      1      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      1      0      1      0      0      0      0      0      0 
+ 40 |      0      0      0      1      0      0      0      0      0      0 
+ 50 |      0      0      0      0      1      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      1      0      0 
+ 70 |      0      0      0      0      0      1      0      0      0      0 
+ 80 |      0      0      0      0      0      0      1      0      0      0 
+ 90 |      0      0      0      1      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      1 
+110 |      0      0      0      0      0      0      0      0      0      1 
+120 |      0      0      0      1      0      0      0      0      0      0 
+130 |      1      0 
+
+CUA 0 temps d'espera de servei a caixa  Mean: 89.42, Samples: 12, Min: 3, Max 250
+
+  0 |      0      0      0      1      0      0      1      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      1      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      1      1      0      0      0      0      1      1      1      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      0      0      0      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      1      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      1      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      0      0      0      0      0      0      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      0      0      0 
+200 |      0      0      0      0      0      0      0      0      0      0 
+210 |      0      0      0      0      0      0      0      1      0      0 
+220 |      0      0      0      0      0      0      0      0      0      0 
+230 |      0      0      0      0      0      0      0      0      0      0 
+240 |      0      0      0      0      0      0      0      0      0      0 
+250 |      1      0 
+
+CUA 1 temps d'espera de servei a caixa  Mean: 37.33, Samples: 12, Min: 4, Max 80
+
+  0 |      0      0      0      0      1      0      1      1      0      0 
+ 10 |      0      1      0      0      1      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      1      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      1      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      2      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      1 
+ 70 |      0      0      0      0      0      1      0      0      0      0 
+ 80 |      1      0 
+
+CUA 2 temps d'espera de servei a caixa  Mean: 63.11, Samples: 19, Min: 10, Max 243
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      1      0      0      1      0      0      1      0      0      1 
+ 20 |      0      0      1      1      0      0      0      0      0      1 
+ 30 |      0      0      0      1      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      1      0      1      0      0      2      0      0      0 
+ 60 |      0      0      0      0      0      1      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      1      0 
+ 80 |      0      0      0      1      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      1      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      1      0      0      1      0      0      0      0      0 
 130 |      0      0      0      0      0      0      0      0      0      0 
 140 |      0      0      0      0      0      0      0      0      0      0 
 150 |      0      0      0      0      0      0      0      0      0      0 
@@ -132,26 +702,212 @@ CUA 0 temps total al super segons caixa  Mean: 252.00, Samples: 2, Min: 220, Max
 190 |      0      0      0      0      0      0      0      0      0      0 
 200 |      0      0      0      0      0      0      0      0      0      0 
 210 |      0      0      0      0      0      0      0      0      0      0 
-220 |      1      0      0      0      0      0      0      0      0      0 
+220 |      0      0      0      0      0      0      0      0      0      0 
+230 |      0      0      0      0      0      0      0      0      0      0 
+240 |      0      0      0      1      0 
+
+CUA 3 temps d'espera de servei a caixa  Mean: 71.00, Samples: 13, Min: 5, Max 190
+
+  0 |      0      0      0      0      0      1      0      0      0      0 
+ 10 |      0      0      0      2      1      0      0      0      0      1 
+ 20 |      0      0      0      1      0      0      1      1      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      0      0      0      0      0      0      0      0      1 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      1      0      0      0      0 
+160 |      0      0      0      0      0      0      1      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      1      0      0      0      0      0      0 
+190 |      1      0 
+
+CUA 4 temps d'espera de servei a caixa  Mean: 43.16, Samples: 19, Min: 7, Max 167
+
+  0 |      0      0      0      0      0      0      0      1      0      2 
+ 10 |      2      0      2      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      1      0      0      0 
+ 30 |      1      0      1      0      0      1      0      1      0      0 
+ 40 |      0      0      0      0      1      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      2      0 
+ 70 |      0      0      0      0      0      1      0      0      1      0 
+ 80 |      0      0      0      0      0      0      0      0      0      0 
+ 90 |      0      1      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      0      0      0      0      0      0      1      0 
+
+CUA 0 temps total al super segons caixa  Mean: 243.00, Samples: 6, Min: 85, Max 407
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      0      0      0      0      0      1      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      0      0      0      0      0      0      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      0      0      0 
+200 |      0      0      0      0      0      1      0      0      0      0 
+210 |      0      0      0      0      0      0      0      0      0      0 
+220 |      0      0      0      0      0      0      0      0      0      0 
+230 |      0      0      0      0      0      0      0      0      0      0 
+240 |      0      0      0      0      0      0      0      0      0      0 
+250 |      0      0      1      0      1      1      0      0      0      0 
+260 |      0      0      0      0      0      0      0      0      0      0 
+270 |      0      0      0      0      0      0      0      0      0      0 
+280 |      0      0      0      0      0      0      0      0      0      0 
+290 |      0      0      0      0      0      0      0      0      0      0 
+300 |      0      0      0      0      0      0      0      0      0      0 
+310 |      0      0      0      0      0      0      0      0      0      0 
+320 |      0      0      0      0      0      0      0      0      0      0 
+330 |      0      0      0      0      0      0      0      0      0      0 
+340 |      0      0      0      0      0      0      0      0      0      0 
+350 |      0      0      0      0      0      0      0      0      0      0 
+360 |      0      0      0      0      0      0      0      0      0      0 
+370 |      0      0      0      0      0      0      0      0      0      0 
+380 |      0      0      0      0      0      0      0      0      0      0 
+390 |      0      0      0      0      0      0      0      0      0      0 
+400 |      0      0      0      0      0      0      0      1      0 
+
+CUA 1 temps total al super segons caixa  Mean: 74.38, Samples: 8, Min: 16, Max 128
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      1      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      1      0      0      1      0      0      0 
+ 60 |      0      1      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      0      0 
+ 80 |      1      1      0      0      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      1      0      0      0      0      0      0      0      1      0 
+
+CUA 2 temps total al super segons caixa  Mean: 167.38, Samples: 16, Min: 38, Max 306
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      1      0 
+ 40 |      0      1      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      1 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      1      0      0      0 
+ 80 |      0      0      0      0      0      0      0      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      1      0      0      1 
+130 |      0      0      1      0      0      0      0      0      0      1 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      0      0      0      0      0      1      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      0      0      1 
+200 |      0      0      0      0      0      0      0      0      0      0 
+210 |      1      0      0      0      0      0      0      0      0      0 
+220 |      0      0      0      0      0      0      0      0      0      0 
+230 |      0      1      0      0      0      0      0      0      0      0 
+240 |      0      0      0      0      0      0      0      0      0      0 
+250 |      0      0      0      1      0      0      0      0      0      0 
+260 |      0      0      0      0      0      0      0      0      0      0 
+270 |      0      0      0      0      0      0      0      0      0      0 
+280 |      0      0      0      0      0      1      0      0      1      0 
+290 |      0      0      0      0      0      0      0      0      0      0 
+300 |      0      0      0      0      0      0      1      0 
+
+CUA 3 temps total al super segons caixa  Mean: 230.22, Samples: 9, Min: 78, Max 371
+
+  0 |      0      0      0      0      0      0      0      0      0      0 
+ 10 |      0      0      0      0      0      0      0      0      0      0 
+ 20 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      0      0      0      0      0      0      0 
+ 40 |      0      0      0      0      0      0      0      0      0      0 
+ 50 |      0      0      0      0      0      0      0      0      0      0 
+ 60 |      0      0      0      0      0      0      0      0      0      0 
+ 70 |      0      0      0      0      0      0      0      0      1      1 
+ 80 |      0      0      0      0      0      0      1      0      0      0 
+ 90 |      0      0      0      0      0      0      0      0      0      0 
+100 |      0      0      0      0      0      0      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      0 
+130 |      0      0      0      0      0      0      0      0      0      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      0      0      0      0      0      0      0 
+160 |      0      0      0      0      0      0      0      0      0      0 
+170 |      0      0      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      0      0      0 
+200 |      0      0      0      0      0      0      1      0      0      0 
+210 |      0      0      0      0      0      0      0      0      0      0 
+220 |      0      0      0      0      0      0      0      0      0      0 
 230 |      0      0      0      0      0      0      0      0      0      0 
 240 |      0      0      0      0      0      0      0      0      0      0 
 250 |      0      0      0      0      0      0      0      0      0      0 
 260 |      0      0      0      0      0      0      0      0      0      0 
 270 |      0      0      0      0      0      0      0      0      0      0 
-280 |      0      0      0      0      1      0 
+280 |      0      1      0      0      0      0      0      0      0      0 
+290 |      0      0      0      1      0      0      0      0      0      0 
+300 |      0      0      0      0      0      0      0      0      0      0 
+310 |      0      0      0      0      0      1      0      0      0      0 
+320 |      0      0      0      0      0      0      0      0      0      0 
+330 |      0      0      0      0      0      0      0      0      0      0 
+340 |      0      0      0      0      0      0      0      0      0      0 
+350 |      0      0      0      0      0      0      0      0      0      0 
+360 |      0      0      0      1      0      0      0      0      0      0 
+370 |      0      1      0 
 
-CUA 1 temps total al super segons caixa  Mean: 54.67, Samples: 3, Min: 31, Max 85
+CUA 4 temps total al super segons caixa  Mean: 107.40, Samples: 15, Min: 33, Max 201
 
   0 |      0      0      0      0      0      0      0      0      0      0 
  10 |      0      0      0      0      0      0      0      0      0      0 
  20 |      0      0      0      0      0      0      0      0      0      0 
- 30 |      0      1      0      0      0      0      0      0      0      0 
- 40 |      0      0      0      0      0      0      0      0      1      0 
- 50 |      0      0      0      0      0      0      0      0      0      0 
+ 30 |      0      0      0      1      0      0      0      0      0      0 
+ 40 |      1      0      0      0      0      0      0      0      0      0 
+ 50 |      1      0      0      0      1      0      0      0      0      0 
  60 |      0      0      0      0      0      0      0      0      0      0 
  70 |      0      0      0      0      0      0      0      0      0      0 
- 80 |      0      0      0      0      0      1      0 
+ 80 |      0      0      0      0      0      1      0      0      0      0 
+ 90 |      0      0      0      0      0      0      1      0      0      0 
+100 |      0      1      1      0      0      1      0      0      0      0 
+110 |      0      0      0      0      0      0      0      0      0      0 
+120 |      0      0      0      0      0      0      0      0      0      1 
+130 |      0      1      0      0      0      0      0      0      0      0 
+140 |      0      0      0      0      0      0      0      0      0      0 
+150 |      0      0      0      1      0      0      0      0      0      0 
+160 |      1      0      0      0      0      0      0      0      0      0 
+170 |      0      1      0      0      0      0      0      0      0      0 
+180 |      0      0      0      0      0      0      0      0      0      0 
+190 |      0      0      0      0      0      0      0      0      0      0 
+200 |      0      1      0 
 
 ****************  END EXECUTION *****************
-     Time : Tue Sep 30 17:34:28 2025
+     Time : Thu Oct  2 18:00:13 2025
 *************************************************

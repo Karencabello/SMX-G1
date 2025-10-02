@@ -213,10 +213,10 @@ int primer_caixer_buit(scua *cues, int inici, int final){
     if(c <= final)
         ret = c;
     else
-        ret = c;
+        ret = NA;
 #if (DEBUGquinaCua == 1)
     fprintf(ofile, "Primer Caixer Buit %d \n", ret);
 #endif
    return(ret);
-   
+
 } // primer_caixer_buit
