@@ -35,7 +35,7 @@ int backoff(int n, char alg){
         case 'D': wait = CRA_deterministic(n);
         break;
         default:
-            ERROR((ofile,"%d ERROR: CRA algorithm (%c) not known.",slot, alg));
+            ERROR((ofile,"%ld ERROR: CRA algorithm (%c) not known.",slot, alg));
             exit(0);
     }
     return(wait);

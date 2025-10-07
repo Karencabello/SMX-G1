@@ -53,7 +53,7 @@ void receive_ack(sstation *s){
         ERROR((ofile,"Receiving and Ack and there is no paquets in the queue"));
 #if 1    
     if (channel.cslot.pk.num != s->qu.pks[s->qu.head].num) 
-        ERROR((ofile,"%d ERROR STNTX: an ACK received at stn %d with wrong pk num (waiting %d arrv %d)\n",
+        ERROR((ofile,"%ld ERROR STNTX: an ACK received at stn %d with wrong pk num (waiting %d arrv %d)\n",
                 slot, s->stnnum,s->qu.pks[s->qu.head].num,channel.cslot.pk.num));
 #endif
   
@@ -64,13 +64,13 @@ void receive_ack(sstation *s){
     
     // check stats
     if(pk.txcount >= MAXATMHIST)
-        ERROR((ofile,"%d Increase size of attempts histogram MAXATMHIST (%d)",slot, MAXATMHIST));
+        ERROR((ofile,"%ld Increase size of attempts histogram MAXATMHIST (%d)",slot, MAXATMHIST));
     if(slot-pk.sarv_time+1 >= MAXDELHIST)
-        ERROR((ofile,"%d Increase size of delay histogram MAXDELHIST (%d) to greater to %d",slot, MAXDELHIST, slot-pk.sarv_time));
+        ERROR((ofile,"%ld Increase size of delay histogram MAXDELHIST (%d) to greater to %d",slot, MAXDELHIST, slot-pk.sarv_time));
      if(slot-pk.iservtime+1 >= MAXDELHIST)
-        ERROR((ofile,"%d Service time: Increase size of delay histogram MAXDELHIST (%d) to greater to %d",slot, MAXDELHIST, slot-pk.sarv_time));
+        ERROR((ofile,"%ld Service time: Increase size of delay histogram MAXDELHIST (%d) to greater to %d",slot, MAXDELHIST, slot-pk.sarv_time));
     if(pk.sarv_time < 0 || pk.iservtime < 0)
-        ERROR((ofile,"% d ERROR: arrival time %d initial service time %d are negative"));
+        ERROR((ofile,"%ld ERROR: arrival time %d initial service time %d are negative"));
     
     // update stats
     if(slot < start_stats)
@@ -120,7 +120,7 @@ void station(sstation *s){
             }
             else 
                 if(s->wait < 0) 
-                   ERROR((ofile,"%d ERROR STNCRA: negative waiting time (%d) at stn %d",
+                   ERROR((ofile,"%ld ERROR STNCRA: negative waiting time (%d) at stn %d",
                     slot, s->wait,s->stnnum)); 
                 else {
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGCRA == 1)
@@ -184,9 +184,9 @@ void run_sink(){
     long d;
     if(channel.cslot.state >= MAXCOLHIST)
     //if(channel.cslot.state >= MAXCOLHIST)
-        ERROR((ofile,"%d Number of collisions is larger than the histogram size. Increase MAXCOLHIST", slot));
+        ERROR((ofile,"%ld Number of collisions is larger than the histogram size. Increase MAXCOLHIST", slot));
     if(channel.cslot.state > nstns)
-        ERROR((ofile,"%d ERROR Multiplicity of collision (%d) larger than total number of stations %d \n", slot, channel.cslot.state, nstns));
+        ERROR((ofile,"%ld ERROR Multiplicity of collision (%d) larger than total number of stations %d \n", slot, channel.cslot.state, nstns));
     // pk generated = pk sent + pk queue
     for (s = 0; s < nstns; s++){
         if( sts.gload[STSWARMUP][s] + sts.gload[STSSTEADY][s]- 
