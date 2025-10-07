@@ -74,7 +74,7 @@ double mean_hist(long *h,long dimh){
     }
     else{
         if(m > 0)
-            ERROR((ofile,"%d ERROR mean_hist: m %d > = but samples = %d",slot, m, samples));
+            ERROR((ofile,"%ld ERROR mean_hist: m %lf > = but samples = %ld",slot, m, samples));
     }
     return(m);
 } // mean_hist
@@ -133,7 +133,7 @@ void print_vector(FILE *ofile, long *v, long length, char *msg, int num_col){
     for (i = 0; i < max; i++ ){
         if(i % num_col == 0)
             fprintf(ofile, "\n %3d | ", i);
-        fprintf(ofile, "%6d ", (long)v[i]);
+        fprintf(ofile, "%6ld ", (long)v[i]);
     }
     fprintf(ofile, "\n\n");
 } // print_vector
@@ -147,9 +147,9 @@ void print_hist(FILE *ofile, long *v, long length, char *msg, int num_col){
     
     fprintf(ofile, "%s\n", msg);
     mean = mean_hist(v,length);
-    fprintf(ofile, " Mean: %.2lf, Samples: %d,", mean, samples(v,length));
-    fprintf(ofile, " Min: %d, Max %d\n", min_hist(v,length), max_hist(v,length));
-    fprintf(ofile, " Stddev: %lf, Jitter: %d, 95th-percentile: %d\n", 
+    fprintf(ofile, " Mean: %.2lf, Samples: %ld,", mean, samples(v,length));
+    fprintf(ofile, " Min: %ld, Max %ld\n", min_hist(v,length), max_hist(v,length));
+    fprintf(ofile, " Stddev: %lf, Jitter: %ld, 95th-percentile: %ld\n",
             stddev_hist(v,length),jitter_hist(v,length),percentile_hist(v,length, 95));
     print_vector(ofile, v, length,"",num_col);
     //fprintf(ofile, "\n");
@@ -160,91 +160,91 @@ void init_stats(){
     int h,i,j;
     sts.gload = (long **) malloc(STSSTATES * sizeof(long*));
     if(sts.gload == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     for(i = 0; i < STSSTATES; i++){
         sts.gload[i]= (long *) calloc(nstns, sizeof(long));
         if(sts.gload[i] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     }
    
     sts.snt= (long **) malloc(STSSTATES * sizeof(long*));
     if(sts.snt == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
      for(i = 0; i < STSSTATES; i++){
         sts.snt[i]= (long *) calloc(nstns, sizeof(long));
         if(sts.snt[i] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     }
    
     sts.chhist= (long **) malloc(STSSTATES * sizeof(long*));
     if(sts.chhist == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     for(i = 0; i < STSSTATES; i++){
         sts.chhist[i]= (long *) calloc(MAXCOLHIST, sizeof(long));
         if(sts.chhist[i] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     }
     sts.phist= (long **) malloc(STSSTATES * sizeof(long*));
     if(sts.phist == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     for(i = 0; i < STSSTATES; i++){
         sts.phist[i]= (long *) calloc(MAXCOLHIST, sizeof(long));
         if(sts.phist[i] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     }
 
     sts.qhist= (long ***) malloc(STSSTATES * sizeof(long**));
     if(sts.qhist == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     for(i = 0; i < STSSTATES; i++){
         sts.qhist[i]= (long **) malloc(nstns * sizeof(long*));
         if(sts.qhist[i] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
-        for(j = 0; j < nstns; j++){                
-            sts.qhist[i][j]= (long *) calloc(MAXQUHIST, sizeof(long));        
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
+        for(j = 0; j < nstns; j++){
+            sts.qhist[i][j]= (long *) calloc(MAXQUHIST, sizeof(long));
             if(sts.qhist[i][j] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
         }
     }
     sts.dhist= (long ***) malloc(STSSTATES * sizeof(long**));
     if(sts.dhist == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     for(i = 0; i < STSSTATES; i++){
         sts.dhist[i]= (long **) malloc(nstns * sizeof(long*));
         if(sts.dhist[i] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
         for(j = 0; j < nstns; j++){
             sts.dhist[i][j]= (long *) calloc(MAXDELHIST, sizeof(long));
             if(sts.dhist[i][j] == NULL )
-                ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));    
+                ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
         }
     }
-     
+
     sts.shist= (long ***) malloc(STSSTATES * sizeof(long**));
     if(sts.shist == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     for(i = 0; i < STSSTATES; i++){
         sts.shist[i]= (long **) malloc(nstns * sizeof(long*));
         if(sts.shist[i] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
         for(j = 0; j < nstns; j++){
             sts.shist[i][j]= (long *) calloc(MAXDELHIST, sizeof(long));
             if(sts.shist[i][j] == NULL )
-                ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));    
+                ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
         }
     }
-     
+
     sts.ahist= (long ***) malloc(STSSTATES * sizeof(long**));
     if(sts.ahist == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
     for(i = 0; i < STSSTATES; i++){
         sts.ahist[i]= (long **) malloc(nstns * sizeof(long*));
         if(sts.ahist[i] == NULL )
-            ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));
+            ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
          for(j = 0; j < nstns; j++){
             sts.ahist[i][j]= (long *) calloc(MAXATMHIST, sizeof(long));
             if(sts.ahist[i][j] == NULL )
-                ERROR((ofile,"%d ERROR: allocating memory in init_stats\n",slot));            
+                ERROR((ofile,"%ld ERROR: allocating memory in init_stats\n",slot));
          }
     }
     sts.av_delay         = 0.0;
@@ -320,7 +320,7 @@ long *sum_stn_hists(long *sum, long **h, long dimh, int numstns){
         free(sum);
     sum = (long *) calloc(dimh,sizeof(long));        
     if(sum == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in sum_stn_hists\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in sum_stn_hists\n",slot));
     
     for(s = 0; s < numstns; s++)
         for(d = 0; d < dimh; d++)

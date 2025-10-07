@@ -66,11 +66,11 @@ void receive_ack(sstation *s){
     if(pk.txcount >= MAXATMHIST)
         ERROR((ofile,"%ld Increase size of attempts histogram MAXATMHIST (%d)",slot, MAXATMHIST));
     if(slot-pk.sarv_time+1 >= MAXDELHIST)
-        ERROR((ofile,"%ld Increase size of delay histogram MAXDELHIST (%d) to greater to %d",slot, MAXDELHIST, slot-pk.sarv_time));
+        ERROR((ofile,"%ld Increase size of delay histogram MAXDELHIST (%d) to greater to %ld",slot, MAXDELHIST, slot-pk.sarv_time));
      if(slot-pk.iservtime+1 >= MAXDELHIST)
-        ERROR((ofile,"%ld Service time: Increase size of delay histogram MAXDELHIST (%d) to greater to %d",slot, MAXDELHIST, slot-pk.sarv_time));
+        ERROR((ofile,"%ld Service time: Increase size of delay histogram MAXDELHIST (%d) to greater to %ld",slot, MAXDELHIST, slot-pk.sarv_time));
     if(pk.sarv_time < 0 || pk.iservtime < 0)
-        ERROR((ofile,"%ld ERROR: arrival time %d initial service time %d are negative"));
+        ERROR((ofile,"%d ERROR: arrival time %d initial service time %d are negative"));
     
     // update stats
     if(slot < start_stats)
@@ -186,20 +186,20 @@ void run_sink(){
     //if(channel.cslot.state >= MAXCOLHIST)
         ERROR((ofile,"%ld Number of collisions is larger than the histogram size. Increase MAXCOLHIST", slot));
     if(channel.cslot.state > nstns)
-        ERROR((ofile,"%ld ERROR Multiplicity of collision (%d) larger than total number of stations %d \n", slot, channel.cslot.state, nstns));
+        ERROR((ofile,"%ld ERROR Multiplicity of collision (%d) larger than total number of stations %ld \n", slot, channel.cslot.state, nstns));
     // pk generated = pk sent + pk queue
     for (s = 0; s < nstns; s++){
         if( sts.gload[STSWARMUP][s] + sts.gload[STSSTEADY][s]- 
                 (sts.snt[STSWARMUP][s] + sts.snt[STSSTEADY][s]) 
                 != stns[s].qu.lng)                     
-            ERROR((ofile,"%d ERROR CHECK STN %d: pk generated (%d + %d) - pk sent (%d + %d) != pk in queu %d",
-                    slot, s,sts.gload[STSWARMUP][s], sts.gload[STSSTEADY][s],                
+            ERROR((ofile,"%ld ERROR CHECK STN %d: pk generated (%ld + %ld) - pk sent (%ld + %ld) != pk in queu %d",
+                    slot, s,sts.gload[STSWARMUP][s], sts.gload[STSSTEADY][s],
                     sts.snt[STSWARMUP][s], sts.snt[STSSTEADY][s], stns[s].qu.lng));
 
-        if(sts.gload[STSWARMUP][s] + sts.gload[STSSTEADY][s]!= stns[s].tpk)     
-            ERROR((ofile,"%d ERROR CHECK STN %d: gload (%d + %d) != tpk %d ",                                           
+        if(sts.gload[STSWARMUP][s] + sts.gload[STSSTEADY][s]!= stns[s].tpk)
+            ERROR((ofile,"%ld ERROR CHECK STN %d: gload (%ld + %ld) != tpk %ld ",
                 slot, s,sts.gload[STSWARMUP][s], sts.gload[STSSTEADY][s],
-                stns[s].tpk));           
+                stns[s].tpk));
     }   
 }//run_sink
 

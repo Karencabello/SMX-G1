@@ -56,10 +56,10 @@ void init_traf(){
       if(stns[stn].rate > 0)
 	stns[stn].nextpkarv = (double)(decide_interarrival(&(stns[stn])));
       if(stns[stn].nextpkarv < slot)
-        ERROR((ofile, "init_traf: the next packet arrival (%8.4lf) is smaller than current time %d", stns[stn].nextpkarv, slot));
+        ERROR((ofile, "init_traf: the next packet arrival (%8.4lf) is smaller than current time %ld", stns[stn].nextpkarv, slot));
 
 #if ( 1) // (DEBUG == 1 || DEBUGSTN == stn || DEBUGTRAF == 1)
-      TRACE((ofile,"%4d STN %2d INIT TRAF: Next pak Arrival %lf slots %d \n", \
+      TRACE((ofile,"%4ld STN %2d INIT TRAF: Next pak Arrival %lf slots %d \n", \
               slot, stns[stn].stnnum, stns[stn].nextpkarv, \
               (int)ceil(stns[stn].nextpkarv)));
               //(int)ceil(MSECtoSLOTS(stns[stn].nextpkarv)));
@@ -122,7 +122,7 @@ void decide_next_arrival(sstation *s){
     s->nextpkarv += decide_interarrival(s);
     
     if((int)ceil(MSECtoSLOTS(s->nextpkarv))< slot)
-        ERROR((ofile, "decide_next_arrival: the next packet arrival (%8.4lf) is smaller than current time %d", s->nextpkarv, slot));
+        ERROR((ofile, "decide_next_arrival: the next packet arrival (%8.4lf) is smaller than current time %ld", s->nextpkarv, slot));
     
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGTRAF == 1)
     TRACE((ofile,"%4d STN %2d NEXT PK ARV: next-pk %d Next time %8.4lf ms %6d\n", 

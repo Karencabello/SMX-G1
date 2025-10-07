@@ -38,14 +38,14 @@ void input_parameters(int argc, char**argv){
     ofile = stdout;
     
     if(argc != 3)
-        ERROR((ofile,"%d Execucion needs two input parameters: name of input and output files. Use: saloha.exe ./src/in ./src/out",slot));
+        ERROR((ofile,"%ld Execucion needs two input parameters: name of input and output files. Use: saloha.exe ./src/in ./src/out",slot));
     
     if(!strcmp(argv[1],"stdin"))
         ifile = stdin;
     else
         ifile = fopen(argv[1],"r");
     if(ifile == NULL)
-        ERROR((ofile,"%d Input file (%s) not found.... check path!!",slot,argv[1]));
+        ERROR((ofile,"%ld Input file (%s) not found.... check path!!",slot,argv[1]));
     
     if(!strcmp(argv[2],"stdout"))
         ofile = stdout;
@@ -64,8 +64,8 @@ void input_parameters(int argc, char**argv){
     
 MESSAGE((ofile,"NETWORK CONFIGURATION ---\n"));
     MESSAGE((ofile,"    Number of stations                      : "));
-	fscanf(ifile,"%d", &nstns); 
-	MESSAGE((ofile,"%9d\n", nstns));
+	fscanf(ifile,"%ld", &nstns);
+	MESSAGE((ofile,"%9ld\n", nstns));
     MESSAGE((ofile,"    Slot Size (bytes)                       : "));
 	fscanf(ifile,"%d", &channel.slot_size); 
 	MESSAGE((ofile,"%9d\n", channel.slot_size));
@@ -93,12 +93,12 @@ MESSAGE((ofile,"SIMULATION PARAMETERS ---\n"));
     MESSAGE((ofile,"    Length of simulation in miliseconds     : "));
         fscanf(ifile,"%lf", &aux);
         nslots = (int) ceil(MSECtoSLOTS(aux));
-	MESSAGE((ofile,"%9.2lf ( %9d slots)\n",aux,nslots));
+	MESSAGE((ofile,"%9.2lf ( %9ld slots)\n",aux,nslots));
 
     MESSAGE((ofile,"    Start statistics at milisecond          : "));
 	fscanf(ifile,"%lf", &aux);
         start_stats = ceil(MSECtoSLOTS(aux));
-	MESSAGE((ofile,"%9.2lf ( %9d slots)\n",aux,start_stats));
+	MESSAGE((ofile,"%9.2lf ( %9ld slots)\n",aux,start_stats));
 
     MESSAGE((ofile,"    Seed value (random = 0)                 : "));
     	fscanf(ifile,"%d",&seedval);
@@ -182,7 +182,7 @@ void initialize(){
        
     stns = (sstation *) malloc(nstns * sizeof(sstation));
     if(stns == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in initialize\n",slot));
+        ERROR((ofile,"%ld ERROR: allocating memory in initialize\n",slot));
     for (s = 0; s < nstns; s++)
         init_sta(&stns[s],s);
   
