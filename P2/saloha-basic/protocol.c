@@ -33,7 +33,7 @@ void transmit_now_stn(sstation *s, equeue pk){
     s->qu.pks[s->qu.head].txcount++; // another attempt to transmit this paquet
        
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGTRAF == 1 || DEBUGchannel == 1 || DEBUGCRA == 1 )
-    TRACE((ofile,"%4d STN %2d TRANSMIT : SA %2d DA %2d pk %3d channel state %2d stn state (prev %c next %c) attempts %d\n",
+    TRACE((ofile,"%4ld STN %2d TRANSMIT : SA %2d DA %2d pk %3d channel state %2d stn state (prev %c next %c) attempts %d\n",
             slot, s->stnnum, channel.cslot.SA, channel.cslot.DA, channel.cslot.pk.num,
             channel.cslot.state, stnprevstate, s->state, s->qu.pks[s->qu.head].txcount));
 #endif
@@ -70,7 +70,8 @@ void receive_ack(sstation *s){
      if(slot-pk.iservtime+1 >= MAXDELHIST)
         ERROR((ofile,"%ld Service time: Increase size of delay histogram MAXDELHIST (%d) to greater to %ld",slot, MAXDELHIST, slot-pk.sarv_time));
     if(pk.sarv_time < 0 || pk.iservtime < 0)
-        ERROR((ofile,"%d ERROR: arrival time %d initial service time %d are negative"));
+        ERROR((ofile,"%ld ERROR: arrival time %d initial service time %d are negative",
+           slot, pk.sarv_time, pk.iservtime));
     
     // update stats
     if(slot < start_stats)

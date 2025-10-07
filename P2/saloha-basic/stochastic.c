@@ -86,7 +86,7 @@ void create_arrival(sstation *s){
         sts.gload[STSSTEADY][s->stnnum]++;
 
 #if (DEBUG == 1 || DEBUGSTN == 1  || DEBUGTRAF == 1 || DEBUGCRA == 1 )
-    TRACE((ofile,"%4d STN %2d PK  ARRIVAL: pk (num %3d, arv %9.6lf sarv %4d Tx-count %2d) QU ",
+    TRACE((ofile,"%4ld STN %2d PK  ARRIVAL: pk (num %3d, arv %9.6lf sarv %4d Tx-count %2d) QU ",
             slot, s->stnnum, s->qu.pks[s->qu.tail].num,
             s->qu.pks[s->qu.tail].arv_time, s->qu.pks[s->qu.tail].sarv_time,
             s->qu.pks[s->qu.tail].txcount)); 
@@ -105,7 +105,7 @@ double decide_interarrival(sstation *s){
     //if(flag == FIRSTPK) ia = -ia;
     
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGTRAF == 1)
-    TRACE((ofile,"%4d STN %2d NEXT INTARV: next-pk %d Next time %8.4lf ms %6d ia %lf\n", 
+    TRACE((ofile,"%4ld STN %2d NEXT INTARV: next-pk %d Next time %8.4lf ms %6d ia %lf\n", 
             slot, s->stnnum, s->qu.pks[s->qu.tail].num+1, 
             s->nextpkarv, (int)ceil(MSECtoSLOTS(s->nextpkarv)), ia));
 #endif
@@ -125,7 +125,7 @@ void decide_next_arrival(sstation *s){
         ERROR((ofile, "decide_next_arrival: the next packet arrival (%8.4lf) is smaller than current time %ld", s->nextpkarv, slot));
     
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGTRAF == 1)
-    TRACE((ofile,"%4d STN %2d NEXT PK ARV: next-pk %d Next time %8.4lf ms %6d\n", 
+    TRACE((ofile,"%4ld STN %2d NEXT PK ARV: next-pk %d Next time %8.4lf ms %6d\n", 
             slot, s->stnnum, s->qu.pks[s->qu.tail].num+1, 
             s->nextpkarv, (int)ceil(MSECtoSLOTS(s->nextpkarv))));
 #endif

@@ -46,7 +46,7 @@
 // ****** debugging flags *************************
 // Flags to active the traces ON=1 OFF=0
 #define DEBUG           0   // Debugging all (prints all traces)            
-#define DEBUGTRAF       0   // Debugging traffic generator              
+#define DEBUGTRAF       1   // Debugging traffic generator              
 #define DEBUGchannel    0   // Debugging channel           
 #define DEBUGSTN        0   // Debugging the station protocol -1=OFF       
 #define DEBUGqueuing    0   // Debugging the queuing when grouping reqs 
