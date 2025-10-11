@@ -1,0 +1,47 @@
+Program usage: <executable> <num_samples> <num_bins> <seed> 
+Arguments:
+0: /cygdrive/C/Users/u26642/Documents/NetBeansProjects/rng/dist/Debug/Cygwin-Windows/rng
+1: 10
+2: 5
+3: 9911
+
+RAND    RNG ------------------------
+  10 Samples generated of distribution function R :
+   0   1288979903    626007095   1216387271   1722341040   1480754447    329476468    513454337   1556921315   1596349217   1625735302 
+Ordered samples  : 
+   0 329476468.0000000000 513454337.0000000000 626007095.0000000000 1216387271.0000000000 1288979903.0000000000 1480754447.0000000000 1556921315.0000000000 1596349217.0000000000 1625735302.0000000000 1722341040.0000000000 
+Histogram      generated : ( 0,    1)( 1,    2)( 2,    1)( 3,    5)( 4,    1)( 5,    0)
+Size 429496729.400 
+Histogram Expected Uniform: ( 0,    2)( 1,    2)( 2,    2)( 3,    2)( 4,    2)( 5,    0)
+
+
+Sample Histogram   : ( 0,    1)( 1,    2)( 2,    1)( 3,    5)( 4,    1)( 5,    0)
+Expected Histogram : ( 0,    2)( 1,    2)( 2,    2)( 3,    2)( 4,    2)( 5,    0)
+         Computing errors: ( 0, 0.50)( 1, 0.00)( 2, 0.50)( 3, 4.50)( 4, 0.50)
+Value of D for 10 samples and 6 bins for R is     6.00
+
+Value of D for 10 samples and 6 bins for RNG RND is     6.00
+  10 Samples generated of distribution function R :
+   0   1288979903    626007095   1216387271   1722341040   1480754447    329476468    513454337   1556921315   1596349217   1625735302 
+Correlation of the observations with 10 samples and 6 bins is 0.639642
+
+drand48 RNG ------------------------
+  10 Samples generated of distribution function U :
+   0 0.8401877172 0.3943829268 0.7830992238 0.7984400335 0.9116473579 0.1975513693 0.3352227557 0.7682295948 0.2777747108 0.5539699558 
+Ordered samples  : 
+   0 0.1975513693 0.2777747108 0.3352227557 0.3943829268 0.5539699558 0.7682295948 0.7830992238 0.7984400335 0.8401877172 0.9116473579 
+Histogram      generated : ( 0,    1)( 1,    3)( 2,    1)( 3,    3)( 4,    2)( 5,    0)
+Size  0.200 
+Histogram Expected Uniform: ( 0,    2)( 1,    2)( 2,    2)( 3,    2)( 4,    2)( 5,    0)
+
+
+Sample Histogram   : ( 0,    1)( 1,    3)( 2,    1)( 3,    3)( 4,    2)( 5,    0)
+Expected Histogram : ( 0,    2)( 1,    2)( 2,    2)( 3,    2)( 4,    2)( 5,    0)
+         Computing errors: ( 0, 0.50)( 1, 0.50)( 2, 0.50)( 3, 0.50)( 4, 0.00)
+Value of D for 10 samples and 6 bins for U is     2.00
+
+Value of D for 10 samples and 6 bins for ldrand48 is     2.00
+
+  10 Samples generated of distribution function U :
+   0 0.4773970519 0.6288709248 0.3647844728 0.5134009102 0.9522297252 0.9161950680 0.6357117280 0.7172969294 0.1416025554 0.6069688763 
+Correlation of the observations with 10 samples and 6 bins is -0.089559

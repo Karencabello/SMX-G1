@@ -1,0 +1,28 @@
+# Makefile rng.c 
+# Execution in cygwin: 
+# Enter cygwin and change to the directory where you have the code. 
+# Put the mymakefile in the same directory
+# Run the makefile with the instruction: make -f mymakefile
+# The makefile generates a rng.exe
+# Run the protocol with the instruction: ./rng.exe
+
+
+rng: rng.o stochastic.o verif.o 
+	gcc -o rng rng.o verif.o stochastic.o 
+
+stochastic.o: stochastic.c rng.h
+	gcc -c stochastic.c
+	
+verif.o: verif.c rng.h
+	gcc -c verif.c
+
+
+rng.o: rng.c rng.h
+	gcc -c rng.c 
+	
+# To make sure everything is recompiled eliminate the objective and executable
+# files
+# in the cygwin terminal do: make -f makefile clean
+clean: 
+	rm *.o rng
+
