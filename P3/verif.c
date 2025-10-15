@@ -274,7 +274,7 @@ double mean_hist(long *h,long dimh){
     }
     else{
         if(m > 0)
-            ERROR((ofile, "ERROR mean_hist: m %d > = but samples = %d", m, samples));
+            ERROR((ofile, "ERROR mean_hist: m %f > = but samples = %ld", m, samples));
     }
     return(m);
 } // mean_hist

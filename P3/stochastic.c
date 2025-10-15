@@ -38,7 +38,7 @@ void print_vector_d(double *v, int length, char *msg, int num_col){
     for (i = 0; i < length; i++ ){
         if(i % num_col == 0){
             //fprintf(ofile,"\n");
-            fprintf(ofile,"\n ", i);
+            fprintf(ofile,"\n %d", i);
             if(num_col > 1)
                 fprintf(ofile,"%3d ", i);
         }
