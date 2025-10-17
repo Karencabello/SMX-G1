@@ -1,0 +1,38 @@
+# Makefile slotted aloha basic
+# Execution in cygwin: 
+# Enter cygwin and change to the directory where you have the code. 
+# Put the mymakefile in the same directory
+# Run the makefile with the instruction: make -f mymakefile
+# The makefile generates a saloha.exe
+# Run the protocol with the instruction: ./saloha.exe
+
+
+saloha: saloha.o cues.o stats.o stochastic.o protocol.o cra.o
+	gcc -o saloha saloha.o cra.o cues.o protocol.o stats.o stochastic.o
+
+cra.o: cra.c cra.h saloha.h
+	gcc -c cra.c
+
+cues.o: cues.c cues.h saloha.h
+	gcc -c cues.c
+	
+protocol.o: protocol.c stats.h cra.h cues.h saloha.h
+	gcc -c protocol.c
+
+stats.o: stats.c stats.h saloha.h
+	gcc -c stats.c
+
+stochastic.o: stochastic.c stats.h cues.h saloha.h
+	gcc -c stochastic.c
+
+saloha.o: saloha.c saloha.h saloha.h stats.h cues.h
+	gcc -c saloha.c
+
+
+
+# To makesure everything is recompiled eliminate the objective and executable
+# files
+# in the cygwin terminal do: make -f makefile clean
+clean: 
+	rm *.o saloha
+
