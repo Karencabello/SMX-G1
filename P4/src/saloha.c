@@ -42,14 +42,14 @@ void input_parameters(int argc, char**argv){
     ofile = stdout;
     
     if(argc != 3)
-        ERROR((ofile,"%d Execucion needs two input parameters: name of input and output files. Use: saloha.exe ./src/in ./src/out",slot));
+        ERROR(NOSTATS, "%ld Execucion needs two input parameters: name of input and output files. Use: saloha.exe ./src/in ./src/out", slot);
     
     if(!strcmp(argv[1],"stdin"))
         ifile = stdin;
     else
         ifile = fopen(argv[1],"r");
     if(ifile == NULL)
-        ERROR((ofile,"%d Input file (%s) not found.... check path!!",slot,argv[1]));
+        ERROR(NOSTATS,"%ld Input file (%s) not found.... check path!!", slot, argv[1]);
     
     if(!strcmp(argv[2],"stdout"))
         ofile = stdout;
@@ -61,84 +61,84 @@ void input_parameters(int argc, char**argv){
         
     time_t curtime;
     time(&curtime);
-    MESSAGE((ofile,"**************** START EXECUTION ********************\n "));    
-    MESSAGE((ofile, " Time : %s", ctime(&curtime)));
-    MESSAGE((ofile,"*****************************************************\n "));    
+    MESSAGE("**************** START EXECUTION ********************\n ");    
+    MESSAGE(" Time : %s", ctime(&curtime));
+    MESSAGE("*****************************************************\n ");    
 
     
-MESSAGE((ofile,"NETWORK CONFIGURATION ---\n"));
-    MESSAGE((ofile,"    Number of stations                      : "));
-	fscanf(ifile,"%d", &nstns); 
-	MESSAGE((ofile,"%9d\n", nstns));
-    MESSAGE((ofile,"    Slot Size (bytes)                       : "));
-	fscanf(ifile,"%d", &channel.slot_size); 
-	MESSAGE((ofile,"%9d\n", channel.slot_size));
-    MESSAGE((ofile,"    Transmission Rate (Mbps)                : "));
+MESSAGE("NETWORK CONFIGURATION ---\n");
+    MESSAGE("    Number of stations                      : ");
+	fscanf(ifile,"%ld", &nstns);
+	MESSAGE("%9ld\n", nstns);
+    MESSAGE("    Slot Size (bytes)                       : ");
+	fscanf(ifile,"%d", &channel.slot_size);
+	MESSAGE("%9d\n", channel.slot_size);
+    MESSAGE("    Transmission Rate (Mbps)                : ");
 	fscanf(ifile,"%lf",&channel.rate);
-	MESSAGE((ofile,"%9.2lf\n",channel.rate));
+	MESSAGE("%9.2lf\n",channel.rate);
 
-    MESSAGE((ofile,"    Contention Resolution Algorithm         : "));
+    MESSAGE("    Contention Resolution Algorithm         : ");
         fscanf(ifile,"%s", &channel.cralg);
-        MESSAGE((ofile,"%9c (D-deterministic, P pPersistence, B BEB, O Optimal pPersistence)\n",channel.cralg));
-    MESSAGE((ofile,"    Probability of p-persistent protocol    : "));
+        MESSAGE("%9c (D-deterministic, P pPersistence, B BEB, O Optimal pPersistence)\n",channel.cralg);
+    MESSAGE("    Probability of p-persistent protocol    : ");
         fscanf(ifile,"%lf", &channel.p);
-        MESSAGE((ofile,"%9.4lf (only for fixed p-persistence)\n",channel.p));
+        MESSAGE("%9.4lf (only for fixed p-persistence)\n",channel.p);
 
-MESSAGE((ofile,"TRAFFIC GENERATOR -------\n"));
-    MESSAGE((ofile,"    Normalized offered load                 : "));
+MESSAGE("TRAFFIC GENERATOR -------\n");
+    MESSAGE("    Normalized offered load                 : ");
             fscanf(ifile,"%lf ", &rho);
-            MESSAGE((ofile,"%9.6lf ( %9.4lf Mbps)\n",rho, NORMtoMBPS(rho)));
+            MESSAGE("%9.6lf ( %9.4lf Mbps)\n",rho, NORMtoMBPS(rho));
 
-    MESSAGE((ofile,"    Interarrival Distribution (E)Exp.       : "));
+    MESSAGE("    Interarrival Distribution (E)Exp.       : ");
 	fscanf(ifile,"%c", &TrafGenType); TrafGenType = toupper(TrafGenType);
-	MESSAGE((ofile,"%9c\n", TrafGenType));
-        
-MESSAGE((ofile,"SIMULATION PARAMETERS ---\n"));
-    MESSAGE((ofile,"    Length of simulation in miliseconds     : "));
+	MESSAGE("%9c\n", TrafGenType);
+
+MESSAGE("SIMULATION PARAMETERS ---\n");
+    MESSAGE("    Length of simulation in miliseconds     : ");
         fscanf(ifile,"%lf", &aux);
         nslots = (int) ceil(MSECtoSLOTS(aux));
-	MESSAGE((ofile,"%9.2lf ( %9d slots)\n",aux,nslots));
+	MESSAGE("%9.2lf ( %9ld slots)\n", aux, nslots);
 
-    MESSAGE((ofile,"    Start statistics at milisecond          : "));
+    MESSAGE("    Start statistics at milisecond          : ");
 	fscanf(ifile,"%lf", &aux);
         start_stats = ceil(MSECtoSLOTS(aux));
-	MESSAGE((ofile,"%9.2lf ( %9d slots)\n",aux,start_stats));
+	MESSAGE("%9.2lf ( %9ld slots)\n", aux, start_stats);
 
-    MESSAGE((ofile,"    Seed value (random = 0)                 : "));
+    MESSAGE("    Seed value (random = 0)                 : ");
     	fscanf(ifile,"%ld",&seedval);
-	MESSAGE((ofile,"%9ld",seedval));
+	MESSAGE("%9ld",seedval);
         if(seedval == 0){
             seedval = time(0); 
-            MESSAGE((ofile,"(Random, seed chosen: %ld)",seedval));
+            MESSAGE("(Random, seed chosen: %ld)",seedval);
         }
-        MESSAGE((ofile,"\n"));
-        
-    MESSAGE((ofile,"    Significance level (alpha)              : "));
+        MESSAGE("\n");
+
+    MESSAGE("    Significance level (alpha)              : ");
 	fscanf(ifile,"%lf", &sts.significance);
-	MESSAGE((ofile,"%9.6lf \n",sts.significance));
+	MESSAGE("%9.6lf \n",sts.significance);
 
-    MESSAGE((ofile,"    Z value of %.3lf (1-alpha/2)            : ",(1-(sts.significance/2.0))));
+    MESSAGE("    Z value of %.3lf (1-alpha/2)            : ",(1-(sts.significance/2.0)));
 	fscanf(ifile,"%lf", &sts.z);
-	MESSAGE((ofile,"%9.2lf \n",sts.z));
+	MESSAGE("%9.2lf \n",sts.z);
 
-    MESSAGE((ofile,"    Target CI accuracy r in %% [0..100]      : "));
+    MESSAGE("    Target CI accuracy r in %% [0..100]      : ");
 	fscanf(ifile,"%lf", &sts.r);
-	MESSAGE((ofile,"%9.2lf \n",sts.r));
+	MESSAGE("%9.2lf \n",sts.r);
 
 #if 0
-MESSAGE((ofile,"DEBUGGING FLAGS ---------\n"));
-    MESSAGE((ofile,"    Trace channel time (percentage end sim) : "));
+MESSAGE("DEBUGGING FLAGS ---------\n");
+    MESSAGE("    Trace channel time (percentage end sim) : ");
         fscanf(ifile,"%lf", &TraceTime);
-        MESSAGE((ofile,"%9.4lf\n",TraceTime));
+        MESSAGE("%9.4lf\n",TraceTime);
 #endif
 
-    MESSAGE((ofile,"\nEnd of input data---\n"));
+    MESSAGE("\nEnd of input data---\n");
 
 // Checking input data
 // Largely not done
 #if 1
         if(sts.r == 0)
-            ERRORF((ofile,"ERROR r is zero and cannot be............"),NULL);
+            ERROR(NOSTATS, "ERROR r is zero and it cannot be............");
 #endif
 }// input_parameters
 
@@ -170,11 +170,11 @@ void generate_new_slot(){
     channel.cslot.pk.txcount  = NA;
  
 #if (DEBUGchannel == 1 || DEBUG == 1)
-    TRACE((ofile, "%4d Creating new Slot empty...", slot));
-    TRACE((ofile, "channel SA %2d DA %2d S %2d pk (%3d, %8.4lf, %4d, %2d)\n", 
-            channel.cslot.SA, channel.cslot.DA, channel.cslot.state, 
-            channel.cslot.pk.num, channel.cslot.pk.arv_time, 
-            channel.cslot.pk.sarv_time, channel.cslot.pk.txcount));
+    TRACE("%4ld Creating new Slot empty...", slot);
+    TRACE("channel SA %2d DA %2d S %2d pk (%3d, %8.4lf, %4d, %2d)\n", \
+            channel.cslot.SA, channel.cslot.DA, channel.cslot.state,   \
+            channel.cslot.pk.num, channel.cslot.pk.arv_time, \
+            channel.cslot.pk.sarv_time, channel.cslot.pk.txcount);
     fflush(ofile);
 #endif
     
@@ -186,7 +186,7 @@ void initialize(){
        
     stns = (sstation *) malloc(nstns * sizeof(sstation));
     if(stns == NULL )
-        ERROR((ofile,"%d ERROR: allocating memory in initialize\n",slot));
+        ERROR(WITHSTATS,"%ld ERROR: allocating memory in initialize\n", slot);
     for (s = 0; s < nstns; s++)
         init_sta(&stns[s],s);
   
@@ -207,16 +207,16 @@ void free_stns(){
 /********************** MAIN ***************************/
 int main(int argc, char**argv) {
     int stn;
-    FILE *ftest;
+    //FILE *ftest;
 
     slot = 0;
     
     input_parameters(argc, argv);
-    MESSAGE((ofile,"Initializing......\n"));
+    MESSAGE("Initializing......\n");
     initialize();
     init_traf();
     init_stats();
-    MESSAGE((ofile," ___________________________________________________\n\n"));
+    MESSAGE(" ___________________________________________________\n\n");
     fflush(ofile);
     
     for(slot = 0; slot < nslots; slot++){
@@ -236,8 +236,8 @@ int main(int argc, char**argv) {
     } // for nslots
 
     collect_stats();
-       
-    MESSAGE((ofile,"\nfinished!!!!!!!!!!!"));
+
+    MESSAGE("\nProgram has finished Successfully!!!!!!!!!!!");
     free_stns();
     free_stats();    
     fclose(ofile);

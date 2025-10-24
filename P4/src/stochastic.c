@@ -32,18 +32,8 @@ double drand(void){
 float expo(float m){
     static double d = 0.0;
 
-    //float alea1(long int *ap_llavor);
     d = drand();
     //d = drand48();
-    return(-m*log(d));
-} // expo
-
-float geometric(float m){
-    static double d = 0.0;
-
-    //float alea1(long int *ap_llavor);
-    d = drand();
-    //    d = drand48();
     return(-m*log(d));
 } // expo
 
@@ -56,19 +46,18 @@ void init_traf(){
   srand(seedval); // srand48(trafseed);
   for(i = 0; i <  nslots; i++)
         trafseed = rand(); //lrand48();
-  //srand(seedval); // srand48(trafseed);
   
-  MESSAGE((ofile,"\nSeed for traffic generator : %ld\n",trafseed));
+  MESSAGE("\nSeed for traffic generator : %ld\n",trafseed);
 
   for(stn = 0; stn < nstns; stn++){
       if(stns[stn].rate > 0)
 	stns[stn].nextpkarv = (double)(decide_interarrival(&(stns[stn])));
 
 #if (DEBUG == 1 || DEBUGSTN == stn || DEBUGTRAF == 1)
-      TRACE((ofile,"%4d STN %2d INIT TRAF: Next pak Arrival %lf slots %d \n", \
+      TRACE("%4d STN %2d INIT TRAF: Next pak Arrival %lf slots %d \n", \
               slot, stns[stn].stnnum, stns[stn].nextpkarv, \
-              (int)ceil(stns[stn].nextpkarv)));
-              //(int)ceil(MSECtoSLOTS(stns[stn].nextpkarv)));
+              (int)ceil(stns[stn].nextpkarv));
+              //(int)ceil(MSECtoSLOTS(stns[stn].nextpkarv));
 #endif
   }
 
@@ -78,7 +67,7 @@ void init_traf(){
 
 // Creates the arrival of the station: puts it in the queue
 void create_arrival(sstation *s){
-    int dbstn = s->stnnum;
+    //int dbstn = s->stnnum;
     equeue e;
     
     e = create_qu_element(s->tpk, stns[s->stnnum].nextpkarv);
@@ -92,10 +81,10 @@ void create_arrival(sstation *s){
         sts.gload[STSSTEADY][s->stnnum]++;
 
 #if (DEBUG == 1 || DEBUGSTN == 1  || DEBUGTRAF == 1 || DEBUGCRA == 1 )
-    TRACE((ofile,"%4d STN %2d PK  ARRIVAL: pk (num %3d, arv %9.6lf sarv %4d Tx-count %2d) QU ",
-            slot, s->stnnum, s->qu.pks[s->qu.tail].num,
-            s->qu.pks[s->qu.tail].arv_time, s->qu.pks[s->qu.tail].sarv_time,
-            s->qu.pks[s->qu.tail].txcount)); 
+    TRACE("%4d STN %2d PK  ARRIVAL: pk (num %3d, arv %9.6lf sarv %4d Tx-count %2d) QU ", \
+            slot, s->stnnum, s->qu.pks[s->qu.tail].num, \
+            s->qu.pks[s->qu.tail].arv_time, s->qu.pks[s->qu.tail].sarv_time, \
+            s->qu.pks[s->qu.tail].txcount); 
     print_queue(s->qu);
 #endif
     
@@ -111,9 +100,9 @@ double decide_interarrival(sstation *s){
     //if(flag == FIRSTPK) ia = -ia;
     
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGTRAF == 1)
-    TRACE((ofile,"%4d STN %2d NEXT INTARV: next-pk %d Next time %8.4lf ms %8.4lf ia %lf\n", 
-            slot, s->stnnum, s->qu.pks[s->qu.tail].num+1, 
-            s->nextpkarv, SLOTStoMSEC(s->nextpkarv), ia)); // MSECtoSLOTS
+    TRACE("%4d STN %2d NEXT INTARV: next-pk %d Next time %8.4lf ms %8.4lf ia %lf\n", \
+            slot, s->stnnum, s->qu.pks[s->qu.tail].num+1, \
+            s->nextpkarv, SLOTStoMSEC(s->nextpkarv), ia); // MSECtoSLOTS
 #endif
 
       return(ia);
@@ -124,13 +113,13 @@ double decide_interarrival(sstation *s){
 // computing the interarrival time based on station rate and adding from 
 // previous arrival
 void decide_next_arrival(sstation *s){
-    int dbstn = s->stnnum;
+    //int dbstn = s->stnnum;
     s->nextpkarv += decide_interarrival(s);
     
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGTRAF == 1)
-    TRACE((ofile,"%4d STN %2d NEXT PK ARV: next-pk %d Next time %8.4lf ms %8.4lf\n", 
-            slot, s->stnnum, s->qu.pks[s->qu.tail].num+1, 
-            s->nextpkarv, SLOTStoMSEC(s->nextpkarv)));  // MSECtoSLOTS
+    TRACE("%4d STN %2d NEXT PK ARV: next-pk %d Next time %8.4lf ms %8.4lf\n", \
+            slot, s->stnnum, s->qu.pks[s->qu.tail].num+1, \
+            s->nextpkarv, SLOTStoMSEC(s->nextpkarv));  // MSECtoSLOTS
 #endif
 } // decide_next_arrival
 
@@ -139,14 +128,12 @@ void decide_next_arrival(sstation *s){
 // station
 void gen_traf(){
   int s;
-  //int done = 0;
-  double tmp;
+  //double tmp;
   
   seedval = rand();  // lrand48();
   srand(trafseed); // srand48(trafseed);
     
   for(s = 0; s < nstns; s++){
-      //while(ceil(MSECtoSLOTS(stns[s].nextpkarv)) == slot){
       while(ceil(stns[s].nextpkarv) == slot){
           create_arrival(&stns[s]);
           decide_next_arrival(&stns[s]);

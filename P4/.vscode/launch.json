@@ -1,0 +1,73 @@
+{
+  // -----------------------------------------------------------------------------
+  // launch.json
+  //
+  // Slotted-aloha C Project - SMX course
+  //
+  // VS Code Debugging Configuration for CMake-built C/C++ Projects with GDB
+  //
+  // This configuration allows debugging:
+  // - The main application (i.e. saloha.exe)
+  //
+  // GDB is used from MSYS2 (UCRT64) toolchain.
+  //
+  // Usage:
+  // The "args" field can be changed to test with different program arguments. 
+  // Change the "environment" and "miDebuggerPath" fields if your MSYS2 installation is in a different path.
+  // -----------------------------------------------------------------------------
+
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Slotted-Aloha (GDB)",
+      "type": "cppdbg",
+      "request": "launch",
+
+      // Path to the executable built by CMake
+      "program": "${workspaceFolder}/build/saloha.exe",
+
+      // Command-line arguments to the program (change to do different input runs)
+      "args": ["./log/in-ref", "./log/out"],
+
+      // If true, stop at main before executing
+      "stopAtEntry": false,
+
+      // Working directory when the program runs
+      "cwd": "${workspaceFolder}",
+
+      // Environment variables: change them for the path of your MSYS2 installation
+      "environment": [
+        { "name": "MSYS2_PATH", "value": "C:/MyPrograms/msys64/ucrt64/bin" }
+      ],
+
+      // If true, opens an external console; set false for integrated terminal
+      "externalConsole": true,
+
+      // Use GDB for debugging (MinGW or MSYS2-compatible)
+      "MIMode": "gdb",
+
+      // Path to the GDB executable
+      "miDebuggerPath": "C:/MyPrograms/msys64/ucrt64/bin/gdb.exe",
+
+      // Opens the integrated debug console automatically when debugging starts,
+      // so you can immediately see program output and interact if needed.
+      "internalConsoleOptions": "openOnSessionStart",
+     
+      // Runs the 'build' task (usually CMake build) automatically before starting the debugger.
+      // Ensures the executable is up to date before debugging begins.
+      "preLaunchTask": "Build Slotted-Aloha  (SMX)",
+
+      // Enables better formatting of variables in debug view
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for GDB",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+
+    }
+
+  ]
+}
+ 

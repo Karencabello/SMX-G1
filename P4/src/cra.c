@@ -21,7 +21,7 @@
 int CRA_deterministic(int n){
              
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGCRA == 1 )
-    TRACE((ofile,"%4d STN %2d CRA DETERMINISTIC: wait %2d \n", slot, n, n));
+    TRACE("%4ld STN %2d CRA DETERMINISTIC: wait %2d \n", slot, n, n);
 #endif 
     
     return(n);
@@ -34,7 +34,7 @@ int CRA_pPersistence(int n){
     int wait = -1;
     
     if(channel.p < 0 || channel.p > 1)
-        ERROR((ofile,"%d ERROR optimal P value is %lf", slot,channel.p));
+        ERROR(WITHSTATS,"%ld ERROR optimal P value is %lf", slot, channel.p);
     
     u = drand(); // drand48();  
     if (u < channel.p)
@@ -43,10 +43,10 @@ int CRA_pPersistence(int n){
         wait = 1;
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGCRA == 1)
     if(channel.cralg == 'P')    
-        TRACE((ofile,"%4d STN %2d CRA p-persistence: wait %2d (u %lf)\n", slot, n, wait, u));
+        TRACE("%4ld STN %2d CRA p-persistence: wait %2d (u %lf)\n", slot, n, wait, u);
     else if (channel.cralg == 'O')
-        TRACE((ofile,"%4d STN %2d CRA optimal p-persistence: wait %2d (u %lf, p %lf)\n", slot, n, wait, u,channel.p));
-    else ERROR((ofile, "%d ERROR CRA %c and in p-persistence function with n %d", slot, channel.cralg, n));
+        TRACE("%4ld STN %2d CRA optimal p-persistence: wait %2d (u %lf, p %lf)\n", slot, n, wait, u, channel.p);
+    else ERROR(WITHSTATS, "%ld ERROR CRA %c and in p-persistence function with n %d", slot, channel.cralg, n);
 #endif 
      
     return(wait);
@@ -71,7 +71,7 @@ void compute_optimal_p(){
 
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGCRA == 1 )
     if(c > 0){    
-        TRACE((ofile,"%4d CRA optimal p-persistence: n %d p %lf\n", slot, c, channel.p));    
+        TRACE("%4ld CRA optimal p-persistence: n %d p %lf\n", slot, c, channel.p);    
     }
 #endif 
 
@@ -81,7 +81,7 @@ void compute_optimal_p(){
     else 
         state = STSSTEADY;
     if(c >= MAXCOLHIST)
-        ERROR((ofile,"%4d ERROR: increase MAXCOLHIST %d as it gets a n optimal = %d", slot, MAXCOLHIST,c));
+        ERROR(WITHSTATS,"%4ld ERROR: increase MAXCOLHIST %d as it gets a n optimal = %d", slot, MAXCOLHIST,c);
     sts.phist[state][c]++;
 } // compute_optimal_p
 
@@ -107,8 +107,8 @@ int CRA_TBEB(int n){
      
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGCRA == 1 )
     //if(n == 0)
-    TRACE((ofile,"%4d STN %2d CRA TBEB: wait %2d (u %d, m %d, pk %d, txcount %d) \n", 
-            slot, n, wait, u, m, stns[n].qu.pks[stns[n].qu.head].num, m));
+    TRACE("%4ld STN %2d CRA TBEB: wait %2ld (u %ld, m %d, pk %d, txcount %d) \n", \
+            slot, n, wait, u, m, stns[n].qu.pks[stns[n].qu.head].num, m);
 #endif 
     return(wait);
 } // CRA_TBEB
@@ -127,7 +127,7 @@ int backoff(int n, char alg){
         case 'B': wait = CRA_TBEB(n);
         break;
         default:
-            ERROR((ofile,"%d ERROR: CRA algorithm (%c) not known.",slot, alg));
+            ERROR(WITHSTATS, "%ld ERROR: CRA algorithm (%c) not known.", slot, alg);
             exit(0);
     }
     return(wait);

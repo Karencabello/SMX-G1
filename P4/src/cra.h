@@ -18,6 +18,7 @@
 
 int backoff(int n, char alg);
 void compute_optimal_p();
+double drand(void);
 
 #endif	/* CRA_H */
 

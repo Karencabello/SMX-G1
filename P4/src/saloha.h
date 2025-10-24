@@ -26,45 +26,69 @@
 
 // MACROS used for the printouts instead of using f/printfs so that all prints
 // in the program are treated the same way.
-// Use TRACE when this printout is used for debugging and it is turned off for final runs
+// Use TRACE when this printout is used for debugging and it is turned off for final runs, it does a flush to get the message immediately
 // Use MESSAGE when the print out is part of the output of the program
 // Use ERROR when the print out informs of a problem in the program and it must abort but printing statistics before finishing
-// Use ERRORF when the print out informs of a problem in the program and it must abort without any stats printing
-// WARNING currently not used, but can be used to provide non-fatal errors in the program and the program can continue
 
-/* usage: ERROR(("Warning: Note the two brackets\n")) */
-#define ERROR(message)({fprintf(ofile,"\nERROOORRRRRRRRRR\n");fprintf message;\
-                        collect_stats();\
-                        printf("\nERROOORRRRRRRRRR see output file\n");exit(0);})
-#define ERRORF(message, stsflag)({fprintf(ofile,"\nERROOORRRRRRRRRR\n");fprintf message;\
-                        if(stsflag)collect_stats();\
-                        printf("\nERROOORRRRRRRRRR see output file\n");exit(0);})
-#define WARNING(message1, message2) ({fprintf(ofile, message1,message2);})
-#define TRACE(message) ({fprintf message;fflush(ofile);}) // To create debugging traces
-#define MESSAGE(message) ({fprintf message;}) // To generate program output
+#define WITHSTATS   1 // when an error occurs, print stats before exiting
+#define NOSTATS     0 // when an error occurs, do not print stats before exiting
+                        
+// =======================================================================
+// ERROR: fatal error, it logs in ofile, collects statistics if stats flag is 1, and exits
+// usage: ERROR(NOSTATS, "Invalid parameter '%s'", "filename.txt");
+// =======================================================================
+#define ERROR(stsflag, fmt, ...) do { \
+    fprintf(ofile, "\n[ERROR] (%s:%d in %s)\n", __FILE__, __LINE__, __func__); \
+    fprintf(ofile, fmt, ##__VA_ARGS__); \
+    fprintf(ofile, "\n---------------------------------------------\n"); \
+    if (stsflag) collect_stats(); \
+    fprintf(stderr, "[ERROR] see output file for details\n"); \
+    exit(EXIT_FAILURE); \
+} while (0)
+
+// =======================================================================
+// MESSAGE: normal informational output in ofile
+// usage: MESSAGE("Simulation started with %d stations", nstns);
+// =======================================================================
+#define MESSAGE(fmt, ...) do { \
+    fprintf(ofile, fmt, ##__VA_ARGS__); \
+} while (0)
+
+// =======================================================================
+// TRACE: debugging trace messages in ofile (flush immediately)
+// usage: TRACE("Value of x is %d", x);
+// =======================================================================
+#define TRACE(fmt, ...) do { \
+    MESSAGE(fmt, ##__VA_ARGS__); \
+    fflush(ofile); \
+} while (0)
+
+// Operations flags
+#define NA            -1            // Value not applicable
 
 // ****** debugging flags *************************
 // Flags to active the traces ON=1 OFF=0
-#define DEBUG           0   // Debugging all (prints all traces)            
-#define DEBUGTRAF       1   // Debugging traffic generator              
-#define DEBUGchannel    1   // Debugging channel            
-#define DEBUGSTN       -1   // Debugging the station protocol -1=OFF       
-#define DEBUGqueuing    0   // Debugging the queuing when grouping reqs 
-#define DEBUGCRA        0   // Debugging contention resolution algorithm 
-#define DEBUGSTS        0   // Debugging statistics
+#define ON              1   // Debugging ON = 1, the traces are printed in output file
+#define OFF             0   // Debugging OFF = 0, no traces are printed in output file
+#define DEBUG           OFF   // Debugging all (prints all traces): ON/OFF         
+#define DEBUGTRAF       OFF   // Debugging traffic generator: ON/OFF              
+#define DEBUGchannel    OFF   // Debugging channel: ON/OFF
+#define DEBUGqueuing    OFF   // Debugging the queuing when grouping reqs: ON/OFF 
+#define DEBUGCRA        OFF   // Debugging contention resolution algorithm : ON/OFF
+#define DEBUGSTS        OFF   // Debugging statistics: ON/OFF     
+#define DEBUGSTN        NA   // Debugging the station protocol -1=OFF=NA=-1 (not fully implemented in full version, leave it always NA)      
 
 //int     DEBUGFIRSTSTN=  0;  /* Debugging first station to printout msgs  */
 //int     DEBUGLASTSTN =  200;  /* Debugging last  station to printout msgs  */
 
 /****** array dimensioning *********/
-#define MAXQU       20  // queue size at stn 
+#define MAXQU       30  // queue size at stn 
 
 /********* macros ********/
 #define MAX(x, y)  (((x) > (y)) ? (x) : (y)) // computes the max of x and y
 #define MIN(x, y)  (((x) < (y)) ? (x) : (y)) // computes the max of x and y
 
 // MACROS for change of units
-#define NA            -1            // Value not applicable
 #define BYTE          8
 
 #define MEGA          (exp(6))      // Translation from bits to Mbits        

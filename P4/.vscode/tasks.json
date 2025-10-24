@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+        // -------------------------------------------------------
+        // Debug Slotted-Aloha project
+        // -------------------------------------------------------
+            "label": "Build Slotted-Aloha  (SMX)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--config",
+                "Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        // -------------------------------------------------------
+        // Run Slotted-Aloha project
+        // -------------------------------------------------------        
+        {
+            "label": "Run Slotted-Aloha project ",
+            "type": "shell",
+            "command": "${workspaceFolder}\\build\\saloha.exe",
+            "args": ["./log/in-ref", "./log/out"],
+            "problemMatcher": []
+        }
+    ]
+}
+ 

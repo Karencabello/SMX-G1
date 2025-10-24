@@ -1,38 +1,45 @@
-# Makefile slotted aloha basic
-# Execution in cygwin: 
-# Enter cygwin and change to the directory where you have the code. 
+# Makefile slotted aloha (full)
+# Execution in terminal (VS code terminal or cygwin terminal): 
+# Enter cygwin/terminal and change to the directory where you have the code. 
 # Put the mymakefile in the same directory
+# It assumes the .c and .h files are inside a src folder
+
+# Create a log folder at the same level as src and mybuild (the dgb.txt is saved in this log folder)
 # Run the makefile with the instruction: make -f mymakefile
-# The makefile generates a saloha.exe
-# Run the protocol with the instruction: ./saloha.exe
+# The makefile generates a saloha.exe in mybuild folder
+# This execution expects two input parametes: the input filename and the output filename
+# Run the saloha with the instruction: ./mybuild/saloha.exe ./log/in-ref ./log/out
+# This run assumes the input file (in-ref) and output file (out) are inside the log folder.
+# But you can run it with different paths if you prefer to have the in and out files in other folders.
 
+# Folders
+SRC_DIR = src
+BUILD_DIR = mybuild
 
-saloha: saloha.o cues.o stats.o stochastic.o protocol.o cra.o
-	gcc -o saloha saloha.o cra.o cues.o protocol.o stats.o stochastic.o
+# Files
+SRCS = $(wildcard $(SRC_DIR)/*.c)
+OBJS = $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
+EXE = $(BUILD_DIR)/saloha
 
-cra.o: cra.c cra.h saloha.h
-	gcc -c cra.c
+# Default target
+all: $(EXE)
 
-cues.o: cues.c cues.h saloha.h
-	gcc -c cues.c
-	
-protocol.o: protocol.c stats.h cra.h cues.h saloha.h
-	gcc -c protocol.c
+# Link executable
+$(EXE): $(OBJS) 
+	@mkdir -p $(BUILD_DIR)
+	gcc -o $@ $(OBJS)
 
-stats.o: stats.c stats.h saloha.h
-	gcc -c stats.c
-
-stochastic.o: stochastic.c stats.h cues.h saloha.h
-	gcc -c stochastic.c
-
-saloha.o: saloha.c saloha.h saloha.h stats.h cues.h
-	gcc -c saloha.c
-
-
+# Compile each .c into .o inside mybuild/
+# It recompiles all .c files when one single .h file is modified (to avoid fancy automatic dependencies)
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c $(wildcard $(SRC_DIR)/*.h)
+	@mkdir -p $(BUILD_DIR)
+	gcc -c $< -o $@
 
 # To makesure everything is recompiled eliminate the objective and executable
 # files
 # in the cygwin terminal do: make -f makefile clean
 clean: 
-	rm *.o saloha
+	rm -rf $(BUILD_DIR)
 
+# Rebuild rule: clean + all
+rebuild: clean all 

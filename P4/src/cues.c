@@ -17,7 +17,7 @@
 
 // Prints a circular queue q
 void print_queue(squeue q){
-    int i, f,p;
+    int i, p;
 
     fprintf(ofile,"Queue (H %2d,T %2d, L %2d) (NM,SAV, iST,TX): ",q.head, q.tail, q.lng);
 
@@ -45,8 +45,8 @@ equeue create_qu_element(int num, double atime){
     c.txcount   = 0;
     
 #if (DEBUGqueuing == 1 || DEBUG == 1)
-   TRACE((ofile, "%4d CREATING NEW ELEMENT: num %d atime %8.4lf stime %6d tx-count %d\n",
-           slot,c.num, c.arv_time, c.sarv_time,c.txcount ));
+   TRACE("%4ld CREATING NEW ELEMENT: num %d atime %8.4lf stime %6d tx-count %d\n", \
+           slot,c.num, c.arv_time, c.sarv_time,c.txcount );
 #endif
       
    return(c);
@@ -61,7 +61,7 @@ void create_queue(sstation *s, int max){
     
     s->qu.pks = (equeue*) malloc(max*sizeof(equeue));
     if(s->qu.pks == NULL){
-        ERROR((ofile,"CREATE QUEUE: Not enough memory to create queue %d\n",s->stnnum));
+        ERROR(WITHSTATS, "CREATE QUEUE: Not enough memory to create queue %d\n", s->stnnum);
         exit(-1);
     }
     for(p = 0; p < max; p++){
@@ -89,13 +89,13 @@ void free_queue(squeue *q){
 //Add an element e in the queue q
 void add_qu_element(squeue *q, equeue e){
 #if (DEBUGqueuing == 1 || DEBUG == 1) 
-    TRACE((ofile,"%4d ADD QUEUE BEFORE: pos %d elem (num %4d, arv %8.4lf sarv %6d txcnt %2d): ",
-            slot, q->tail,e.num, e.arv_time,e.sarv_time, e.txcount));
+    TRACE("%4ld ADD QUEUE BEFORE: pos %d elem (num %4d, arv %8.4lf sarv %6d txcnt %2d): ", \
+            slot, q->tail,e.num, e.arv_time,e.sarv_time, e.txcount);
     print_queue(*q);
 #endif
     
     if (q->lng == MAXQU) {
-        ERROR((ofile,"ERROR QUEUE: Not enough memory in queue, increment MAXQU constant"));
+        ERROR(WITHSTATS,"%ld ERROR QUEUE: Not enough memory in queue, increment MAXQU constant", slot);
         exit(-1);
     }
     
@@ -107,9 +107,9 @@ void add_qu_element(squeue *q, equeue e){
     q->pks[q->tail] = e;
 
 #if (DEBUGqueuing == 1 || DEBUG == 1)
-    TRACE((ofile,"%4d ADD QUEUE... pos %d elem (%4d, %8.4lf %6d %2d): ",
-            slot, q->tail,q->pks[q->tail].num,q->pks[q->tail].arv_time, 
-            q->pks[q->tail].sarv_time,q->pks[q->tail].txcount));
+    TRACE("%4ld ADD QUEUE... pos %d elem (%4d, %8.4lf %6d %2d): ",  \
+            slot, q->tail,q->pks[q->tail].num,q->pks[q->tail].arv_time, \
+            q->pks[q->tail].sarv_time,q->pks[q->tail].txcount);
     print_queue(*q);
 #endif
         
@@ -119,12 +119,10 @@ void add_qu_element(squeue *q, equeue e){
 int delete_qu_element(squeue *q, equeue *e){
     
 #if (DEBUGqueuing == 1 || DEBUG == 1)
-    TRACE((ofile,"%4d DELETE QUEUE BEFORE ... pos %d elem (%4d, %8.4lf, %6d) ",
-            slot, q->tail,q->pks[q->tail].num,q->pks[q->tail].arv_time, 
-            q->pks[q->tail].sarv_time));
+    TRACE("%4ld DELETE QUEUE BEFORE ... pos %3d elem (%4d, %8.4lf, %6d) ", \
+            slot, q->tail,q->pks[q->tail].num,q->pks[q->tail].arv_time, \
+            q->pks[q->tail].sarv_time);
    print_queue(*q);
-   TRACE((ofile,"%4d DELETE QUEUE AFTER  ... pos %d ",
-            slot, q->tail,q->pks[q->tail].sarv_time));
 #endif
 
     if(q->lng == 0) return (0); //no hi ha elements a la cua
@@ -137,8 +135,11 @@ int delete_qu_element(squeue *q, equeue *e){
     if(q->lng == 0) q->head = q->tail = NA; // empty queue
 
 #if (DEBUGqueuing == 1 || DEBUG == 1)
-   TRACE((ofile,"elem (%4d, %8.4lf, %6d) ",
-            e->num, e->arv_time, e->sarv_time, e->txcount));
+   TRACE("%4ld DELETE QUEUE AFTER  ... pos %3d elem (%4d, %8.4lf, %6d) ", \
+            slot, q->tail,q->pks[q->tail].num,q->pks[q->tail].arv_time, \
+            q->pks[q->tail].sarv_time);
+   TRACE("elem (%4d, %8.4lf, %6d) ", \
+          e->num, e->arv_time, e->sarv_time);
     print_queue(*q);
 #endif
 
