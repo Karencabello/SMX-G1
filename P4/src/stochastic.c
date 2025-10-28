@@ -54,7 +54,7 @@ void init_traf(){
 	stns[stn].nextpkarv = (double)(decide_interarrival(&(stns[stn])));
 
 #if (DEBUG == 1 || DEBUGSTN == stn || DEBUGTRAF == 1)
-      TRACE("%4d STN %2d INIT TRAF: Next pak Arrival %lf slots %d \n", \
+      TRACE("%4ld STN %2d INIT TRAF: Next pak Arrival %lf slots %d \n", \
               slot, stns[stn].stnnum, stns[stn].nextpkarv, \
               (int)ceil(stns[stn].nextpkarv));
               //(int)ceil(MSECtoSLOTS(stns[stn].nextpkarv));
@@ -81,10 +81,10 @@ void create_arrival(sstation *s){
         sts.gload[STSSTEADY][s->stnnum]++;
 
 #if (DEBUG == 1 || DEBUGSTN == 1  || DEBUGTRAF == 1 || DEBUGCRA == 1 )
-    TRACE("%4d STN %2d PK  ARRIVAL: pk (num %3d, arv %9.6lf sarv %4d Tx-count %2d) QU ", \
+    TRACE("%4ld STN %2d PK  ARRIVAL: pk (num %3d, arv %9.6lf sarv %4d Tx-count %2d) QU ", \
             slot, s->stnnum, s->qu.pks[s->qu.tail].num, \
             s->qu.pks[s->qu.tail].arv_time, s->qu.pks[s->qu.tail].sarv_time, \
-            s->qu.pks[s->qu.tail].txcount); 
+            s->qu.pks[s->qu.tail].txcount);
     print_queue(s->qu);
 #endif
     
@@ -100,7 +100,7 @@ double decide_interarrival(sstation *s){
     //if(flag == FIRSTPK) ia = -ia;
     
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGTRAF == 1)
-    TRACE("%4d STN %2d NEXT INTARV: next-pk %d Next time %8.4lf ms %8.4lf ia %lf\n", \
+    TRACE("%4ld STN %2d NEXT INTARV: next-pk %d Next time %8.4lf ms %8.4lf ia %lf\n", \
             slot, s->stnnum, s->qu.pks[s->qu.tail].num+1, \
             s->nextpkarv, SLOTStoMSEC(s->nextpkarv), ia); // MSECtoSLOTS
 #endif
@@ -117,7 +117,7 @@ void decide_next_arrival(sstation *s){
     s->nextpkarv += decide_interarrival(s);
     
 #if (DEBUG == 1 || DEBUGSTN == 1 || DEBUGTRAF == 1)
-    TRACE("%4d STN %2d NEXT PK ARV: next-pk %d Next time %8.4lf ms %8.4lf\n", \
+    TRACE("%4ld STN %2d NEXT PK ARV: next-pk %d Next time %8.4lf ms %8.4lf\n", \
             slot, s->stnnum, s->qu.pks[s->qu.tail].num+1, \
             s->nextpkarv, SLOTStoMSEC(s->nextpkarv));  // MSECtoSLOTS
 #endif

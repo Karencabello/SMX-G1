@@ -1,13 +1,6 @@
 # TODO: Fix format specifier warnings in saloha
 
-## saloha.c ✅
-- Line 41: %d -> %ld for slot
-- Line 48: %d -> %ld for slot
-- Line 67: %d -> %ld for nstns
-- Line 68: %9d -> %9ld for nstns
-- Line 96: %9d -> %9ld for nslots
-- Line 101: %9d -> %9ld for start_stats
-- Line 185: %d -> %ld for slot
+## saloha.c ✅ Done
 
 ## stats.c
 - Line 77: %d %d %d -> %ld %f %ld for slot, m, samples
