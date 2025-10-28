@@ -1,11 +1,11 @@
 **************** START EXECUTION ********************
-  Time : Mon Oct 27 18:33:30 2025
+  Time : Tue Oct 28 12:17:51 2025
 *****************************************************
  NETWORK CONFIGURATION ---
     Number of stations                      :         5
     Slot Size (bytes)                       :       100
     Transmission Rate (Mbps)                :    100.00
-    Contention Resolution Algorithm         :         D (D-deterministic, P pPersistence, B BEB, O Optimal pPersistence)
+    Contention Resolution Algorithm         :         B (D-deterministic, P pPersistence, B BEB, O Optimal pPersistence)
     Probability of p-persistent protocol    :    0.1500 (only for fixed p-persistence)
 TRAFFIC GENERATOR -------
     Normalized offered load                 :  0.032000 (    3.2000 Mbps)
@@ -2031,30 +2031,37 @@ Seed for traffic generator : 1613781888
  882 END SLOT TIME:........... channel SA  1 DA  5 S  2 pk (  2,  882,   -1,  0)
  882 CHANNEL COLLISION: SA  1 DA  5 pk   2 channel state  2 
  883 Creating new Slot empty...channel SA -1 DA -1 S  0 pk ( -1,  -1.0000,   -1, -1)
- 883 STN  0 CRA DETERMINISTIC: wait  0 
+ 883 STN  0 CRA TBEB: wait  0 (u 1526928578, m 1, pk 3, txcount 1) 
  883 STN  0 COLLISION: SA -1 DA -1 pk   3 channel state  0 stn state (prev T next R) attempts 1 wait  0
- 883 STN  1 CRA DETERMINISTIC: wait  1 
- 883 STN  1 COLLISION: SA -1 DA -1 pk   2 channel state  0 stn state (prev T next R) attempts 1 wait  1
+ 883 STN  1 CRA TBEB: wait  0 (u 659028796, m 1, pk 2, txcount 1) 
+ 883 STN  1 COLLISION: SA -1 DA -1 pk   2 channel state  0 stn state (prev T next R) attempts 1 wait  0
  883 END SLOT TIME:........... channel SA -1 DA -1 S  0 pk ( -1,   -1,   -1, -1)
  884 Creating new Slot empty...channel SA -1 DA -1 S  0 pk ( -1,  -1.0000,   -1, -1)
  884 STN  0 TRANSMIT : SA  0 DA  5 pk   3 channel state  1 stn state (prev R next T) attempts 2
- 884 STN  1 CRA: wait  1 
- 884 END SLOT TIME:........... channel SA  0 DA  5 S  1 pk (  3,  882,  882,  1)
- 884 DELETE QUEUE BEFORE ... pos   0 elem (   3, 881.8466,    882) Queue (H  0,T  0, L  1) (NM,SAV, iST,TX):   0 (  3,  882,  882, 2)
- 884 CREATING NEW ELEMENT: num -1 atime  -1.0000 stime     -1 tx-count 0
- 884 DELETE QUEUE AFTER  ... pos  -1 elem (  -1,   0.0000, 858993459) elem (   3, 881.8466,    882) Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
- 884 STN  0 RV ACK   : SA  0 DA  5 channel state  1 stn state (prev T next I) tx-count 2 Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
+ 884 STN  1 TRANSMIT : SA  1 DA  5 pk   2 channel state  2 stn state (prev R next T) attempts 2
+ 884 END SLOT TIME:........... channel SA  1 DA  5 S  2 pk (  2,  882,  882,  1)
+ 884 CHANNEL COLLISION: SA  1 DA  5 pk   2 channel state  2 
  885 Creating new Slot empty...channel SA -1 DA -1 S  0 pk ( -1,  -1.0000,   -1, -1)
- 885 STN  1 TRANSMIT : SA  1 DA  5 pk   2 channel state  1 stn state (prev R next T) attempts 2
- 885 END SLOT TIME:........... channel SA  1 DA  5 S  1 pk (  2,  882,  882,  1)
- 885 DELETE QUEUE BEFORE ... pos   0 elem (   2, 881.2255,    882) Queue (H  0,T  0, L  1) (NM,SAV, iST,TX):   0 (  2,  882,  882, 2)
- 885 CREATING NEW ELEMENT: num -1 atime  -1.0000 stime     -1 tx-count 0
- 885 DELETE QUEUE AFTER  ... pos  -1 elem (  -1,  -1.0000,     -1) elem (   2, 881.2255,    882) Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
- 885 STN  1 RV ACK   : SA  1 DA  5 channel state  1 stn state (prev T next I) tx-count 2 Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
+ 885 STN  0 CRA TBEB: wait  1 (u 1583521853, m 2, pk 3, txcount 2) 
+ 885 STN  0 COLLISION: SA -1 DA -1 pk   3 channel state  0 stn state (prev T next R) attempts 2 wait  1
+ 885 STN  1 CRA TBEB: wait  0 (u 486946100, m 2, pk 2, txcount 2) 
+ 885 STN  1 COLLISION: SA -1 DA -1 pk   2 channel state  0 stn state (prev T next R) attempts 2 wait  0
+ 885 END SLOT TIME:........... channel SA -1 DA -1 S  0 pk ( -1,   -1,   -1, -1)
  886 Creating new Slot empty...channel SA -1 DA -1 S  0 pk ( -1,  -1.0000,   -1, -1)
- 886 END SLOT TIME:........... channel SA -1 DA -1 S  0 pk ( -1,   -1,   -1, -1)
+ 886 STN  0 CRA: wait  1 
+ 886 STN  1 TRANSMIT : SA  1 DA  5 pk   2 channel state  1 stn state (prev R next T) attempts 3
+ 886 END SLOT TIME:........... channel SA  1 DA  5 S  1 pk (  2,  882,  882,  2)
+ 886 DELETE QUEUE BEFORE ... pos   0 elem (   2, 881.2255,    882) Queue (H  0,T  0, L  1) (NM,SAV, iST,TX):   0 (  2,  882,  882, 3)
+ 886 CREATING NEW ELEMENT: num -1 atime  -1.0000 stime     -1 tx-count 0
+ 886 DELETE QUEUE AFTER  ... pos  -1 elem (  -1,  -1.0000,     -1) elem (   2, 881.2255,    882) Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
+ 886 STN  1 RV ACK   : SA  1 DA  5 channel state  1 stn state (prev T next I) tx-count 3 Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
  887 Creating new Slot empty...channel SA -1 DA -1 S  0 pk ( -1,  -1.0000,   -1, -1)
- 887 END SLOT TIME:........... channel SA -1 DA -1 S  0 pk ( -1,   -1,   -1, -1)
+ 887 STN  0 TRANSMIT : SA  0 DA  5 pk   3 channel state  1 stn state (prev R next T) attempts 3
+ 887 END SLOT TIME:........... channel SA  0 DA  5 S  1 pk (  3,  882,  882,  2)
+ 887 DELETE QUEUE BEFORE ... pos   0 elem (   3, 881.8466,    882) Queue (H  0,T  0, L  1) (NM,SAV, iST,TX):   0 (  3,  882,  882, 3)
+ 887 CREATING NEW ELEMENT: num -1 atime  -1.0000 stime     -1 tx-count 0
+ 887 DELETE QUEUE AFTER  ... pos  -1 elem (  -1,   0.0000, 858993459) elem (   3, 881.8466,    882) Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
+ 887 STN  0 RV ACK   : SA  0 DA  5 channel state  1 stn state (prev T next I) tx-count 3 Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
  888 Creating new Slot empty...channel SA -1 DA -1 S  0 pk ( -1,  -1.0000,   -1, -1)
  888 CREATING NEW ELEMENT: num 3 atime 887.7337 stime    888 tx-count 0
  888 ADD QUEUE BEFORE: pos -1 elem (num    3, arv 887.7337 sarv    888 txcnt  0): Queue (H -1,T -1, L  0) (NM,SAV, iST,TX): 
@@ -4385,15 +4392,15 @@ PRINTING STATISTICS -----------------------------
 
 Queue Histogram of station 0
  Mean: 0.01, Samples: 1875, Min: 0, Max 1
- Stddev: 0.082977, Jitter: 1, 95th-percentile: 0
- CI: 0.003756 (0.00, 0.01) r 54.17 %
-   0 |   1862     13      0 
+ Stddev: 0.091981, Jitter: 1, 95th-percentile: 0
+ CI: 0.004163 (0.00, 0.01) r 48.79 %
+   0 |   1859     16      0 
 
 Queue Histogram of station 1
  Mean: 0.01, Samples: 1875, Min: 0, Max 1
- Stddev: 0.086087, Jitter: 1, 95th-percentile: 0
- CI: 0.003897 (0.00, 0.01) r 52.19 %
-   0 |   1861     14      0 
+ Stddev: 0.089084, Jitter: 1, 95th-percentile: 0
+ CI: 0.004032 (0.00, 0.01) r 50.40 %
+   0 |   1860     15      0 
 
 Queue Histogram of station 2
  Mean: 0.00, Samples: 1875, Min: 0, Max 1
@@ -4415,21 +4422,21 @@ Queue Histogram of station 4
 
 Queue Histogram over all stns
  Mean: 0.01, Samples: 9375, Min: 0, Max 2
- Stddev: 0.080418, Jitter: 2, 95th-percentile: 0
- CI: 0.001628 (0.00, 0.01) r 25.87 %
-   0 |   9317     57      1      0 
+ Stddev: 0.082995, Jitter: 2, 95th-percentile: 0
+ CI: 0.001680 (0.01, 0.01) r 25.00 %
+   0 |   9313     61      1      0 
 
 Delay Histogram of station 0
- Mean: 1.18, Samples: 11, Min: 1, Max 3
- Stddev: 0.574960, Jitter: 2, 95th-percentile: 3
- CI: 0.339779 (0.84, 1.52) r 28.75 %
-   0 |      0     10      0      1      0 
+ Mean: 1.45, Samples: 11, Min: 1, Max 6
+ Stddev: 1.437399, Jitter: 5, 95th-percentile: 6
+ CI: 0.849448 (0.61, 2.30) r 58.40 %
+   0 |      0     10      0      0      0      0      1      0 
 
 Delay Histogram of station 1
- Mean: 1.27, Samples: 11, Min: 1, Max 4
- Stddev: 0.862439, Jitter: 3, 95th-percentile: 4
- CI: 0.509669 (0.76, 1.78) r 40.05 %
-   0 |      0     10      0      0      1      0 
+ Mean: 1.36, Samples: 11, Min: 1, Max 5
+ Stddev: 1.149919, Jitter: 4, 95th-percentile: 5
+ CI: 0.679559 (0.68, 2.04) r 49.83 %
+   0 |      0     10      0      0      0      1      0 
 
 Delay Histogram of station 2
  Mean: 1.00, Samples: 9, Min: 1, Max 1
@@ -4450,22 +4457,22 @@ Delay Histogram of station 4
    0 |      0     14      1      0 
 
 Delay Histogram over all stns
- Mean: 1.11, Samples: 53, Min: 1, Max 4
- Stddev: 0.501333, Jitter: 3, 95th-percentile: 2
- CI: 0.134972 (0.98, 1.25) r 12.12 %
-   0 |      0     50      1      1      1      0 
+ Mean: 1.19, Samples: 53, Min: 1, Max 6
+ Stddev: 0.869973, Jitter: 5, 95th-percentile: 2
+ CI: 0.234220 (0.95, 1.42) r 19.70 %
+   0 |      0     50      1      0      0      1      1      0 
 
 Service Time Histogram of station 0
- Mean: 1.18, Samples: 11, Min: 1, Max 3
- Stddev: 0.574960, Jitter: 2, 95th-percentile: 3
- CI: 0.339779 (0.84, 1.52) r 28.75 %
-   0 |      0     10      0      1      0 
+ Mean: 1.45, Samples: 11, Min: 1, Max 6
+ Stddev: 1.437399, Jitter: 5, 95th-percentile: 6
+ CI: 0.849448 (0.61, 2.30) r 58.40 %
+   0 |      0     10      0      0      0      0      1      0 
 
 Service Time Histogram of station 1
- Mean: 1.27, Samples: 11, Min: 1, Max 4
- Stddev: 0.862439, Jitter: 3, 95th-percentile: 4
- CI: 0.509669 (0.76, 1.78) r 40.05 %
-   0 |      0     10      0      0      1      0 
+ Mean: 1.36, Samples: 11, Min: 1, Max 5
+ Stddev: 1.149919, Jitter: 4, 95th-percentile: 5
+ CI: 0.679559 (0.68, 2.04) r 49.83 %
+   0 |      0     10      0      0      0      1      0 
 
 Service Time Histogram of station 2
  Mean: 1.00, Samples: 9, Min: 1, Max 1
@@ -4486,22 +4493,22 @@ Service Time Histogram of station 4
    0 |      0     15      0 
 
 Service Time Histogram over all stns
- Mean: 1.09, Samples: 53, Min: 1, Max 4
- Stddev: 0.486192, Jitter: 3, 95th-percentile: 1
- CI: 0.130896 (0.96, 1.23) r 11.96 %
-   0 |      0     51      0      1      1      0 
+ Mean: 1.17, Samples: 53, Min: 1, Max 6
+ Stddev: 0.862988, Jitter: 5, 95th-percentile: 1
+ CI: 0.232340 (0.94, 1.40) r 19.86 %
+   0 |      0     51      0      0      0      1      1      0 
 
 Transmission Attempt Histogram of station 0
- Mean: 1.09, Samples: 11, Min: 1, Max 2
- Stddev: 0.287480, Jitter: 1, 95th-percentile: 2
- CI: 0.169890 (0.92, 1.26) r 15.57 %
-   0 |      0     10      1      0 
+ Mean: 1.18, Samples: 11, Min: 1, Max 3
+ Stddev: 0.574960, Jitter: 2, 95th-percentile: 3
+ CI: 0.339779 (0.84, 1.52) r 28.75 %
+   0 |      0     10      0      1      0 
 
 Transmission Attempt Histogram of station 1
- Mean: 1.09, Samples: 11, Min: 1, Max 2
- Stddev: 0.287480, Jitter: 1, 95th-percentile: 2
- CI: 0.169890 (0.92, 1.26) r 15.57 %
-   0 |      0     10      1      0 
+ Mean: 1.18, Samples: 11, Min: 1, Max 3
+ Stddev: 0.574960, Jitter: 2, 95th-percentile: 3
+ CI: 0.339779 (0.84, 1.52) r 28.75 %
+   0 |      0     10      0      1      0 
 
 Transmission Attempt Histogram of station 2
  Mean: 1.00, Samples: 9, Min: 1, Max 1
@@ -4522,16 +4529,16 @@ Transmission Attempt Histogram of station 4
    0 |      0     15      0 
 
 Transmission Attempt Histogram over all stns
- Mean: 1.04, Samples: 53, Min: 1, Max 2
- Stddev: 0.190557, Jitter: 1, 95th-percentile: 1
- CI: 0.051303 (0.99, 1.09) r 4.94 %
-   0 |      0     51      2      0 
+ Mean: 1.08, Samples: 53, Min: 1, Max 3
+ Stddev: 0.381113, Jitter: 2, 95th-percentile: 1
+ CI: 0.102606 (0.97, 1.18) r 9.54 %
+   0 |      0     51      0      2      0 
 
 Collision Histogram over all stns
  Mean: 0.03, Samples: 1875, Min: 0, Max 2
- Stddev: 0.171871, Jitter: 2, 95th-percentile: 0
- CI: 0.007780 (0.02, 0.04) r 26.52 %
-   0 |   1821     53      1      0 
+ Stddev: 0.177790, Jitter: 2, 95th-percentile: 0
+ CI: 0.008048 (0.02, 0.04) r 26.47 %
+   0 |   1820     53      2      0 
 
 Paquets sent by each station STSWARMUP (mean     0.00)
    0 |      0 
@@ -4549,25 +4556,25 @@ Paquets generated by each station STSSTEADY (mean    10.60)
 SUMMARY OF SIMULATION MEASURES ----------------
 Total offered load                             : 0.028267
 Utilization                                    : 0.028267
-Average Queue Length across stns               : 0.006293 pks
-Average Delay across stns                      :   1.1042 slots  CI: 0.134972 (0.97, 1.24) r 12.22 %
-compute target n: z 1.960000 r 5.000000 mean 1.104242 stddev 0.337369 n 143.434120 return 144 
- samples 53 target 144
-Standard Deviation of Delay across stns        :   0.3374 slots
-Delay jitter (max-min) across stns             :   1.2000 slots
-95th-percentile of Delay across stns           :   2.2000 slots 
-Average Service Time across stns               :   1.0909 slots  CI: 0.130896 (0.96, 1.22) r 12.00 %
-compute target n: z 1.960000 r 5.000000 mean 1.090909 stddev 0.287480 n 106.711111 return 107 
- samples 53 target 107
-Standard Deviation of Service Time across stns :     0.29 slots
+Average Queue Length across stns               : 0.006720 pks
+Average Delay across stns                      :   1.1770 slots  CI: 0.234220 (0.94, 1.41) r 19.90 %
+compute target n: z 1.960000 r 5.000000 mean 1.176970 stddev 0.567352 n 357.065045 return 358 
+ samples 53 target 358
+Standard Deviation of Delay across stns        :   0.5674 slots
+Delay jitter (max-min) across stns             :   2.0000 slots
+95th-percentile of Delay across stns           :   3.0000 slots 
+Average Service Time across stns               :   1.1636 slots  CI: 0.232340 (0.93, 1.40) r 19.97 %
+compute target n: z 1.960000 r 5.000000 mean 1.163636 stddev 0.517464 n 303.876562 return 304 
+ samples 53 target 304
+Standard Deviation of Service Time across stns :     0.52 slots
 
 THEORETICAL FORMULAS ----------------
-Little's law average delay              :   1.1132 slots
+Little's law average delay              :   1.1887 slots
 M/D/1 (small load) average delay        :   1.0145 slots
 M/D/1 (small load) average queue length :   0.0287 pks
 
 **************** END EXECUTION ******************
-  Time : Mon Oct 27 18:33:30 2025
+  Time : Tue Oct 28 12:17:52 2025
 *************************************************
  
 Program has finished Successfully!!!!!!!!!!!
