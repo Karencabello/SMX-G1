@@ -70,7 +70,7 @@
 // Flags to active the traces ON=1 OFF=0
 #define ON              1   // Debugging ON = 1, the traces are printed in output file
 #define OFF             0   // Debugging OFF = 0, no traces are printed in output file
-#define DEBUG           ON   // Debugging all (prints all traces): ON/OFF         
+#define DEBUG           OFF   // Debugging all (prints all traces): ON/OFF         
 #define DEBUGTRAF       OFF   // Debugging traffic generator: ON/OFF              
 #define DEBUGchannel    OFF   // Debugging channel: ON/OFF
 #define DEBUGqueuing    OFF   // Debugging the queuing when grouping reqs: ON/OFF 
