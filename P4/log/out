@@ -1,112 +1,452 @@
 **************** START EXECUTION ********************
-  Time : Thu Nov  6 12:27:09 2025
+  Time : Tue Nov 11 11:02:02 2025
 *****************************************************
  NETWORK CONFIGURATION ---
-    Number of stations                      :         1
+    Number of stations                      :        10
     Slot Size (bytes)                       :       100
     Transmission Rate (Mbps)                :    100.00
     Contention Resolution Algorithm         :         D (D-deterministic, P pPersistence, B BEB, O Optimal pPersistence)
-    Probability of p-persistent protocol    :    0.1500 (only for fixed p-persistence)
+    Probability of p-persistent protocol    :    0.2000 (only for fixed p-persistence)
 TRAFFIC GENERATOR -------
-    Normalized offered load                 :  0.001000 (    0.1000 Mbps)
+    Normalized offered load                 :  0.200000 (   20.0000 Mbps)
     Interarrival Distribution (E)Exp.       :         E
 SIMULATION PARAMETERS ---
-    Length of simulation in miliseconds     :     15.00 (      1875 slots)
+    Length of simulation in miliseconds     :   1000.00 (    125000 slots)
     Start statistics at milisecond          :      0.00 (         0 slots)
-    Seed value (random = 0)                 :      3412
+    Seed value (random = 0)                 :     58724
     Significance level (alpha)              :  0.050000 
     Z value of 0.975 (1-alpha/2)            :      1.96 
-    Target CI accuracy r in % [0..100]      :      5.00 
+    Target CI accuracy r in % [0..100]      :      2.00 
 
 End of input data---
 Initializing......
 
-Seed for traffic generator : 1613781888
+Seed for traffic generator : 1959499455
  ___________________________________________________
 
 PRINTING STATISTICS -----------------------------
 
 Queue Histogram of station 0
- Mean: 0.00, Samples: 1875, Min: 0, Max 0
- Stddev: 0.000000, Jitter: 0, 95th-percentile: 0
- CI: 0.000000 (0.00, 0.00) r nan %
-   0 |   1875      0 
+ Mean: 0.03, Samples: 125000, Min: 0, Max 3
+ Stddev: 0.182969, Jitter: 3, 95th-percentile: 0
+ CI: 0.001014 (0.03, 0.03) r 3.15 %
+   0 | 121125   3732    141      2      0 
+
+Queue Histogram of station 1
+ Mean: 0.04, Samples: 125000, Min: 0, Max 3
+ Stddev: 0.205933, Jitter: 3, 95th-percentile: 0
+ CI: 0.001142 (0.04, 0.04) r 2.85 %
+   0 | 120225   4546    221      8      0 
+
+Queue Histogram of station 2
+ Mean: 0.05, Samples: 125000, Min: 0, Max 4
+ Stddev: 0.230228, Jitter: 4, 95th-percentile: 0
+ CI: 0.001276 (0.05, 0.05) r 2.72 %
+   0 | 119572   5054    322     39     13      0 
+
+Queue Histogram of station 3
+ Mean: 0.05, Samples: 125000, Min: 0, Max 4
+ Stddev: 0.233843, Jitter: 4, 95th-percentile: 0
+ CI: 0.001296 (0.05, 0.05) r 2.63 %
+   0 | 119277   5331    351     36      5      0 
+
+Queue Histogram of station 4
+ Mean: 0.06, Samples: 125000, Min: 0, Max 3
+ Stddev: 0.260753, Jitter: 3, 95th-percentile: 1
+ CI: 0.001446 (0.06, 0.06) r 2.40 %
+   0 | 118127   6263    560     50      0 
+
+Queue Histogram of station 5
+ Mean: 0.07, Samples: 125000, Min: 0, Max 3
+ Stddev: 0.273644, Jitter: 3, 95th-percentile: 1
+ CI: 0.001517 (0.07, 0.07) r 2.27 %
+   0 | 117413   6862    694     31      0 
+
+Queue Histogram of station 6
+ Mean: 0.07, Samples: 125000, Min: 0, Max 3
+ Stddev: 0.289155, Jitter: 3, 95th-percentile: 1
+ CI: 0.001603 (0.07, 0.07) r 2.19 %
+   0 | 116773   7352    821     54      0 
+
+Queue Histogram of station 7
+ Mean: 0.08, Samples: 125000, Min: 0, Max 4
+ Stddev: 0.313005, Jitter: 4, 95th-percentile: 1
+ CI: 0.001735 (0.08, 0.09) r 2.07 %
+   0 | 115689   8308    869    115     19      0 
+
+Queue Histogram of station 8
+ Mean: 0.09, Samples: 125000, Min: 0, Max 6
+ Stddev: 0.340308, Jitter: 6, 95th-percentile: 1
+ CI: 0.001887 (0.09, 0.09) r 2.08 %
+   0 | 115332   8299   1171    142     20     34      2      0 
+
+Queue Histogram of station 9
+ Mean: 0.10, Samples: 125000, Min: 0, Max 5
+ Stddev: 0.358128, Jitter: 5, 95th-percentile: 1
+ CI: 0.001985 (0.10, 0.10) r 1.98 %
+   0 | 114409   9009   1329    172     68     13      0 
 
 Queue Histogram over all stns
- Mean: 0.00, Samples: 1875, Min: 0, Max 0
- Stddev: 0.000000, Jitter: 0, 95th-percentile: 0
- CI: 0.000000 (0.00, 0.00) r nan %
-   0 |   1875      0 
+ Mean: 0.06, Samples: 1250000, Min: 0, Max 6
+ Stddev: 0.275082, Jitter: 6, 95th-percentile: 1
+ CI: 0.000482 (0.06, 0.06) r 0.75 %
+   0 | 1177942  64756   6479    649    125     47      2      0 
 
 Delay Histogram of station 0
- Mean: 0.00, Samples: 0, Min: -1, Max -1
- Stddev: nan, Jitter: -1, 95th-percentile: -1
- CI: nan (nan, nan) r nan %
-   0 |      0 
+ Mean: 1.62, Samples: 2479, Min: 1, Max 19
+ Stddev: 1.399170, Jitter: 18, 95th-percentile: 5
+ CI: 0.055079 (1.57, 1.68) r 3.40 %
+   0 |      0   1901     25    413     11     88      5     21      2      6 
+  10 |      0      2      0      2      0      1      0      1      0      1 
+  20 |      0 
+
+Delay Histogram of station 1
+ Mean: 1.96, Samples: 2558, Min: 1, Max 34
+ Stddev: 2.309833, Jitter: 33, 95th-percentile: 7
+ CI: 0.089513 (1.87, 2.05) r 4.57 %
+   0 |      0   1969     12     14    413     10      4     86      5      1 
+  10 |     25      0      1      4      0      0      7      0      0      3 
+  20 |      0      0      0      0      1      1      0      0      0      0 
+  30 |      0      0      0      0      2      0 
+
+Delay Histogram of station 2
+ Mean: 2.37, Samples: 2476, Min: 1, Max 34
+ Stddev: 3.153124, Jitter: 33, 95th-percentile: 9
+ CI: 0.124200 (2.25, 2.49) r 5.24 %
+   0 |      0   1895     16      6      4    389     10      4      4     71 
+  10 |      2      0      0     37      3      6      4     11      3      0 
+  20 |      2      5      0      0      0      1      0      0      0      1 
+  30 |      0      1      0      0      1      0 
+
+Delay Histogram of station 3
+ Mean: 2.51, Samples: 2453, Min: 1, Max 26
+ Stddev: 3.304059, Jitter: 25, 95th-percentile: 11
+ CI: 0.130754 (2.38, 2.64) r 5.21 %
+   0 |      0   1892     21      2      9      5    373      8      8      5 
+  10 |      4     64      9      2      1      2     34      1      1      2 
+  20 |      2      5      1      0      0      1      1      0 
+
+Delay Histogram of station 4
+ Mean: 3.07, Samples: 2457, Min: 1, Max 55
+ Stddev: 4.572721, Jitter: 54, 95th-percentile: 13
+ CI: 0.180812 (2.89, 3.25) r 5.90 %
+   0 |      0   1841     23      6      4      6      9    393     13      5 
+  10 |      3      3      5     80      6      1      3      2      4     25 
+  20 |      1      0      1      0      0     13      1      0      0      0 
+  30 |      1      3      0      0      0      0      0      2      0      0 
+  40 |      0      0      0      1      0      0      0      0      0      1 
+  50 |      0      0      0      0      0      1      0 
+
+Delay Histogram of station 5
+ Mean: 3.25, Samples: 2568, Min: 1, Max 57
+ Stddev: 4.858352, Jitter: 56, 95th-percentile: 15
+ CI: 0.187909 (3.06, 3.44) r 5.78 %
+   0 |      0   1940     21      7      6      4     11      7    399     10 
+  10 |      6      4      4      4      6     81      5      4      0      2 
+  20 |      0      1     28      1      2      0      0      1      0      8 
+  30 |      0      0      1      0      1      0      2      0      0      0 
+  40 |      0      0      0      0      0      0      0      0      1      0 
+  50 |      0      0      0      0      0      0      0      1      0 
+
+Delay Histogram of station 6
+ Mean: 3.63, Samples: 2523, Min: 1, Max 61
+ Stddev: 5.580342, Jitter: 60, 95th-percentile: 17
+ CI: 0.217750 (3.41, 3.85) r 6.00 %
+   0 |      0   1897     19      6      6      5      6      5      8    384 
+  10 |      4      8      3      6      8      3      7     94      4      2 
+  20 |      1      4      4      2      2     19      3      0      0      2 
+  30 |      1      0      0      5      0      0      1      0      0      0 
+  40 |      0      1      0      0      0      0      0      0      0      0 
+  50 |      0      0      0      0      0      0      0      2      0      0 
+  60 |      0      1      0 
+
+Delay Histogram of station 7
+ Mean: 4.07, Samples: 2570, Min: 1, Max 73
+ Stddev: 6.544056, Jitter: 72, 95th-percentile: 19
+ CI: 0.253009 (3.82, 4.33) r 6.21 %
+   0 |      0   1914     16      4      6      6     13      7      3     10 
+  10 |    405      3      4      2      4      3      5      3      7     87 
+  20 |      7      3      5      2      2      1      1      5     25      2 
+  30 |      0      1      0      0      2      0      0      4      0      0 
+  40 |      0      0      0      0      0      1      2      0      0      0 
+  50 |      0      0      0      0      0      2      0      0      0      0 
+  60 |      0      0      0      0      2      0      0      0      0      0 
+  70 |      0      0      0      1      0 
+
+Delay Histogram of station 8
+ Mean: 4.69, Samples: 2418, Min: 1, Max 61
+ Stddev: 7.556993, Jitter: 60, 95th-percentile: 21
+ CI: 0.301215 (4.38, 4.99) r 6.43 %
+   0 |      0   1767     13      7     10     10      7      4      5     10 
+  10 |      6    374      6      4      4      5      9      7      6      2 
+  20 |      3     84      4      1      1      3      1      3      1      0 
+  30 |      0     31      3      0      2      1      1      3      1      0 
+  40 |      1      9      0      0      0      1      1      0      2      1 
+  50 |      0      1      0      0      0      1      0      0      0      0 
+  60 |      0      2      0 
+
+Delay Histogram of station 9
+ Mean: 4.95, Samples: 2528, Min: 1, Max 89
+ Stddev: 8.419206, Jitter: 88, 95th-percentile: 23
+ CI: 0.328200 (4.62, 5.28) r 6.63 %
+   0 |      0   1868     25      8      6     11      2      4      6      8 
+  10 |      9      5    357     11      0      3      2      5      5      3 
+  20 |      6      1      5    100      5      4      1      0      3      2 
+  30 |      4      2      2      4     29      0      0      0      0      0 
+  40 |      1      1      0      0      0      8      0      0      1      1 
+  50 |      0      0      0      1      2      0      2      2      0      0 
+  60 |      1      0      0      0      0      0      0      0      0      0 
+  70 |      0      0      0      0      0      0      0      0      0      0 
+  80 |      0      1      0      0      0      0      0      0      0      1 
+  90 |      0 
 
 Delay Histogram over all stns
- Mean: 0.00, Samples: 0, Min: -1, Max -1
- Stddev: nan, Jitter: -1, 95th-percentile: -1
- CI: nan (nan, nan) r nan %
-   0 |      0 
+ Mean: 3.21, Samples: 25030, Min: 1, Max 89
+ Stddev: 5.349705, Jitter: 88, 95th-percentile: 12
+ CI: 0.066276 (3.15, 3.28) r 2.06 %
+   0 |      0  18884    191    473    475    534    440    539    453    510 
+  10 |    464    463    389    152     32    105     76    128     30    127 
+  20 |     22    103     48    106     13     43      8      9     29     15 
+  30 |      6     38      6      9     37      1      4      9      1      0 
+  40 |      2     11      0      1      0     10      3      0      4      3 
+  50 |      0      1      0      1      2      4      2      5      0      0 
+  60 |      1      3      0      0      2      0      0      0      0      0 
+  70 |      0      0      0      1      0      0      0      0      0      0 
+  80 |      0      1      0      0      0      0      0      0      0      1 
+  90 |      0 
 
 Service Time Histogram of station 0
- Mean: 0.00, Samples: 0, Min: -1, Max -1
- Stddev: nan, Jitter: -1, 95th-percentile: -1
- CI: nan (nan, nan) r nan %
-   0 |      0 
+ Mean: 1.56, Samples: 2479, Min: 1, Max 19
+ Stddev: 1.297571, Jitter: 18, 95th-percentile: 3
+ CI: 0.051080 (1.51, 1.61) r 3.27 %
+   0 |      0   1944      0    425      0     82      0     16      0      7 
+  10 |      0      2      0      1      0      0      0      1      0      1 
+  20 |      0 
+
+Service Time Histogram of station 1
+ Mean: 1.87, Samples: 2558, Min: 1, Max 34
+ Stddev: 2.138257, Jitter: 33, 95th-percentile: 4
+ CI: 0.082864 (1.78, 1.95) r 4.44 %
+   0 |      0   2017      0      0    419      0      0     88      0      0 
+  10 |     19      0      0      4      0      0      6      0      0      2 
+  20 |      0      0      0      0      0      1      0      0      0      0 
+  30 |      0      1      0      0      1      0 
+
+Service Time Histogram of station 2
+ Mean: 2.19, Samples: 2476, Min: 1, Max 29
+ Stddev: 2.752036, Jitter: 28, 95th-percentile: 9
+ CI: 0.108401 (2.08, 2.30) r 4.94 %
+   0 |      0   1944      0      0      0    406      0      0      0     73 
+  10 |      0      0      0     36      0      0      0     10      0      0 
+  20 |      0      5      0      0      0      1      0      0      0      1 
+  30 |      0 
+
+Service Time Histogram of station 3
+ Mean: 2.33, Samples: 2453, Min: 1, Max 26
+ Stddev: 3.024623, Jitter: 25, 95th-percentile: 6
+ CI: 0.119696 (2.21, 2.45) r 5.13 %
+   0 |      0   1954      0      0      0      0    390      0      0      0 
+  10 |      0     70      0      0      0      0     33      0      0      0 
+  20 |      0      5      0      0      0      0      1      0 
+
+Service Time Histogram of station 4
+ Mean: 2.80, Samples: 2457, Min: 1, Max 55
+ Stddev: 4.195811, Jitter: 54, 95th-percentile: 13
+ CI: 0.165909 (2.63, 2.96) r 5.93 %
+   0 |      0   1922      0      0      0      0      0    409      0      0 
+  10 |      0      0      0     83      0      0      0      0      0     26 
+  20 |      0      0      0      0      0     12      0      0      0      0 
+  30 |      0      1      0      0      0      0      0      1      0      0 
+  40 |      0      0      0      1      0      0      0      0      0      1 
+  50 |      0      0      0      0      0      1      0 
+
+Service Time Histogram of station 5
+ Mean: 2.95, Samples: 2568, Min: 1, Max 57
+ Stddev: 4.404741, Jitter: 56, 95th-percentile: 8
+ CI: 0.170364 (2.78, 3.12) r 5.77 %
+   0 |      0   2022      0      0      0      0      0      0    426      0 
+  10 |      0      0      0      0      0     85      0      0      0      0 
+  20 |      0      0     25      0      0      0      0      0      0      7 
+  30 |      0      0      0      0      0      0      2      0      0      0 
+  40 |      0      0      0      0      0      0      0      0      0      0 
+  50 |      0      0      0      0      0      0      0      1      0 
+
+Service Time Histogram of station 6
+ Mean: 3.26, Samples: 2523, Min: 1, Max 57
+ Stddev: 4.979562, Jitter: 56, 95th-percentile: 17
+ CI: 0.194307 (3.07, 3.46) r 5.96 %
+   0 |      0   1980      0      0      0      0      0      0      0    413 
+  10 |      0      0      0      0      0      0      0    101      0      0 
+  20 |      0      0      0      0      0     24      0      0      0      0 
+  30 |      0      0      0      3      0      0      0      0      0      0 
+  40 |      0      0      0      0      0      0      0      0      0      0 
+  50 |      0      0      0      0      0      0      0      2      0 
+
+Service Time Histogram of station 7
+ Mean: 3.62, Samples: 2570, Min: 1, Max 73
+ Stddev: 6.048367, Jitter: 72, 95th-percentile: 19
+ CI: 0.233845 (3.39, 3.86) r 6.45 %
+   0 |      0   2016      0      0      0      0      0      0      0      0 
+  10 |    422      0      0      0      0      0      0      0      0     96 
+  20 |      0      0      0      0      0      0      0      0     25      0 
+  30 |      0      0      0      0      0      0      0      4      0      0 
+  40 |      0      0      0      0      0      0      2      0      0      0 
+  50 |      0      0      0      0      0      2      0      0      0      0 
+  60 |      0      0      0      0      2      0      0      0      0      0 
+  70 |      0      0      0      1      0 
+
+Service Time Histogram of station 8
+ Mean: 4.00, Samples: 2418, Min: 1, Max 61
+ Stddev: 6.557060, Jitter: 60, 95th-percentile: 21
+ CI: 0.261359 (3.74, 4.26) r 6.54 %
+   0 |      0   1882      0      0      0      0      0      0      0      0 
+  10 |      0    404      0      0      0      0      0      0      0      0 
+  20 |      0     89      0      0      0      0      0      0      0      0 
+  30 |      0     33      0      0      0      0      0      0      0      0 
+  40 |      0      8      0      0      0      0      0      0      0      0 
+  50 |      0      0      0      0      0      0      0      0      0      0 
+  60 |      0      2      0 
+
+Service Time Histogram of station 9
+ Mean: 4.19, Samples: 2528, Min: 1, Max 89
+ Stddev: 7.388310, Jitter: 88, 95th-percentile: 23
+ CI: 0.288013 (3.90, 4.48) r 6.87 %
+   0 |      0   2009      0      0      0      0      0      0      0      0 
+  10 |      0      0    368      0      0      0      0      0      0      0 
+  20 |      0      0      0    108      0      0      0      0      0      0 
+  30 |      0      0      0      0     30      0      0      0      0      0 
+  40 |      0      0      0      0      0      9      0      0      0      0 
+  50 |      0      0      0      0      0      0      3      0      0      0 
+  60 |      0      0      0      0      0      0      0      0      0      0 
+  70 |      0      0      0      0      0      0      0      0      0      0 
+  80 |      0      0      0      0      0      0      0      0      0      1 
+  90 |      0 
 
 Service Time Histogram over all stns
- Mean: 0.00, Samples: 0, Min: -1, Max -1
- Stddev: nan, Jitter: -1, 95th-percentile: -1
- CI: nan (nan, nan) r nan %
-   0 |      0 
+ Mean: 2.88, Samples: 25030, Min: 1, Max 89
+ Stddev: 4.758166, Jitter: 88, 95th-percentile: 12
+ CI: 0.058947 (2.82, 2.94) r 2.05 %
+   0 |      0  19690      0    425    419    488    390    513    426    493 
+  10 |    441    476    368    124      0     85     39    112      0    125 
+  20 |      0     99     25    108      0     38      1      0     25      8 
+  30 |      0     35      0      3     31      0      2      5      0      0 
+  40 |      0      8      0      1      0      9      2      0      0      1 
+  50 |      0      0      0      0      0      3      3      3      0      0 
+  60 |      0      2      0      0      2      0      0      0      0      0 
+  70 |      0      0      0      1      0      0      0      0      0      0 
+  80 |      0      0      0      0      0      0      0      0      0      1 
+  90 |      0 
 
 Transmission Attempt Histogram of station 0
- Mean: 0.00, Samples: 0, Min: -1, Max -1
- Stddev: nan, Jitter: -1, 95th-percentile: -1
- CI: nan (nan, nan) r nan %
-   0 |      0 
+ Mean: 1.28, Samples: 2479, Min: 1, Max 10
+ Stddev: 0.648786, Jitter: 9, 95th-percentile: 2
+ CI: 0.025540 (1.26, 1.31) r 1.99 %
+   0 |      0   1944    425     82     16      7      2      1      0      1 
+  10 |      1      0 
+
+Transmission Attempt Histogram of station 1
+ Mean: 1.29, Samples: 2558, Min: 1, Max 12
+ Stddev: 0.712752, Jitter: 11, 95th-percentile: 2
+ CI: 0.027621 (1.26, 1.32) r 2.14 %
+   0 |      0   2017    419     88     19      4      6      2      0      1 
+  10 |      0      1      1      0 
+
+Transmission Attempt Histogram of station 2
+ Mean: 1.30, Samples: 2476, Min: 1, Max 8
+ Stddev: 0.688009, Jitter: 7, 95th-percentile: 3
+ CI: 0.027100 (1.27, 1.33) r 2.09 %
+   0 |      0   1944    406     73     36     10      5      1      1      0 
+
+Transmission Attempt Histogram of station 3
+ Mean: 1.27, Samples: 2453, Min: 1, Max 6
+ Stddev: 0.604925, Jitter: 5, 95th-percentile: 2
+ CI: 0.023939 (1.24, 1.29) r 1.89 %
+   0 |      0   1954    390     70     33      5      1      0 
+
+Transmission Attempt Histogram of station 4
+ Mean: 1.30, Samples: 2457, Min: 1, Max 10
+ Stddev: 0.699302, Jitter: 9, 95th-percentile: 3
+ CI: 0.027651 (1.27, 1.33) r 2.13 %
+   0 |      0   1922    409     83     26     12      1      1      1      1 
+  10 |      1      0 
+
+Transmission Attempt Histogram of station 5
+ Mean: 1.28, Samples: 2568, Min: 1, Max 9
+ Stddev: 0.629249, Jitter: 8, 95th-percentile: 2
+ CI: 0.024338 (1.25, 1.30) r 1.90 %
+   0 |      0   2022    426     85     25      7      2      0      0      1 
+  10 |      0 
+
+Transmission Attempt Histogram of station 6
+ Mean: 1.28, Samples: 2523, Min: 1, Max 8
+ Stddev: 0.622445, Jitter: 7, 95th-percentile: 3
+ CI: 0.024288 (1.26, 1.31) r 1.89 %
+   0 |      0   1980    413    101     24      3      0      0      2      0 
+
+Transmission Attempt Histogram of station 7
+ Mean: 1.29, Samples: 2570, Min: 1, Max 9
+ Stddev: 0.672041, Jitter: 8, 95th-percentile: 3
+ CI: 0.025983 (1.27, 1.32) r 2.01 %
+   0 |      0   2016    422     96     25      4      2      2      2      1 
+  10 |      0 
+
+Transmission Attempt Histogram of station 8
+ Mean: 1.30, Samples: 2418, Min: 1, Max 7
+ Stddev: 0.655706, Jitter: 6, 95th-percentile: 3
+ CI: 0.026136 (1.27, 1.33) r 2.01 %
+   0 |      0   1882    404     89     33      8      0      2      0 
+
+Transmission Attempt Histogram of station 9
+ Mean: 1.29, Samples: 2528, Min: 1, Max 9
+ Stddev: 0.671665, Jitter: 8, 95th-percentile: 3
+ CI: 0.026183 (1.26, 1.32) r 2.03 %
+   0 |      0   2009    368    108     30      9      3      0      0      1 
+  10 |      0 
 
 Transmission Attempt Histogram over all stns
- Mean: 0.00, Samples: 0, Min: -1, Max -1
- Stddev: nan, Jitter: -1, 95th-percentile: -1
- CI: nan (nan, nan) r nan %
-   0 |      0 
+ Mean: 1.29, Samples: 25030, Min: 1, Max 12
+ Stddev: 0.661471, Jitter: 11, 95th-percentile: 3
+ CI: 0.008195 (1.28, 1.30) r 0.64 %
+   0 |      0  19690   4082    875    267     69     22      9      6      6 
+  10 |      2      1      1      0 
 
 Collision Histogram over all stns
- Mean: 0.00, Samples: 1875, Min: 0, Max 0
- Stddev: 0.000000, Jitter: 0, 95th-percentile: 0
- CI: 0.000000 (0.00, 0.00) r nan %
-   0 |   1875      0 
+ Mean: 0.26, Samples: 125000, Min: 0, Max 4
+ Stddev: 0.506255, Jitter: 4, 95th-percentile: 1
+ CI: 0.002807 (0.26, 0.26) r 1.09 %
+   0 |  96515  25030   3182    254     19      0 
 
 Paquets sent by each station STSWARMUP (mean     0.00)
+   0 |      0 
 
-Paquets sent by each station STSSTEADY (mean     0.00)
+Paquets sent by each station STSSTEADY (mean  2503.00)
+   0 |   2479   2558   2476   2453   2457   2568   2523   2570   2418   2528 
 
 Paquets generated by each station STSWARMUP (mean     0.00)
+   0 |      0 
 
-Paquets generated by each station STSSTEADY (mean     0.00)
+Paquets generated by each station STSSTEADY (mean  2503.00)
+   0 |   2479   2558   2476   2453   2457   2568   2523   2570   2418   2528 
 
 
 SUMMARY OF SIMULATION MEASURES ----------------
-Total offered load                             : 0.000000
-Utilization                                    : 0.000000
-Average Queue Length across stns               : 0.000000 pks
-Average Delay across stns                      :   0.0000 slots  CI: nan (nan, nan) r nan % samples 0 target -9223372036854775808
-Standard Deviation of Delay across stns        :   0.0000 slots
-Delay jitter (max-min) across stns             :   0.0000 slots
-95th-percentile of Delay across stns           :   0.0000 slots 
-Average Service Time across stns               :   0.0000 slots  CI: nan (nan, nan) r nan % samples 0 target -9223372036854775808
-Standard Deviation of Service Time across stns :     0.00 slots
+Total offered load                             : 0.200240
+Utilization                                    : 0.200240
+Average Queue Length across stns               : 0.064326 pks
+Average Delay across stns                      :   3.2116 slots  CI: 0.066276 (3.15, 3.28) r 2.06 % samples 25030 target 21184
+Standard Deviation of Delay across stns        :   4.7698 slots
+Delay jitter (max-min) across stns             :  49.9000 slots
+95th-percentile of Delay across stns           :  14.0000 slots 
+Average Service Time across stns               :   2.8778 slots  CI: 0.058947 (2.82, 2.94) r 2.05 % samples 25030 target 21229
+Standard Deviation of Service Time across stns :     4.28 slots
 
 THEORETICAL FORMULAS ----------------
-Little's law average delay              :      nan slots
-M/D/1 (small load) average delay        :   1.0000 slots
-M/D/1 (small load) average queue length :   0.0000 pks
+Little's law average delay              :   3.2125 slots
+M/D/1 (small load) average delay        :   1.1252 slots
+M/D/1 (small load) average queue length :   0.2253 pks
 
 **************** END EXECUTION ******************
-  Time : Thu Nov  6 12:27:09 2025
+  Time : Tue Nov 11 11:03:13 2025
 *************************************************
  
 Program has finished Successfully!!!!!!!!!!!
