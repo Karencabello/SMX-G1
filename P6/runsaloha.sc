@@ -48,24 +48,23 @@ mkdir -p ${runpath}             # Create subdir if it doesn't exist
    set stats     = ${runpath}/StatsTable
 
 # generate header of Stats summary table
-    echo -n "stns CRA p-pbl  load duration start   seed " >! ${stats}
+    echo -n "stns p dur start stns CRA p-pbl  load duration start   seed " >! ${stats}
     echo -n "alpha    z    r " >> ${stats}
-    echo -n "efLoad util  avgQ avgDly " >> ${stats}
+    echo -n "efLoad util    avgQ avgDly " >> ${stats}
     echo -n "   CI    r EfSamples TgtSamples "  >> ${stats}
     echo -n "stdDly jitDly 95Dly avgSrv little MD1avgD MD1avgQ \n" >> ${stats}
-    echo -n "stns   load " >! ${stats}
-    echo -n " efLoad    util      avgQ      avgDly " >> ${stats}
+    
+    echo -n "stns p dur start stns load " >! ${stats}
+    echo -n "efLoad    util      avgQ      avgDly " >> ${stats}
     echo -n "    jitter  little   MD1avgD   MD1avgQ " >> ${stats}
-    echo -n " avgDCI   ef_r EfSamples TgtSamples\n" >> ${stats}
-
+    echo -n " avgDCI  ef_r EfSamples TgtSamples\n" >> ${stats}
+    
 # Execute multiple runs
-foreach seed        (   1234  234  )     # ( 3435 78531 845978)
-foreach stns        (  10  30)     # ( 15)
-foreach CRA         (   D B P)     # ( B  )
-foreach duration    (   30  )   # ( 10 300 )
-foreach start       (    10   )   # ( 3 30 )
+foreach stns    (5 10 30)
+foreach p       (0.05 0.2)
+foreach duration (100 300 500)
+foreach start    (20 50)
 
-foreach load (  .1  .2  .3 0.3 0.35 0.4     )   #( .1  .2  .3  .32  .34  .35  )
 
 # Set different filename for each different run
    set infile    = ${runpath}/in
@@ -82,21 +81,23 @@ foreach load (  .1  .2  .3 0.3 0.35 0.4     )   #( .1  .2  .3  .32  .34  .35  )
    echo "${alpha} ${z} ${r}" >> ${infile}
    
 # Execute the simulation: comment if you just want to reprocess the output files without re-executing
-   ./saloha-full.exe ${infile} ${outfile}
-  
+   #./saloha.exe ${infile} ${outfile}
+
+# Escribir los parámetros de esta ejecución en la tabla
+ echo -n "${stns} ${p} ${duration} ${start} " >> ${stats}
+
 # Collect the summary of statistics
   awk -f saloha-table.awk < ${outfile} >> ${stats} # < ${outfile} > ${stats}
 
   echo done
 
-end     #load
 echo " " >>${stats}
 echo " " 
+
 end     #start
 end     #duration
-end     #CRA
+end     #p
 end     #stns
-end     #seed
 
 # Clean as needed
 # rm ${runpath}/*                  

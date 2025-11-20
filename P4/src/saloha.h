@@ -74,7 +74,7 @@
 #define DEBUGTRAF       OFF   // Debugging traffic generator: ON/OFF              
 #define DEBUGchannel    OFF   // Debugging channel: ON/OFF
 #define DEBUGqueuing    OFF   // Debugging the queuing when grouping reqs: ON/OFF 
-#define DEBUGCRA        ON   // Debugging contention resolution algorithm : ON/OFF
+#define DEBUGCRA        OFF   // Debugging contention resolution algorithm : ON/OFF
 #define DEBUGSTS        OFF   // Debugging statistics: ON/OFF     
 #define DEBUGSTN        NA   // Debugging the station protocol -1=OFF=NA=-1 (not fully implemented in full version, leave it always NA)      
 
